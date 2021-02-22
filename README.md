@@ -4,7 +4,7 @@ Basics of working with p5js at IDM
 ## topics
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
-- settig up a local environment
+- setting up a local environment
   - exercises: 
 - variables
   - exercises: animation, motion, time & clocks

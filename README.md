@@ -5,9 +5,10 @@ Basics of working with p5js at IDM
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
 - setting up a local environment
-  - demo: VS Code, Brackets - others?
+  - demo: VS Code
 - variables
-  - exercises: animation, motion, time & clocks
+  - exercises: bouncing ball animation, motion, time & clocks
+  - translation
 - arrays
   - exercises: recording mouse actions, trails 
 - conditionals
@@ -20,3 +21,9 @@ Basics of working with p5js at IDM
   - exercises: draw a body, or a sandwich
 - objects
   - exercises: dance party
+  - particle system
+- math 
+  - general math
+  - sin and cos / trig (envisioning as a cycle, something over time)
+  - dynamic
+

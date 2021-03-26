@@ -15,6 +15,9 @@ Basics of working with p5js at IDM
   - exercises: bouncing ball
 - for & while loops
   - exercises: recreate work by Vera Molnár
+- color
+  - color modes
+  - color theory
 - noise v random
   - exercises: generate terrainas
 - functions

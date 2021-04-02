@@ -10,17 +10,18 @@ Local development is great when you expect to be offline, want control over your
 Running your own server is useful for deploying p5 sketches on a raspberry pi, or similar situation where you won't be viewing the content on the machine directly.
 
 ## Online Editors
-editor.p5js.org
-openprocessing.com
+- editor.p5js.org
+- openprocessing.com
 
 ## Local development (Mac, Windows, Linux)
-folder management
+- folder management
 
-sublime text / atom
-download library
+- sublime text / atom
+- download library
 
-Install VS code
-install p5 plugin
+- Install VS code
+- install p5 plugin
 
 ## Running your own server
-install node
+- install node
+- install p5-manager

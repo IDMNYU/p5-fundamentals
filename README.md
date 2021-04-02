@@ -2,7 +2,7 @@
 Basics of working with p5js at IDM
 
 ## topics
-- setting up a local environment
+- [setting up a local environment](00_setup.md)
   - demo: VS Code
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing

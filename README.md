@@ -2,10 +2,10 @@
 Basics of working with p5js at IDM
 
 ## topics
-- coordinate system/drawing on screen
-  - exercises: selfie, landscape drawing
 - setting up a local environment
   - demo: VS Code
+- coordinate system/drawing on screen
+  - exercises: selfie, landscape drawing
 - variables
   - exercises: bouncing ball animation, motion, time & clocks
   - translation

@@ -17,7 +17,7 @@ Basics of working with p5js at IDM
   - exercises: recreate work by Vera Molnár
 - color
   - color modes
-  - color theory
+  - [color theory](4a_color_modes.md)
 - noise v random
   - exercises: generate terrainas
 - functions

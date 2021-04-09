@@ -5,7 +5,7 @@ Before we can start start coding, we'll want to set up our development environme
 
 Online editors are great for keeping stuff in the cloud, accessing anywhere, and quickly testing out ideas. It's got the lowest barrier to entry and requires nothing more than an internet connection. 
 
-Local development is great when you expect to be offline, want control over your tools, or will be working with largewr media files, or simply want the affordances of your own setup.
+Local development is great when you expect to be offline, want control over your tools, or will be working with larger media files, or simply want the affordances of your own setup.
 
 Running your own server is useful for deploying p5 sketches on a raspberry pi, or similar situation where you won't be viewing the content on the machine directly.
 

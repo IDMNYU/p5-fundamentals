@@ -10,8 +10,8 @@ Local development is great when you expect to be offline, want control over your
 Running your own server is useful for deploying p5 sketches on a raspberry pi, or similar situation where you won't be viewing the content on the machine directly.
 
 ## Online Editors
-- editor.p5js.org
-- openprocessing.com
+- [editor.p5js.org](https://editor.p5js.org) 
+- [openprocessing.com](https://openprocessing.com)
 
 ## Local development (Mac, Windows, Linux)
 - folder management

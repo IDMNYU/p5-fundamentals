@@ -3,7 +3,8 @@ Basics of working with p5js at IDM
 
 ## topics
 - [setting up a local environment](00_setup.md)
-  - demo: VS Code
+  - [VS Code](https://youtu.be/epQgFt4NTPI)
+  - [Atom](https://youtu.be/h5I7GFohFNc)
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
 - variables
@@ -24,7 +25,7 @@ Basics of working with p5js at IDM
   - exercises: draw a body, or a sandwich
 - objects
   - exercises: dance party
-  - particle system
+  - [particle system](https://lillylin.medium.com/p5-js-tutorials-particle-systems-254b4b0344a2)
 - math 
   - general math
   - sin and cos / trig (envisioning as a cycle, something over time)

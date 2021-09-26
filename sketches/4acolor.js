@@ -17,8 +17,6 @@
 // look at it on different devices, is there a difference 
 // between them? which seems like the 'true' red to you?
 
-// the setup() function runs once
-function setup() {
   // create a canavas 400px/400px
   createCanvas(400, 400);
   // by default, the color mode is RGB - red, green, blue
@@ -60,4 +58,3 @@ function setup() {
   colorMode(HSB);
   fill(0,100,100);
   rect(200,200,399,399);
-}

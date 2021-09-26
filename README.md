@@ -2,6 +2,9 @@
 Basics of working with p5js at IDM
 
 ## topics
+- javascript basics
+  - browser console
+- p5js files nd requirements
 - [setting up a local environment](00_setup.md)
   - [VS Code](https://youtu.be/epQgFt4NTPI)
   - [Atom](https://youtu.be/h5I7GFohFNc)

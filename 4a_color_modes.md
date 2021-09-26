@@ -1,6 +1,6 @@
 <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
 
-<script type="text/p5">
+<script type="text/p5" data-height="600" data-preview-width="200">
   
   // color
 // from Interaction of Color by Josef Albers

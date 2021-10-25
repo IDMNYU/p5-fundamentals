@@ -4,7 +4,7 @@ Basics of working with p5js at IDM
 ## topics
 - javascript basics
   - browser console
-- p5js files nd requirements
+- p5js files and requirements
 - [setting up a local environment](00_setup.md)
   - [VS Code](https://youtu.be/epQgFt4NTPI)
   - [Atom](https://youtu.be/h5I7GFohFNc)
@@ -33,4 +33,5 @@ Basics of working with p5js at IDM
   - general math
   - sin and cos / trig (envisioning as a cycle, something over time)
   - dynamic
+- [video and images, cv](https://idmnyu.github.io/DM-GY-6063-Creative-Coding-A-Fall-2020/cv.html)
 

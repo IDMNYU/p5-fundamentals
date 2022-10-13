@@ -58,3 +58,4 @@
   colorMode(HSB);
   fill(0,100,100);
   rect(200,200,399,399);
+  text ("jiyun", 200, 200);

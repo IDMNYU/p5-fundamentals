@@ -10,7 +10,7 @@ Basics of working with p5js at IDM
   - [Atom](https://youtu.be/h5I7GFohFNc)
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
-- variables
+- [variables](variables.md)
   - exercises: bouncing ball animation, motion, time & clocks
   - translation
 - arrays

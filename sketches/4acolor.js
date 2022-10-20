@@ -58,4 +58,3 @@ rect(0, 200, 199, 399);
 colorMode(HSB);
 fill(0, 100, 100);
 rect(200, 200, 399, 399);
-text("jiyun rocks", 200, 200);

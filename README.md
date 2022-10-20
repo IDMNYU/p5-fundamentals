@@ -27,6 +27,8 @@ Basics of working with p5js at IDM
 - noise v random
   - exercises: generate terrainas
 - functions
+  - built-un functions
+    - mousePressed() / mouseReleased()
   - exercises: draw a body, or a sandwich
 - objects
   - exercises: dance party

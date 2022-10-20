@@ -11,6 +11,8 @@ Basics of working with p5js at IDM
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
 - [variables](variables.md)
+  - built in variables
+    - mouseClick
   - exercises: bouncing ball animation, motion, time & clocks
   - translation
 - arrays

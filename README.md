@@ -2,7 +2,7 @@
 Basics of working with p5js at IDM
 
 ## topics
-- javascript basics
+- [javascript basics](javascript.md)
   - browser console
 - p5js files and requirements
 - [setting up a local environment](00_setup.md)

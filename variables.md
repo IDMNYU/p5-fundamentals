@@ -20,7 +20,8 @@ The general kinds of data you’ll find in variables in javascript include :
 
 You can find out what type of data is in your variable with the `typeof` command. (needs example)
 Here is example: 
-<!-- <iframe src="https://editor.p5js.org/JiyunYao/full/DOiUS1vtM"></iframe> -->
+<iframe src="https://editor.p5js.org/JiyunYao/full/DOiUS1vtM" width = "600" height = "600"></iframe>
+
 You declare a variable like this :
 ```
 let value;

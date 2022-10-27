@@ -1,3 +1,4 @@
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script> 
 # Variables
 
 Variables provide a sense of memory to our programs. Without variables, programs forget things as soon as we’re done with them. It’s not a very efficient method, like buying a new water bottle every time you want a drink. Instead of being wasteful, let’s save the planet and use something over and over again. 
@@ -20,7 +21,7 @@ The general kinds of data you’ll find in variables in javascript include :
 
 You can find out what type of data is in your variable with the `typeof` command. (needs example)
 Here is the example: 
-<iframe src="https://editor.p5js.org/JiyunYao/full/DOiUS1vtM" width = "600" height = "600"></iframe>
+<script type="text/p5" data-height="600" data-preview-width="400" src="sketches/1aVars.js" data-autoplay> </script>
 
 
 You declare a variable like this :

@@ -1,4 +1,4 @@
-let variable1 = 22;
+let variable1 = 45;
 let variable2 = "Hello world";
 let variable3 = false;
 let variable4 = [1, 2, 3];
@@ -11,9 +11,9 @@ function setup() {
 
 function draw() {
   background(220);
-  text("variable1 is " + typeof(variable1), 100, 100);
-  text("variable2 is " + typeof(variable2), 100, 150);
-  text("variable3 is " + typeof(variable3), 100, 200);
-  text("variable4 is " + typeof(variable4), 100, 250);
-  text("variable5 is " + typeof(variable5), 100, 300);
+  text("variable1 holds " + variable1 + ", which is a " + typeof(variable1), 100, 100);
+  text("variable2 is " + variable2 + ", which is a " + typeof(variable2), 100, 150);
+  text("variable3 is " + variable3 + ", which is a " + typeof(variable3), 100, 200);
+  text("variable4 is " + variable4 + ", which is a " + typeof(variable4), 100, 250);
+  text("variable5 is " + variable5 + ", which is a " + typeof(variable5), 100, 300);
 }

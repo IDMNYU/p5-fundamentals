@@ -21,7 +21,7 @@ The general kinds of data you’ll find in variables in javascript include :
 
 You can find out what type of data is in your variable with the `typeof` command. (needs example)
 Here is the example: 
-<script type="text/p5" data-height="600" data-preview-width="400" src="sketches/1aVars.js" data-autoplay> </script>
+<script type="text/p5" data-height="600" data-preview-width="400" src="sketches/typeofExample.js" data-autoplay> </script>
 
 
 You declare a variable like this :

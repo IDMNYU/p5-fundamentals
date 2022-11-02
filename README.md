@@ -11,8 +11,11 @@ Basics of working with p5js at IDM
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
 - [variables](variables.md)
-  - built in variables
-    - mouseIsPressed
+  - Common built in variables
+    - mouseIsPressed/keyIsPressed: return True/False (https://editor.p5js.org/JiyunYao/sketches/IwEcNmrlM)
+    - mouseButton: return RIGHT/LEFT/CENTER
+    - key: return most recent typed key (https://p5js.org/reference/#/p5/key)
+    - 
   - exercises: bouncing ball animation, motion, time & clocks
   - translation
 - arrays

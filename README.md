@@ -45,7 +45,7 @@ Basics of working with p5js at IDM
 
 - Fun examples:
   - [How to use timer function in p5 to make TNT game](https://editor.p5js.org/JiyunYao/sketches/0OOdWCtZ5)
-  - [How to let a cat follow your mouse with translate() function](https://editor.p5js.org/JiyunYao/sketches/6vkmvtbXE)
+  - [How to let a cat react to your pat with translate() function](https://editor.p5js.org/JiyunYao/sketches/6vkmvtbXE)
   -- 
 
 

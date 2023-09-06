@@ -1,16 +1,7 @@
-
-  
-  if (window.console) console = { 
-    log: function(){
-        let output='',
-            console=document.getElementById('console');
-        let (var i=0;i<arguments.length;i++) {
-            output+=arguments[i]+' ';
-        }
-        console.innerText+=output+"\n";
-    }
-};
-
-//test
-let test=12345;
-console.log('test', 'xyz', test);
+var realConsoleLog = console.log;
+    console.log = function () {
+        var message = [].join.call(arguments, " ");
+        // Display the message somewhere... (jQuery example)
+        $(".output").text(message);
+        realConsoleLog.apply(console, arguments);
+    };

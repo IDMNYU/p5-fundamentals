@@ -7,7 +7,6 @@ Basics of working with p5js at IDM
 - p5js files and requirements
 - [setting up a local environment](00_setup.md)
   - [VS Code](https://youtu.be/epQgFt4NTPI)
-  - [Atom](https://youtu.be/h5I7GFohFNc)
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
 - [variables](variables.md)
@@ -26,6 +25,8 @@ Basics of working with p5js at IDM
 - for & while loops
   - exercises: recreate work by Vera Molnár
 - color
+  - [RGB color picker](4_rgbpicker.md)
+  - [RGBA color picker](4_rgbapicker.md)
   - color modes
   - [color theory](4a_color_modes.md)
 - noise v random

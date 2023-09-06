@@ -1,1 +1,1 @@
-<iframe src="https://editor.p5js.org/shfitz/full/c6HGnhJK-"></iframe>
+<script async src="//jsfiddle.net/shfitz/oye8wbhp/embed/js,result/"></script>

@@ -19,3 +19,4 @@ defaults:
       path: "_pages"
     values:
       layout: "page"
+      permalink: :title/index.html

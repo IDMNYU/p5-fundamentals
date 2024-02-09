@@ -6,36 +6,34 @@ title: p5-fundamentals | Basics of working with p5js at IDM
 # p5-fundamentals
 Basics of working with p5js at IDM
 
+## Intro
+- [Programming Computers](programming)
+- [The Browser and JavaScript](javascript)
+- [Setting up a local development environment](ide)
+- [Git and GitHub](git)
+
+## Ready to p5
+- [Setting up p5js](p5-setup)
+- [Drawing on screen](drawing)
+- [Variables and Loops](variables)
+
+
 ## topics
-- [javascript basics](javascript)
-  - browser console
-- p5js files and requirements
-- [setting up a local environment](00_setup)
-  - [VS Code](https://youtu.be/epQgFt4NTPI)
-- coordinate system/drawing on screen
-  - exercises: selfie, landscape drawing
-- [variables](variables)
-  - Common built in variables
-    - [mouseIsPressed/keyIsPressed: return True/False](https://editor.p5js.org/JiyunYao/sketches/IwEcNmrlM)
-    - [mouseButton: return RIGHT/LEFT/CENTER](https://p5js.org/reference/#/p5/mouseButton)
-    - [key: return most recent typed key](https://p5js.org/reference/#/p5/key)
-    - [keyCode: return keyCode of any key](https://editor.p5js.org/JiyunYao/sketches/Q-15JpcIU)
-    - [millis()](https://p5js.org/reference/#/p5/millis)
+
+- Common built in variables
+  - [mouseIsPressed/keyIsPressed: return True/False](https://editor.p5js.org/JiyunYao/sketches/IwEcNmrlM)
+  - [mouseButton: return RIGHT/LEFT/CENTER](https://p5js.org/reference/#/p5/mouseButton)
+  - [key: return most recent typed key](https://p5js.org/reference/#/p5/key)
+  - [keyCode: return keyCode of any key](https://editor.p5js.org/JiyunYao/sketches/Q-15JpcIU)
+  - [millis()](https://p5js.org/reference/#/p5/millis)
   - exercises: bouncing ball animation, motion, time & clocks
   - translation
 - arrays
   - exercises: recording mouse actions, trails 
 - conditionals
   - exercises: bouncing ball
-- for & while loops
-  - exercises: recreate work by Vera Molnár
-- color
-  - [RGB color picker](4_rgbpicker)
-  - [RGBA color picker](4_rgbapicker)
-  - color modes
-  - [color theory](4a_color_modes)
 - noise v random
-  - exercises: generate terrainas
+  - exercises: generate terrains
 - functions
   - built-un functions
     - mousePressed() / mouseReleased()

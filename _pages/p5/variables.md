@@ -43,8 +43,11 @@ There are other ways of incrementing/decrementing numbers and applying math to a
 
 P5.js has a number of built in variables that do not need to be declared - these include ways of describing the canvas size, the mouse position, keys that are pressed, time, and other things that may change over time.
  
- # Examples
+## Examples
 - [Create variables](https://editor.p5js.org/shfitz/sketches/qLmPWLA1e)
 - [Global v local, datatypes](https://editor.p5js.org/shfitz/sketches/4L1XqeYFL)
 - [Freebie variables in p5js (width, height, mouseX, mouseY)](https://editor.p5js.org/shfitz/sketches/IhVA4oVSj)
-- [Basic math , string manipulation](https://editor.p5js.org/shfitz/sketches/4L1XqeYFL)
+- [Basic math, string manipulation](https://editor.p5js.org/shfitz/sketches/4L1XqeYFL)
+
+# Loops
+exercises: recreate work by Vera Molnár

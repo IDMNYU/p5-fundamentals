@@ -18,12 +18,7 @@ Running your own server is useful for deploying p5 sketches on a raspberry pi, o
 ## Local development (Mac, Windows, Linux)
 - folder management
 
-- sublime text / atom
 - download library
 
 - Install VS code
 - install p5 plugin
-
-## Running your own server
-- install node
-- install p5-manager

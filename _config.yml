@@ -19,9 +19,3 @@ defaults:
       path: "_pages"
     values:
       layout: "page"
-  - scope:
-      path: "README.md"
-    values:
-      layout: "page"
-      permalink: /
-      title: p5-fundamentals | Basics of working with p5js at IDM

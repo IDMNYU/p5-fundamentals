@@ -1,6 +1,6 @@
 title: p5-fundamentals
 
-baseurl: ""
+baseurl: "/p5-fundamentals"
 
 # Build settings
 markdown: kramdown

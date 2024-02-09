@@ -1,15 +1,18 @@
+---
+---
+
 # p5-fundamentals
 Basics of working with p5js at IDM
 
 ## topics
-- [javascript basics](javascript.md)
+- [javascript basics](javascript)
   - browser console
 - p5js files and requirements
-- [setting up a local environment](00_setup.md)
+- [setting up a local environment](00_setup)
   - [VS Code](https://youtu.be/epQgFt4NTPI)
 - coordinate system/drawing on screen
   - exercises: selfie, landscape drawing
-- [variables](variables.md)
+- [variables](variables)
   - Common built in variables
     - [mouseIsPressed/keyIsPressed: return True/False](https://editor.p5js.org/JiyunYao/sketches/IwEcNmrlM)
     - [mouseButton: return RIGHT/LEFT/CENTER](https://p5js.org/reference/#/p5/mouseButton)
@@ -25,10 +28,10 @@ Basics of working with p5js at IDM
 - for & while loops
   - exercises: recreate work by Vera Molnár
 - color
-  - [RGB color picker](4_rgbpicker.md)
-  - [RGBA color picker](4_rgbapicker.md)
+  - [RGB color picker](4_rgbpicker)
+  - [RGBA color picker](4_rgbapicker)
   - color modes
-  - [color theory](4a_color_modes.md)
+  - [color theory](4a_color_modes)
 - noise v random
   - exercises: generate terrainas
 - functions

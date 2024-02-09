@@ -1,1 +1,27 @@
-theme: jekyll-theme-architect
+title: p5-fundamentals
+
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+# Local dev settings
+port: 6300
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "README.md"
+    values:
+      layout: "page"
+      permalink: /
+      title: p5-fundamentals | Basics of working with p5js at IDM

@@ -20,3 +20,4 @@ defaults:
     values:
       layout: "page"
       permalink: :title/index.html
+      type: "tutorial"

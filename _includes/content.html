@@ -1,7 +1,11 @@
 <div class="body-section-container">
   <div class="body-section">
     <content class="body-section-content">
-      {{ content }}
+      {% if page.type == "tutorial" %}
+        {% include tutorial-content.html %}
+      {% else %}
+        {{ content }}
+      {% endif %}
     </content>
   </div>
 </div>

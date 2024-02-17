@@ -64,7 +64,6 @@ th {
   font-size: 16px;
 }
 
-
 .body-container {
   width: 100%;
   display: flex;
@@ -73,6 +72,16 @@ th {
   .nav-container {
     color: var(--bgnd-color);
     background: #2e7bcf url("{{ site.baseurl }}/assets/images/header-bg.jpg") 0 0 repeat-x;
+
+    a.nav-home-link {
+      color: var(--bgnd-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--bgnd-color-h);
+        text-decoration: underline;
+      }
+    }
   }
   
   .body-section-container {
@@ -92,8 +101,42 @@ th {
   }
 }
 
+.editor-block-wrapper {
+  .p5-editor-wrapper {
+    --editor-height: 600px;
+    --editor-y-offset: -45px;
+    --editor-x-offset: -15px;
+  }
 
+  .arduino-editor-wrapper {
+    --editor-height: 600px;
+    --editor-y-offset: -100px;
+    --editor-x-offset: -10px;
+  }
 
+  .editor-wrapper {
+    overflow-y: hidden;
+    position: relative;
+    width: calc(100% + 100px);
+    height: calc(var(--editor-height) + var(--editor-y-offset));
+
+    .editor {
+      position: absolute;
+      top: var(--editor-y-offset);
+      left: var(--editor-x-offset);
+      width: 100%;
+      height: var(--editor-height);
+      border: 0;
+      display: block;
+    }
+  }
+
+  .editor-link {
+    display: block;
+    font-size: 0.9rem;
+  }
+  margin-bottom: 1rem;
+}
 
 .image-row {
   display: flex;

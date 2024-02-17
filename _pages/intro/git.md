@@ -1,5 +1,6 @@
 ---
+title: Git and GitHub
 ---
-# Git
+## Git
 
-# GitHub
+## GitHub

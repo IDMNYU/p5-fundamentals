@@ -7,8 +7,6 @@ title: Drawing on Screen
 
 ## Colors
 
-<!-- {% include p5-editor.html id="4cfE26_b6" %} -->
-
 ### RGB color picker
 <script type="text/p5"
   data-p5-version="1.9.0"

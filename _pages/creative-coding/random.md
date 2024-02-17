@@ -1,9 +1,10 @@
 ---
+title: Randomness
 ---
-# Random
+## Random
 
-# Gaussian
+## Gaussian
 
-# Noise
+## Noise
 
 exercises: generate terrains

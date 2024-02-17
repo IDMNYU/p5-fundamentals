@@ -1,7 +1,7 @@
 ---
+title: Variables and Loops
 ---
-<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script> 
-# Variables
+## Variables
 
 Variables provide a sense of memory to our programs. Without variables, programs forget things as soon as we’re done with them. It’s not a very efficient method, like buying a new water bottle every time you want a drink. Instead of being wasteful, let’s save the planet and use something over and over again. 
 
@@ -49,5 +49,7 @@ P5.js has a number of built in variables that do not need to be declared - these
 - [Freebie variables in p5js (width, height, mouseX, mouseY)](https://editor.p5js.org/shfitz/sketches/IhVA4oVSj)
 - [Basic math, string manipulation](https://editor.p5js.org/shfitz/sketches/4L1XqeYFL)
 
-# Loops
+## Loops
 exercises: recreate work by Vera Molnár
+
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script> 

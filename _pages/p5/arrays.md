@@ -1,6 +1,6 @@
 ---
+title: Arrays
 ---
-# Arrays
+
 
 - exercises: recording mouse actions, trails 
-

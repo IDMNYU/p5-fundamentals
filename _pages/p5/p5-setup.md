@@ -1,6 +1,7 @@
 ---
+title: Setting Up p5.js
 ---
-# Setting up an environment for working with p5.js
+## Setting up an environment for working with p5.js
 _Last updated April 2 2021_
 
 Before we can start start coding, we'll want to set up our development environment. There are a few different ways to do this, it all depends on your needs. 

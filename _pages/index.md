@@ -22,7 +22,8 @@ type: home
 
   - [Setting Up p5js](p5-setup)
   - [Drawing on Screen](drawing)
-  - [Variables and Loops](variables)
+  - [Variables](variables)
+  - [Loops](loops)
   - [Conditionals](conditionals)
   - [Functions](functions)
   - [Arrays](arrays)

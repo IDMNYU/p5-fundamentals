@@ -20,7 +20,7 @@ In its simplest form, the machine consists of an infinite tape that holds data a
 <div class="scaled-images">
   <img src="{{ site.baseurl }}/assets/images/intro/turing-machine.jpg" class="">
 </div>
-*Simplified representation of a Turing Machine with instruction set $$X$$, $$Y$$, $$\varnothing$$, $$\forall$$*
+*Simplified representation of a Turing Machine with instruction set $$\{$$ $$X$$, $$Y$$, $$\varnothing$$, $$\forall$$ $$\}$$*
 
 This simple model of reading and writing instructions and data from the same place is still used today, and is what enables computers to do an almost infinite number of tasks using a finite number of instructions.
 

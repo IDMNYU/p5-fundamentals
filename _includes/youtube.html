@@ -1,0 +1,7 @@
+{% assign ratio = include.ratio | default: "16x9" %}
+
+<div class="youtube-container-wrapper">
+  <div class="youtube-container s{{ ratio }}">
+    <iframe src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>

@@ -225,26 +225,35 @@ th {
   }
 }
 
-.youtube-container {
-  position: relative;
-  height: 0;
-  overflow: hidden;
+.youtube-container-wrapper {
+  width: 100%;
+  max-width: 640px;
 
-  &.s16x9 {
-    padding-bottom: 56.25%;
-  }
+  .youtube-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
 
-  &.s4x3 {
-    padding-bottom: 75%;
-  }
+    &.s16x9 {
+      padding-bottom: 56.25%;
+    }
 
-  iframe, video {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    &.s9x6 {
+      padding-bottom: 66.66%;
+    }
+
+    &.s4x3 {
+      padding-bottom: 75%;
+    }
+
+    iframe, video {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 

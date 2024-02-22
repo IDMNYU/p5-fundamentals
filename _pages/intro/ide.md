@@ -26,9 +26,19 @@ It can be downloaded [here](https://code.visualstudio.com/#alt-downloads), and t
 
 {% include youtube.html id="epQgFt4NTPI" ratio="9x6" %}
 
-## Plugins
+## Plugins / Extensions
 
-The following plugins are really useful for developing HTML/JavaScript and p5.js projects:
+Installing extensions on VS Code is easy:
+
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ site.baseurl }}/assets/images/intro/ide-plugins.webm" type="video/webm">
+    <source src="{{ site.baseurl }}/assets/images/intro/ide-plugins.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+The following extensions are really useful for developing HTML/JavaScript and p5.js projects:
 
 ### [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
@@ -40,4 +50,5 @@ This plugin helps us format our code in a consistent manner, so it's easier to r
 
 ### [p5js Snippets](https://marketplace.visualstudio.com/items?itemName=acidic9.p5js-snippets)
 
-This gives our IDE information about p5.js functions so it can help us with suggestions and auto-complete.
+This gives the IDE information about p5.js functions, so it can help us with suggestions and auto-complete.
+

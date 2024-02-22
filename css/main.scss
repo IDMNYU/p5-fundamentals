@@ -203,10 +203,10 @@ th {
 
 .video-container {
   height: 200px;
+  max-width: 640px;
 
   video {
     display: block;
-    margin: 0 auto;
   }
 
   &.h200 {

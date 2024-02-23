@@ -11,7 +11,8 @@
 
   <ul>
   {% for t in topics %}
-    {% assign p = site.pages | where_exp:"p", "p.url contains section and p.url contains t" | first %}
+    {% assign _p = site.pages | where_exp:"p", "p.url contains section" %}
+    {% assign p = _p | where_exp:"p", "p.url contains t" | first %}
     {% assign page_words = p.content | markdownify | strip_html | strip_newlines | number_of_words %}
 
     {% if page_words > 100 %}

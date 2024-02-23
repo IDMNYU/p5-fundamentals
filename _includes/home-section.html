@@ -1,0 +1,23 @@
+{% assign topics = include.topics | split: " " %}
+{% assign title = include.title | split: ":" | first %}
+{% assign subtitle = include.title | split: ":" | last %}
+{% assign section = include.section %}
+
+<details class="home-details">
+  <summary class="home-summary">
+    <span class="home-summary-title">{{ title }}</span>
+    <span class="home-summary-subtitle">{{ subtitle }}</span>
+  </summary>
+
+  <ul>
+  {% for t in topics %}
+    {% assign p = site.pages | where_exp:"p", "p.url contains section and p.url contains t" | first %}
+    {% assign page_words = p.content | markdownify | strip_html | strip_newlines | number_of_words %}
+
+    {% if page_words > 100 %}
+      <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
+    
+  {% endfor %}
+  </ul>
+</details>

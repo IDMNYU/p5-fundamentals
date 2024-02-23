@@ -2,62 +2,51 @@
 permalink: /
 title: p5-fundamentals | Basics of working with p5js at IDM
 ---
+<!-- Intro -->
+{% assign title = "Intro:Some basic concepts related to programming" %}
+{% capture topics %}
+  programming
+  javascript
+  ide
+  git
+{% endcapture %}
+{% include home-section.html section="intro" title=title topics=topics %}
 
-<details class="home-details" markdown="1">
-  <summary class="home-summary">
-    <span class="home-summary-title">Intro</span>
-    <span class="home-summary-subtitle">Some basic concepts related to programming</span>
-  </summary>
+<!-- P5 -->
+{% assign title = "Ready to p5:The basics of programming using p5.js and JavaScript" %}
+{% capture topics %}
+  p5-setup
+  drawing
+  variables
+  patterns
+  counters
+  conditionals
+  functions
+  arrays
+  objects
+  classes
+{% endcapture %}
+{% include home-section.html section="p5" title=title topics=topics %}
 
-  - [Programming Computers](programming)
-  - [The Browser and JavaScript](javascript)
-  - [Setting up a Development Environment](ide)
-  - [Git and GitHub](git)
-</details>
+<!-- Creative Coding -->
+{% assign title = "Creative Coding:The browser as a canvas" %}
+{% capture topics %}
+  transforms
+  interaction
+  animation
+  images
+  video
+  cv
+  cycles
+  vectors
+  random
+  sound
+{% endcapture %}
+{% include home-section.html section="creative-coding" title=title topics=topics %}
 
-<details class="home-details" markdown="1">
-  <summary class="home-summary">
-    <span class="home-summary-title">Ready to p5</span>
-    <span class="home-summary-subtitle">The basics of programming using p5.js and JavaScript</span>
-  </summary>
-
-  - [Setting Up p5js](p5-setup)
-  - [Drawing on Screen](drawing)
-  - [Variables](variables)
-  - [Drawing Patterns](patterns)
-  - [Loops as Counters](counters)
-  - [Conditionals](conditionals)
-  - [Functions](functions)
-  - [Arrays](arrays)
-  - [JavaScript Objects](objects)
-  - [Classes](classes)
-</details>
-
-<details class="home-details" markdown="1">
-  <summary class="home-summary">
-    <span class="home-summary-title">Creative Coding</span>
-    <span class="home-summary-subtitle">The browser as a canvas</span>
-  </summary>
-
-  - [Translations and Transformations](transforms)
-  - [Interaction](interaction)
-  - [Animation](animation)
-  - [Images](images)
-  - [Video](video)
-  - [Computer Vision](cv)
-  - [Cycles](cycles)
-  - [Vectors](vectors)
-  - [Randomness](random)
-  - [Sound](sound)
-</details>
-
-<details class="home-details" markdown="1">
-  <summary class="home-summary">
-    <span class="home-summary-title">Mini Projects</span>
-    <span class="home-summary-subtitle">Putting it all together</span>
-  </summary>
-
-  - [2D Patterns](patterns-2d)
-  - ~~[Project 0](#)~~
-  - ~~[Project 1](#)~~
-</details>
+<!-- Projects -->
+{% assign title = "Mini Projects:Putting it all together" %}
+{% capture topics %}
+  patterns-2d
+{% endcapture %}
+{% include home-section.html section="projects" title=title topics=topics %}

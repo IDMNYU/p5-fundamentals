@@ -22,5 +22,5 @@ defaults:
   - scope:
       path: "_pages/*/"
     values:
-      permalink: :title/index.html
+      permalink: :path/
       type: "tutorial"

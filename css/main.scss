@@ -119,13 +119,24 @@ th {
     list-style-position: outside;
     margin-left: 0.7em;
     padding-left: 10px;
+    cursor: pointer;
 
     &::marker {
       font-size: 0.66em;
     }
 
+    &:hover {
+      .home-summary-title {
+        text-decoration: underline;
+      }
+    }
+
     .home-summary-subtitle {
-      display: block;
+      &::before {
+        content: "";
+        display: block;
+      }
+
       font-size: 17px;
       font-weight: 400;
       margin-block-start: 0.5em;

@@ -24,7 +24,8 @@ title: p5-fundamentals | Basics of working with p5js at IDM
   - [Setting Up p5js](p5-setup)
   - [Drawing on Screen](drawing)
   - [Variables](variables)
-  - [Loops](loops)
+  - [Drawing Patterns](patterns)
+  - [Loops as Counters](counters)
   - [Conditionals](conditionals)
   - [Functions](functions)
   - [Arrays](arrays)
@@ -56,6 +57,7 @@ title: p5-fundamentals | Basics of working with p5js at IDM
     <span class="home-summary-subtitle">Putting it all together</span>
   </summary>
 
+  - [2D Patterns](patterns-2d)
   - ~~[Project 0](#)~~
   - ~~[Project 1](#)~~
 </details>

@@ -1,7 +1,7 @@
 ---
-title: Loops
+title: Drawing Patterns
 ---
-## Repeating 
+## On Repeat
 
 It's very common in programming to want to repeat calculations on different data/inputs. For example, when processing images or sound, we'll often want to rerun the same code on different pixels/samples. Creating visual or sound patterns also involves repeating some computation over and over, with slight modifications.
 
@@ -30,6 +30,10 @@ for(start; condition; increment) {
   // do stuff
 }
 ```
+Where:
+- ```start``` is an expression that initializes variables we will use in our loop
+- ```condition``` is a boolean expression that specifies what keeps the loop running
+- ```increment``` is an expression that runs at the end of each iteration
 
 {% include p5-editor.html id="yCTAMB2Hb" %}
 
@@ -59,6 +63,8 @@ Let's go back to the first way (by location) and add some variables for looping 
 
 Take some time to play with the variables to see how they affect our drawing.
 
+## For Loops With For Loops
+
 And now, let's say that when we're looping in the horizontal direction, instead of drawing one circle for every location of ```xPos``` we want to draw an entire column of circles?
 
 Nested ```for()``` loops to the rescue! We can just copy the whole loop statement that draws a column of circles and put that inside the first loop that iterates in the horizontal direction (and make sure the ```ellipse()``` command uses the ```xPos``` and ```yPos``` variables):
@@ -80,6 +86,8 @@ Or, increase diameter along with the x position:
 Or, color based on x position and size based on y position:
 
 {% include p5-editor.html id="-ESdy4zlH" %}
+
+## For Loops With For Loops With For Loops...
 
 And if we really want to stretch our looping abilities we can add another level of ```for()``` looping to draw concentric circles at each x and y position:
 

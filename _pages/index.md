@@ -1,7 +1,6 @@
 ---
 permalink: /
 title: p5-fundamentals | Basics of working with p5js at IDM
-type: home
 ---
 
 <details class="home-details" markdown="1">

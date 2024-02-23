@@ -16,8 +16,11 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: "_pages"
+      path: "_pages/"
     values:
       layout: "page"
+  - scope:
+      path: "_pages/*/"
+    values:
       permalink: :title/index.html
       type: "tutorial"

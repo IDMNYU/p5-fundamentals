@@ -17,6 +17,8 @@
 
     {% if page_words > 100 %}
       <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+    {% else %}
+      <li><a>{{ p.title }}</a></li>
     {% endif %}
     
   {% endfor %}

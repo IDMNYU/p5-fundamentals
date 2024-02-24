@@ -11,16 +11,11 @@ port: 6300
 collections:
   pages:
     output: true
-    permalink: /:path/
+    permalink: :path/
 
 # Defaults
 defaults:
   - scope:
-      path: "_pages/"
+      type: "pages"
     values:
       layout: "page"
-  - scope:
-      path: "_pages/*/"
-    values:
-      permalink: :path/
-      type: "tutorial"

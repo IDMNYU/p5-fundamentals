@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: p5-fundamentals | Basics of working with p5js at IDM
+title: "p5-fundamentals | Basics of working with p5js at IDM"
 ---
 <!-- Intro -->
 {% assign title = "Intro:Some basic concepts related to programming" %}

@@ -16,13 +16,15 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
 {% assign title = "Ready to p5:The basics of programming using p5.js and JavaScript" %}
 {% capture topics %}
   p5-setup
+  p5-intro
   drawing
   variables
+  conditionals
   patterns
   counters
-  conditionals
   functions
   arrays
+  strings
   objects
   classes
 {% endcapture %}
@@ -34,12 +36,13 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   transforms
   interaction
   animation
+  random
+  math
+  cycles
+  vectors
   images
   video
   cv
-  cycles
-  vectors
-  random
   sound
 {% endcapture %}
 {% include home-section.html section="creative-coding" title=title topics=topics %}

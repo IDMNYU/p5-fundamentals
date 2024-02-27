@@ -96,17 +96,13 @@ th {
 
   .body-section {
     width: 100%;
-    max-width: 950px;
+    max-width: 800px;
     margin: 0 auto;
   }
 
   .body-section-content {
     display: block;
     width: 100%;
-
-    p {
-      max-width: 720px;
-    }
   }
 }
 
@@ -151,6 +147,9 @@ th {
 }
 
 .editor-block-wrapper {
+  width: 120%;
+  margin-left: -10%;
+
   .p5-editor-wrapper {
     --editor-height: 640px;
     --editor-y-offset: -45px;

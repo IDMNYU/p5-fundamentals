@@ -18,7 +18,7 @@ The Turing Machine is a conceptual model of computation that describes a simple 
 In its simplest form, the machine consists of an infinite tape that holds data and instructions. During its operation, the machine reads a value from the tape and, depending on the history of values read so far, it will either overwrite the value on the tape, move one position and read a new value, or stop. That's it.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/turing-machine.jpg" class="">
+  <img src="{{ site.baseurl }}/assets/images/intro/turing-machine.jpg">
 </div>
 *Simplified representation of a Turing Machine with instruction set $$\{$$ $$X$$, $$Y$$, $$\varnothing$$, $$\forall$$ $$\}$$*
 
@@ -33,7 +33,7 @@ He went on to prove that this type of math, called [Boolean Algebra](https://en.
 The properties of this binary algebra make it easy to build complex circuits from very basic, repeatable, building blocks. What this means is that many types of calculations and logic problems could now be solved using physical circuits that were easy to conceptualize, design and scale.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/shannon-switches.jpg" class="">
+  <img src="{{ site.baseurl }}/assets/images/intro/shannon-switches.jpg">
 </div>
 *Different representations of the logic operations that were implemented by Shannon using electrical switches*
 
@@ -81,10 +81,3 @@ Again, this is a very high-level and particular narrative of some moments in the
 - [The Story of NASA’s *Hidden Figures*](https://www.scientificamerican.com/article/the-story-of-nasas-real-ldquo-hidden-figures-rdquo/)
 - [Rhizome's Queer History of Computing](https://rhizome.org/editorial/2013/feb/19/queer-computing-1/)
 - [The Wild West of Computing](https://cutpathways.podbean.com/e/a-byte-size-history-of-computing/)
-
-<!-- 
-Software is the realization of Alan Turing’s universal machine. This is a computational machine that can replicate any other computational machine after being fed a set of instructions. These instructions indicate how the machine is to be configured and act on any data. Through software, we can reconfigure a machine to do anything we darn well please, including teaching the machine to behave like a different machine (see also, emulators).
-
-There a many many different types of software languages. Generally speaking, languages can be laid out along a continuum of “high-level” to “low-level”. As we’re not planning on talking directly to the silicon in the chips we’re using, we can use a higher level language that abstracts the basic instruction set. JavaScript and p5.js are high-level languages that come closer to human language than machine code.
-
-The general idea behind software is that it abstracts machine instructions (a series of 0s and 1s) and gives us something closer to natural human language to address the computer with. p5.js is a JavaScript library that abstracts the base language of JavaScript (no relation to java). JavaScript itself is highly abstracted from the hardware of a computer, and p5.js makes it even more approachable. -->

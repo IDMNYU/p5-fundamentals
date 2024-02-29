@@ -76,7 +76,7 @@ th {
 
   .nav-container {
     color: var(--bgnd-color);
-    background: #2e7bcf url("{{ site.baseurl }}/assets/images/header-bg.jpg") 0 0 repeat-x;
+    background: #2e7bcf url("{{ '/assets/images/header-bg.jpg' | relative_url }}") 0 0 repeat-x;
 
     a.nav-home-link {
       color: var(--bgnd-color);
@@ -98,6 +98,7 @@ th {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    margin-left: unquote("max(0%, (100% - 800px) / 2.3)");
   }
 
   .body-section-content {
@@ -147,8 +148,7 @@ th {
 }
 
 .editor-block-wrapper {
-  width: 120%;
-  margin-left: -10%;
+  width: unquote("max(100%, min(120%, 100vw - 20%))");
 
   .p5-editor-wrapper {
     --editor-height: 640px;

@@ -6,19 +6,19 @@ title: The Browser and JavaScript
 Since JavaScript is a language that was originally designed to run on browsers over the internet, it could be useful to understand a little bit more about the internet and how it works.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/internet-00.jpg">
+  <img src="{{ '/assets/images/intro/internet-00.jpg' | relative_url }}">
 </div>
 
 To put it simply, The Internet is just other people's computers. There is no cloud, nor matrix, just a bunch of really big, hot and well-connected computers, called servers, that live in warehouses and store files that our phones and computers can download.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/internet-01.jpg">
+  <img src="{{ '/assets/images/intro/internet-01.jpg' | relative_url }}">
 </div>
 
 The process is similar for other types of services, but when we access a URL with our browser, our computer sends a request to one of these servers, asking for a particular file at the specified address. Requests made to URLs like `p5js.org` or `nyu.edu` are actually asking for a file called `index.html` that lives in the `p5js.org` (or `nyu.edu`) server computers.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/request-00.jpg">
+  <img src="{{ '/assets/images/intro/request-00.jpg' | relative_url }}">
 </div>
 
 ## The Browser
@@ -26,7 +26,7 @@ The process is similar for other types of services, but when we access a URL wit
 When our browser makes a correct and authorized request to a server, asking for an `html` file, the server responds with a text file with `html` code:
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/request-01.jpg">
+  <img src="{{ '/assets/images/intro/request-01.jpg' | relative_url }}">
 </div>
 
 The `html` code might look something like this:
@@ -49,22 +49,22 @@ It's not very important right now to understand `html` in detail. We should just
 A lot of this content is text, and links, but more often than not, the `html` file will also reference other files, like image or video files. When the browser sees these references in the `html` code, it makes additional requests to the server, asking for those files.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/request-02.jpg">
+  <img src="{{ '/assets/images/intro/request-02.jpg' | relative_url }}">
 </div>
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/request-03.jpg">
+  <img src="{{ '/assets/images/intro/request-03.jpg' | relative_url }}">
 </div>
 
 Other common types of files referenced by `html` are `css` files and `JavaScript` files. These are special because, unlike media files that the browser just has to show to us, they are files that change *how* the browser shows content and how it behaves.
 `css` files usually specify the style of webpages. They tell the browser how to format the content in the `html` file: which fonts to use, what size the text should be, the colors of different elements, etc.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/request-04.jpg">
+  <img src="{{ '/assets/images/intro/request-04.jpg' | relative_url }}">
 </div>
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/request-05.jpg">
+  <img src="{{ '/assets/images/intro/request-05.jpg' | relative_url }}">
 </div>
 
 If a webpage was an apartment, the `html` file defines where the walls, doors and windows should go, while the `css` file specifies their materials and colors. Once the `css` file is downloaded, the browser has to go back through the content in the `html` file and apply the styles specified.
@@ -82,7 +82,7 @@ Once a JavaScript file (usually a `.js` file) is downloaded by a page, and while
 This JavaScript interpreter (or engine), is an internal part of the browser that is responsible for going through the JavaScript file line-by-line and executing its commands. This is what it means for JavaScript to be an *interpreted* language: instead of running directly on the computer's hardware, a JavaScript program needs another program to run it. It isn't something unique to JavaScript, but does make it different from some programming languages, and is something we should keep in mind.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/JavaScript.jpg">
+  <img src="{{ '/assets/images/intro/JavaScript.jpg' | relative_url }}">
 </div>
 
 Nowadays, JavaScript is considered a robust, general purpose language that can be used to create almost any kind of programs, inside or outside a browser (but always with an interpreter). As such, we can find many resources in the form of libraries (reusable code) and frameworks (reusable code and predefined methodologies) that extend the language and make it easier for us to write certain types of programs without always starting from scratch.

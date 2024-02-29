@@ -16,7 +16,7 @@
     {% assign page_words = p.content | markdownify | strip_html | strip_newlines | number_of_words %}
 
     {% if page_words > 100 %}
-      <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+      <li><a href="{{ p.url | relative_url }}  ">{{ p.title }}</a></li>
     {% else %}
       <li><a>{{ p.title }}</a></li>
     {% endif %}

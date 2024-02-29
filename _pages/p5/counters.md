@@ -3,7 +3,7 @@ title: Loops as Counters
 ---
 ## Loop to Fill
 
-We saw some examples of how to use ```for()``` loops to draw gridded patterns [here]({{ site.baseurl }}/counters/).
+We saw some examples of how to use ```for()``` loops to draw gridded patterns [here](../patterns).
 
 Now, we'll explore another way to think about loops that will allow us to do slightly different things.
 

@@ -32,8 +32,8 @@ Installing extensions on VS Code is easy:
 
 <div class="video-container w100">
   <video class="video" playsinline autoplay muted loop>
-    <source src="{{ site.baseurl }}/assets/images/intro/ide-plugins.webm" type="video/webm">
-    <source src="{{ site.baseurl }}/assets/images/intro/ide-plugins.mp4" type="video/mp4">
+    <source src="{{ '/assets/images/intro/ide-plugins.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/ide-plugins.mp4' | relative_url }}" type="video/mp4">
   </video>
 </div>
 

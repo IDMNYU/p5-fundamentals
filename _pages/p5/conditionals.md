@@ -3,7 +3,7 @@ title: Conditionals
 ---
 ## Mouse Over Shapes
 
-Now that we've seen how to create [variables](./variables/) to keep track of changing values and parameters in our code, let's see how they can be used in boolean expressions to create interactive shapes.
+Now that we've seen how to create [variables](../variables/) to keep track of changing values and parameters in our code, let's see how they can be used in boolean expressions to create interactive shapes.
 
 Let's start with a square, centered on our canvas. Notice the use of variables for setting the location and dimensions of the ```rect()```. This will be important soon.
 
@@ -107,7 +107,7 @@ We can even extend it to multiple shapes:
 
 There is a lot of repeated code here, which makes the sketch look messy and more complicated than it is.
 
-We'll later see how to use [functions](./functions/), [arrays](./arrays/) and [objects](./objects/) to clean this up and make it easier to understand, extend and maintain:
+We'll later see how to use [functions](../functions/), [arrays](../arrays/) and [objects](../objects/) to clean this up and make it easier to understand, extend and maintain:
 
 {% include p5-editor.html id="DmmKJw7Sl" %}
 
@@ -126,13 +126,13 @@ We can start with the logic from before, except it won't detect when the circle 
 If we look at a diagram of what's happening and what we want to happen, we can see that instead of detecting when the center of the circle is inside the rectangle, we should instead detect when the center of the circle is within $$r$$ pixels from the edge of the rectangle (where $$r$$ is the circle's radius, or, half of its diameter):
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/p5/overlap-00.jpg">
+  <img src="{{ '/assets/images/p5/overlap-00.jpg' | relative_url }}">
 </div>
 
 If we extend the drawing to consider all four sides of the rectangle, we get something like this:
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/p5/overlap-01.jpg">
+  <img src="{{ '/assets/images/p5/overlap-01.jpg' | relative_url }}">
 </div>
 
 This looks exactly like our original situation of detecting whether the center of the circle is inside a rectangle, but now we just have to use a bigger rectangle.
@@ -188,4 +188,4 @@ let overlap = mouseX > oRectX && mouseX < oRightEdge &&
 
 {% include p5-editor.html id="3Roffk9Y0" %}
 
-This could still be improved to account for the cases where it wrongly detects an overlap when the circle moves near the corners of the rectangle (a literal [corner case](https://en.wikipedia.org/wiki/Corner_case)), but we'll wait until we see [functions](./functions/) and a little bit of [trigonometry](../creative-coding/vectors/).
+This could still be improved to account for the cases where it wrongly detects an overlap when the circle moves near the corners of the rectangle (a literal [corner case](https://en.wikipedia.org/wiki/Corner_case)), but we'll wait until we see [functions](../functions/) and a little bit of [trigonometry](../../creative-coding/vectors/).

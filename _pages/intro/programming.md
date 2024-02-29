@@ -18,7 +18,7 @@ The Turing Machine is a conceptual model of computation that describes a simple 
 In its simplest form, the machine consists of an infinite tape that holds data and instructions. During its operation, the machine reads a value from the tape and, depending on the history of values read so far, it will either overwrite the value on the tape, move one position and read a new value, or stop. That's it.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/turing-machine.jpg">
+  <img src="{{ '/assets/images/intro/turing-machine.jpg' | erlative_url }}">
 </div>
 *Simplified representation of a Turing Machine with instruction set $$\{$$ $$X$$, $$Y$$, $$\varnothing$$, $$\forall$$ $$\}$$*
 
@@ -33,7 +33,7 @@ He went on to prove that this type of math, called [Boolean Algebra](https://en.
 The properties of this binary algebra make it easy to build complex circuits from very basic, repeatable, building blocks. What this means is that many types of calculations and logic problems could now be solved using physical circuits that were easy to conceptualize, design and scale.
 
 <div class="scaled-images">
-  <img src="{{ site.baseurl }}/assets/images/intro/shannon-switches.jpg">
+  <img src="{{ '/assets/images/intro/shannon-switches.jpg' | erlative_url }}">
 </div>
 *Different representations of the logic operations that were implemented by Shannon using electrical switches*
 

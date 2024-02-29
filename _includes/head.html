@@ -5,16 +5,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-<!-- <link rel="stylesheet" href="{{ site.baseurl }}/assets/simplelightbox/simple-lightbox.min.css"> -->
+<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+<!-- <link rel="stylesheet" href="{{ '/assets/simplelightbox/simple-lightbox.min.css' | relative_url }}"> -->
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
 
 <base target="_blank">
-<script src="{{ site.baseurl }}/js/targets.js"></script>
+<script src="{{ '/js/targets.js' | relative_url }}"></script>
 
 {% if page.url != "/" %}
-  <script src="{{ site.baseurl }}/js/editor-loader.js"></script>
+  <script src="{{ '/js/editor-loader.js' | relative_url }}"></script>
   <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {% endif %}

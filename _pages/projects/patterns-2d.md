@@ -6,28 +6,27 @@ title: 2D Patterns
 
 This mini-project draws on materials from:
 
-- [Drawing on Screen](../drawing)
-- [Drawing Patterns](../patterns)
-- [Loops as Counters](../counters)
-- [Translations and Transformations](../transforms)
+- [Drawing on Screen](../../p5/drawing/)
+- [Drawing Patterns](../../p5/patterns/)
+- [Loops as Counters](../../p5/counters/)
+- [Translations and Transformations](../../creative-coding/transforms/)
 
 ## Tiling
 
-We saw how to draw chessboards [here](../counters).
+We saw how to draw chessboards [here](../../p5/counters/).
 
 What if instead of black and white squares we used the following tiles:
 
-![]({{ site.baseurl }}/assets/images/projects/tiles-1x4.jpg)
+![]({{ '/assets/images/projects/tiles-1x4.jpg' | relative_url }})
 
-The function ```quarter()``` in the sketch below uses four parameters (```x```, ```y```, ```width``` and ```angle```) to draw a tile at position (```x```, ```y```) that has a quarter-circle in one of its corners.
+The function `quarter()` in the sketch below uses four parameters (`x`, `y`, `width` and `angle`) to draw a tile at position (`x`, `y`) that has a quarter-circle in one of its corners.
 
 {% include p5-editor.html id="iqWU_6Mxb" %}
 
 That is cool, and we can experiment with the angles in this version and use $$0$$ and $$180$$, but this code will only use $$2$$ out of many possible different variations of the pattern.
 
 We can try something that rotates depending on all possible row and column even/odd combinations:
-
-```
+```js
 if (col is even && row is even) {
   angle = 0;
 } else if (col is even && row is odd) {
@@ -38,6 +37,7 @@ if (col is even && row is even) {
   angle = 270;
 }
 ```
+
 {% include p5-editor.html id="WXTIQraE-" %}
 
 Or, many other possible combinations of the $$4$$ angles.
@@ -55,7 +55,7 @@ Let's use a pattern like this now:
 
 It's made up of a single composite shape, but depending on which column or row it's in, it gets rotated by $$0^\circ$$, $$90^\circ$$, $$180^\circ$$ or $$270^\circ$$.
 
-Without worrying too much about the implementation details, let's say we have a function called ```zig()``` that draws that shape based on $$4$$ parameters: ```x```, ```y```, ```width``` and ```angle``` of rotation (in degrees):
+Without worrying too much about the implementation details, let's say we have a function called `zig()` that draws that shape based on $$4$$ parameters: `x`, `y`, `width` and `angle` of rotation (in degrees):
 
 {% include p5-editor.html id="2IarIAkMf" %}
 

@@ -69,23 +69,22 @@ Other common types of files referenced by `html` are `css` files and `JavaScript
 
 If a webpage was an apartment, the `html` file defines where the walls, doors and windows should go, while the `css` file specifies their materials and colors. Once the `css` file is downloaded, the browser has to go back through the content in the `html` file and apply the styles specified.
 
-JavaScript files, on the other hand, describe how the browser should behave and what it should do with the content of the `html` file as a user interacts with it. The analogy might be running out of steam, but JavaScript might be the specification of what should happen when different light switches are pressed in an apartment.
+JavaScript files, on the other hand, describe how the browser should behave and what it should do with the content of the `html` file as a user interacts with it. Our analogy might be running out of steam, but if webpages were apartments, JavaScript might be the specification of what should happen when different light switches are pressed in a room.
 
-## Javascript
+## JavaScript
 
-Once a JavaScript file (usually a `.js` file) is downloaded, the browser will start a separate parallel process to read and execute the commands specified in this file, while the `html` file and `css` file finish figuring out how to display the page's content.
+In the early days of the internet, before JavaScript was a fully developed language recognized by all browsers, websites were pretty *static*. Once the `html` and `css` files were downloaded and the content of the page was styled and displayed, the browser's job was done and we had on our screens the digital equivalent of a printed newspaper.
 
-JavaScript code is different than other code because it's specified in a text file that the browser reads and executes, line-by-line. It's different from code that can run directly on your computer's hardware, or code that your operating system is responsible for running. Instead, JavaScript is an *interpreted* language, as it requires another program (usually a browser) to read its files and execute them.
+JavaScript gradually enabled websites to become more dynamic, allowing the content and style of a webpage to change based on user interaction.
+
+Once a JavaScript file (usually a `.js` file) is downloaded by a page, and while the `html` file and `css` file finish figuring out how to display the page's content, the browser will start a separate parallel process to read and *interpret* the content of the JavaScript file.
+
+This JavaScript interpreter (or engine), is an internal part of the browser that is responsible for going through the JavaScript file line-by-line and executing its commands. This is what it means for JavaScript to be an *interpreted* language: instead of running directly on the computer's hardware, a JavaScript program needs another program to run it. It isn't something unique to JavaScript, but does make it different from some programming languages, and is something we should keep in mind.
 
 <div class="scaled-images">
   <img src="{{ site.baseurl }}/assets/images/intro/JavaScript.jpg">
 </div>
 
-In the early days of the internet, before JavaScript was a fully developed language recognized by all browsers, websites were pretty *static*. Once the `html` and `css` files were downloaded and the content was styled and displayed, the browser's job was done and we could look at the digital equivalent of a printed newspaper.
+Nowadays, JavaScript is considered a robust, general purpose language that can be used to create almost any kind of programs, inside or outside a browser (but always with an interpreter). As such, we can find many resources in the form of libraries (reusable code) and frameworks (reusable code and predefined methodologies) that extend the language and make it easier for us to write certain types of programs without always starting from scratch.
 
-Nowadays, JavaScript is responsible for so much of what happens in the browser, that even after a `js` file is downloaded and executed, the browser's JavaScript engine (the hidden part of the browser responsible for running JavaScript code) has to keep running parts of the code repeatedly in order to handle user interactions.
-
-And JavaScript has become such a general purpose language that it has been used to create almost any kind of program. Not only can we play most time of media using JavaScript, but now we can also use it to create, process and edit media in real time, inside our browsers.
-
-TODO:
-....
+[p5js](https://p5js.org/) is an example of a JavaScript library. It's focused on creative coding and making it easier for everyone to learn how to create interactive experiences using JavaScript.

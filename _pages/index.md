@@ -39,6 +39,7 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   random
   math
   cycles
+  sincos
   vectors
   images
   video

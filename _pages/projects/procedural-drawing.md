@@ -49,6 +49,8 @@ Once we have the class definition and its functions, we can fill in some of the 
 
 {% include p5-editor.html id="zovsJ1fGz" %}
 
+## Update
+
 And now, finally, let's fill in some of our class, starting with the constructor and the `drawAgent()` function, and some pseudo-code for `update()`:
 
 {% include p5-editor.html id="CpcX_dT7f" %}
@@ -93,7 +95,11 @@ The problem is that when we send the `distComp()` function as a parameter to the
 
 In order to make sure `this` keeps referring to an `Agent` object during sorting, we have to add `.bind(this)` to the function before we send it to `toSorted()`.
 
-But, no worries. Once we have that working we can even re-use it during drawing. Let's add some drawing strategies to our class:
+But, no worries. Once we have that working we can even re-use it during drawing.
+
+## Draw
+
+Let's add some drawing strategies to our `Agent` class:
 
 `drawAgent()`: draws an ellipse at the agent's location.
 

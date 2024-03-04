@@ -36,6 +36,7 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   transforms
   interaction
   animation
+  state
   random
   math
   cycles
@@ -52,5 +53,6 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
 {% assign title = "Mini Projects:Putting it all together" %}
 {% capture topics %}
   patterns-2d
+  procedural-drawing
 {% endcapture %}
 {% include home-section.html section="projects" title=title topics=topics %}

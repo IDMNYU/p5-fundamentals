@@ -29,7 +29,7 @@ Next, we can open this directory in VSCode and create two empty files inside it:
 
 Let's start with the `index.html` file since this is the file that gets loaded first when we access our project in a browser. This file is responsible for loading a few other files with JavaScript code, and setting up a couple of basic `html` elements where the results of our JavaScript code can be drawn.
 
-[This](https://github.com/IDMNYU/p5-fundamentals/blob/main/_pages/p5js-template/index.html) is what a basic p5js project `index.html` file looks like. We can just copy the contents of this file into the empty `index.html` file in our local directory.
+[THIS](https://github.com/IDMNYU/p5-fundamentals/blob/main/_pages/p5js-template/index.html) is what a basic p5js project `index.html` file looks like. We can just copy the contents of this file into the empty `index.html` file in our local directory.
 
 We don't have to understand everything in this file, but a few lines are worth highlighting:
 
@@ -69,7 +69,7 @@ function draw() {
 }
 ```
 
-We can copy these lines into out empty `sketch.js` file or download the file form [here](https://github.com/IDMNYU/p5-fundamentals/blob/main/_pages/p5js-template/sketch.js).
+We can copy these lines into our empty `sketch.js` file or download the file form [HERE](https://github.com/IDMNYU/p5-fundamentals/blob/main/_pages/p5js-template/sketch.js).
 
 This file has two sections, one called `setup` and another called `draw`. Commands for the `setup` section are grouped within its brackets (`{` `}`), just like the commands for the `draw` section are grouped within brackets.
 
@@ -91,8 +91,8 @@ Luckily, we can use our VSCode IDE and the [Live Server](https://marketplace.vis
 
 All we have to do is navigate to our project directory in VSCode and click the "Go Live" button towards the lower right-hand side of the window. This will start a local server and open a browser with our project:
 
-<div class="video-container w100">
-  <video class="video" playsinline autoplay muted loop>
+<div class="video-container w100" style="overflow-x: hidden;">
+  <video class="video" playsinline autoplay muted loop style="margin-left:-2px;">
     <source src="{{ '/assets/images/p5/setup-02.webm' | relative_url }}" type="video/webm">
     <source src="{{ '/assets/images/p5/setup-02.mp4' | relative_url }}" type="video/mp4">
   </video>
@@ -100,8 +100,8 @@ All we have to do is navigate to our project directory in VSCode and click the "
 
 And now that the server is running, any changes we make to our project code will be reflect on the browser:
 
-<div class="video-container w100">
-  <video class="video" playsinline autoplay muted loop>
+<div class="video-container w100" style="overflow-x: hidden;">
+  <video class="video" playsinline autoplay muted loop style="margin-left:-2px;">
     <source src="{{ '/assets/images/p5/setup-03.webm' | relative_url }}" type="video/webm">
     <source src="{{ '/assets/images/p5/setup-03.mp4' | relative_url }}" type="video/mp4">
   </video>

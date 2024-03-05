@@ -37,7 +37,6 @@ Installing extensions on VS Code is easy:
   </video>
 </div>
 
-
 The following extensions are really useful for developing HTML/JavaScript and p5.js projects:
 
 ### [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)

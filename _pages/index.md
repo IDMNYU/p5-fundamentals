@@ -26,6 +26,7 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   arrays
   strings
   objects
+  data
   classes
 {% endcapture %}
 {% include home-section.html section="p5" title=title topics=topics %}

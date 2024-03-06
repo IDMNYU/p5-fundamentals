@@ -46,7 +46,8 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   images
   video
   cv
-  sound
+  sound-files
+  sound-processing
 {% endcapture %}
 {% include home-section.html section="creative-coding" title=title topics=topics %}
 

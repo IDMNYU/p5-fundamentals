@@ -23,6 +23,8 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   patterns
   counters
   functions
+  random
+  math
   arrays
   strings
   objects
@@ -38,8 +40,6 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   interaction
   animation
   state
-  random
-  math
   cycles
   sincos
   vectors
@@ -57,5 +57,6 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
 {% capture topics %}
   patterns-2d
   procedural-drawing
+  glitchy-typewriter
 {% endcapture %}
 {% include home-section.html section="projects" title=title topics=topics %}

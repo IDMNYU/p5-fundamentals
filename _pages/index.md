@@ -43,6 +43,7 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   cycles
   sincos
   vectors
+  the-dom
   images
   video
   cv

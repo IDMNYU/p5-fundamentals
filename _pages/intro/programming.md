@@ -18,7 +18,7 @@ The Turing Machine is a conceptual model of computation that describes a simple 
 In its simplest form, the machine consists of an infinite tape that holds data and instructions. During its operation, the machine reads a value from the tape and, depending on the history of values read so far, it will either overwrite the value on the tape, move one position and read a new value, or stop. That's it.
 
 <div class="scaled-images">
-  <img src="{{ '/assets/images/intro/turing-machine.jpg' | erlative_url }}">
+  <img src="{{ '/assets/images/intro/turing-machine.jpg' | relative_url }}">
 </div>
 *Simplified representation of a Turing Machine with instruction set $$\{$$ $$X$$, $$Y$$, $$\varnothing$$, $$\forall$$ $$\}$$*
 
@@ -28,12 +28,12 @@ This simple model of reading and writing instructions and data from the same pla
 
 In $$1937$$ Claude Shannon wrote his master's thesis "[A Symbolic Analysis of Relay and Switching Circuits](https://en.wikipedia.org/wiki/A_Symbolic_Analysis_of_Relay_and_Switching_Circuits)" while at MIT. In his thesis Shannon showed how to optimize telephone relay circuits by using a form of algebra that only uses two numbers: $$1$$s and $$0$$s.
 
-He went on to prove that this type of math, called [Boolean Algebra](https://en.wikipedia.org/wiki/Boolean_algebra), could be implemented using electrical switches that were either $$on$$ or $$off$$.
+He went on to prove that this type of math, called [Boolean Algebra](https://en.wikipedia.org/wiki/Boolean_algebra), could be implemented using electrical switches that were either $$on$$ or $$\mathit{off}$$.
 
 The properties of this binary algebra make it easy to build complex circuits from very basic, repeatable, building blocks. What this means is that many types of calculations and logic problems could now be solved using physical circuits that were easy to conceptualize, design and scale.
 
 <div class="scaled-images">
-  <img src="{{ '/assets/images/intro/shannon-switches.jpg' | erlative_url }}">
+  <img src="{{ '/assets/images/intro/shannon-switches.jpg' | relative_url }}">
 </div>
 *Different representations of the logic operations that were implemented by Shannon using electrical switches*
 
@@ -49,11 +49,11 @@ Programming, or coding, is the art and science of telling a computer to do *some
 
 Some form of computer programming has been happening since at least the $$1830$$s when [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) wrote a program to calculate a sequence of Bernoulli numbers on a mechanical computer. Mechanical computers were programmed using punched cards, physical pieces of cardboard with holes, that were fed into the machine at specific times. The holes, or lack of holes, in specific positions of the cards is what determined whether certain mechanical connections were made, and this is what caused the computer to behave in a specific way.
 
-It wasn't until the $$1940$$s, with the advance of electronic computers, that writing and running a computer program could be done on the same machine. The commands that were given to these computers, however, were still pretty much written out in a way that specified sequences of $$on$$ and $$off$$ signals for electronic switches and other components.
+It wasn't until the $$1940$$s, with the advance of electronic computers, that writing and running a computer program could be done on the same machine. The commands that were given to these computers, however, were still pretty much written out in a way that specified sequences of $$on$$ and $$\mathit{off}$$ signals for electronic switches and other components.
 
 ## Languages
 
-We can trace the origins of the programming languages that we use today to the late $$1950$$s, and the work of American computer scientist and Navy admiral [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper). Hopper showed that English terms could be used to describe instructions for a program in a generic way, that could later be translated into sequences of $$on$$ and $$off$$ signals for specific computers.
+We can trace the origins of the programming languages that we use today to the late $$1950$$s, and the work of American computer scientist and Navy admiral [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper). Hopper showed that English terms could be used to describe instructions for a program in a generic way, that could later be translated into sequences of $$on$$ and $$\mathit{off}$$ signals for specific computers.
 
 This led to the advent of "high-level", machine-independent, programming languages like FORTRAN, ALGOL and COBOL, which could be used to write programs in human-readable English. The term "high-level" here is somewhat relative and fluid. It's used to describe how close a programming language is to a natural language and to denote a level of abstraction provided by the language in relation to the specific hardware that its resulting programs will run on.
 

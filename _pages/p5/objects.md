@@ -1,4 +1,3 @@
 ---
-title: JavaScript Objects and JSON
+title: JavaScript Objects
 ---
-

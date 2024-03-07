@@ -59,5 +59,6 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   patterns-2d
   procedural-drawing
   glitchy-typewriter
+  sprites
 {% endcapture %}
 {% include home-section.html section="projects" title=title topics=topics %}

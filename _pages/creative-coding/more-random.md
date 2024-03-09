@@ -221,7 +221,7 @@ Pretty cool. We'll soon see how to use this version of 2D and even 3D noise.
 
 ## Review
 
-`random(min, max)`: gives us normally distributed values between `min` and `max`, where every value is equally likely to occur.
+`random(min, max)`: gives us uniformly distributed values between `min` and `max`, where every value is equally likely to occur.
 
 `randomGaussian(`$$\mu$$`, `$$\sigma$$`)`: gives us normally distributed values clustered around $$\mu$$, and with most of the values between $$\mu - 3\sigma$$ and $$\mu + 3\sigma$$.
 

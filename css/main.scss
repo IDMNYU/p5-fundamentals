@@ -314,6 +314,22 @@ th {
   }
 }
 
+.canvas-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .canvas-container {
+    width: 33%;
+  }
+  canvas {
+    display: block;
+  }
+  .canvas-container > .language-plaintext {
+    user-select: none;
+  }
+}
+
 .sl-overlay {
   background: var(--bgnd-color) !important;
 }

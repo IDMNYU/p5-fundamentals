@@ -1,0 +1,34 @@
+<script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+<script src="{{ '/js/random-examples.js' | relative_url }}"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const rowEl = document.getElementsByClassName("canvas-row")[0];
+    const rowWidth = rowEl.offsetWidth;
+
+    const mRandom1D = new p5(random1d(rowWidth / 3), 'random-1d');
+    const mGauss1D = new p5(gauss1d(rowWidth / 3), 'randomGaussian-1d');
+    const mNoise1D = new p5(noise1d(rowWidth / 3), 'noise-1d');
+
+    const mRandom2D = new p5(random2d(rowWidth / 3), 'random-2d');
+    const mGauss2D = new p5(gauss2d(rowWidth / 3), 'randomGaussian-2d');
+    const mNoise2D = new p5(noise2d(rowWidth / 3), 'noise-2d');
+
+    const mRandomGrid = new p5(randomGrid(rowWidth / 3), 'random-grid');
+    const mGaussGrid = new p5(gaussGrid(rowWidth / 3), 'randomGaussian-grid');
+    const mNoiseGrid = new p5(noiseGrid(rowWidth / 3), 'noise-grid');
+  });
+</script>
+
+{% assign types = "1d,2d,grid" | split: "," %}
+{% assign funs = "random,randomGaussian,noise" | split: "," %}
+
+{% for t in types %}
+  <div class="canvas-row">
+    {% for f in funs %}
+      <div id="{{ f }}-{{ t }}" class="canvas-container">
+        <code class="language-plaintext highlighter-rouge">{{ f }}()</code>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

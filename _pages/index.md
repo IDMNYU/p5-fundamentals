@@ -36,7 +36,7 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
 <!-- Creative Coding -->
 {% assign title = "Creative Coding:The browser as a canvas" %}
 {% capture topics %}
-  transforms
+  transformations
   interaction
   animation
   state

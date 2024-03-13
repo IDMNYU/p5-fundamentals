@@ -1,3 +1,0 @@
----
-title: Translations and Transformations
----

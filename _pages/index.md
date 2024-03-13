@@ -46,7 +46,7 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   vectors
   the-dom
   images
-  video
+  videos
   cv
   sound-files
   sound-processing

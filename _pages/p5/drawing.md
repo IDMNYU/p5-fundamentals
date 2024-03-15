@@ -1,5 +1,5 @@
 ---
-title: Drawing on Screen
+title: "Drawing: Shapes and Colors"
 ---
 ## Coordinate System
 

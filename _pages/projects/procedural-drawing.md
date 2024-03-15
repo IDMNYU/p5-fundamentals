@@ -6,7 +6,7 @@ title: Procedural Drawing Machine
 
 This mini-project draws on materials from:
 
-- [Drawing on Screen](../../p5/drawing/)
+- [Shapes and Colors](../../p5/drawing/)
 - [Conditionals](../../p5/conditionals/)
 - [Loops as Counters](../../p5/counters/)
 - [Functions](../../p5/functions/)

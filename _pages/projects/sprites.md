@@ -5,7 +5,7 @@ title: Sprites
 
 This mini-project draws on materials from:
 
-- [Drawing on Screen](../../p5/drawing/)
+- [Shapes and Colors](../../p5/drawing/)
 - [Conditionals](../../p5/conditionals/)
 - [Arrays](../../p5/arrays/)
 - [Classes](../../p5/classes/)

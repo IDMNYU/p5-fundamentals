@@ -6,7 +6,7 @@ title: Glitchy Typewriter
 
 This mini-project draws on materials from:
 
-- [Drawing on Screen](../../p5/drawing/)
+- [Shapes and Colors](../../p5/drawing/)
 - [Loops as Counters](../../p5/counters/)
 - [Random](../../p5/random)
 - [Math](../../p5/math/)

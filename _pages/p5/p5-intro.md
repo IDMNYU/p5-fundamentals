@@ -1,7 +1,7 @@
 ---
 title: Intro to p5.js
 ---
-Now that we've seen how to [setup a p5js project](../p5-setup/) on our computer, let's take a closer look at how p5js works and how we can start writing code for our projects.
+Now that we've seen how to [setup a p5.js project](../p5-setup/) on our computer, let's take a closer look at how p5.js works and how we can start writing code for our projects.
 
 [THIS](https://github.com/IDMNYU/p5-fundamentals/blob/main/_pages/p5js-template/sketch.js) is a bare `sketch.js` file we can start with:
 
@@ -29,7 +29,7 @@ In the example above, the `createCanvas(windowWidth, windowHeight)` command belo
 The difference between these two parts of our code is that the code inside the `setup()` function only gets executed once, while the code inside our `draw()` function runs repeatedly, over and over and over and over...
 
 ### `setup()`
-The `setup()` function runs when we first load our page and the `html` file includes the p5js library, and then our `sketch.js` file. The commands that we put inside the `setup()` function usually have to do with *setting up* our environment and canvas: How big do we want our canvas to be? Do we need a canvas? What color mode are we using? Should we specify image positioning using their corners or center? What's our default font style and size? Do we have to load any external files?
+The `setup()` function runs when we first load our page and the `html` file includes the p5.js library, and then our `sketch.js` file. The commands that we put inside the `setup()` function usually have to do with *setting up* our environment and canvas: How big do we want our canvas to be? Do we need a canvas? What color mode are we using? Should we specify image positioning using their corners or center? What's our default font style and size? Do we have to load any external files?
 
 We don't always have to answer all of these questions in our `setup()` function, and we can always change how we do things later in our code, but for parameters and settings that are fixed, it's more efficient to just set them up once, at the beginning of our program, by putting commands in the `setup()` function.
 

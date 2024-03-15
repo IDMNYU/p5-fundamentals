@@ -7,7 +7,7 @@ Now that we know everything we need to know about [images](../images/), what abo
 
 Well, a video is just a bunch of images, one after the other, so it should be pretty similar to load and process videos.
 
-In this example we load a video from a specific URL (our sketch's directory) by first creating a `<video>` html element, and then hiding it. This is the easiest way to load video files into p5js and have access to its frames. We just have to remember to hide the video element once we've loaded the file:
+In this example we load a video from a specific URL (our sketch's directory) by first creating a `<video>` html element, and then hiding it. This is the easiest way to load video files into p5.js and have access to its frames. We just have to remember to hide the video element once we've loaded the file:
 
 ### NOTE: sketches that load the camera won't work here. They have to be opened in a new window directly from their [LINK](https://editor.p5js.org/thiagohersan/sketches/8Cpc3Gzk3).
 
@@ -37,7 +37,7 @@ if(r < 64 && g < 64 && b < 64) {
 
 ## Video From Camera
 
-We can also get a video stream from our camera. The process is very similar. We use a `<capture>` html element that we can access with p5js code, and then hide the actual html element:
+We can also get a video stream from our camera. The process is very similar. We use a `<capture>` html element that we can access with p5.js code, and then hide the actual html element:
 
 ### NOTE: sketches that use the camera won't work here. They have to be opened in a new window directly from their [LINK](https://editor.p5js.org/thiagohersan/sketches/8Cpc3Gzk3).
 

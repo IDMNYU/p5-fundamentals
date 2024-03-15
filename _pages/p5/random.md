@@ -3,7 +3,7 @@ title: Randomness
 ---
 ## Breaking Patterns
 
-Now that we've seen how to draw [patterns](../counters/) on our canvas using `for()` loops and how to create our own [functions](../functions/), let's see how to use one of the built-in functions from p5js to make our patterns more interesting.
+Now that we've seen how to draw [patterns](../counters/) on our canvas using `for()` loops and how to create our own [functions](../functions/), let's see how to use one of the built-in functions from p5.js to make our patterns more interesting.
 
 Let's start with a simple grid of circles.
 

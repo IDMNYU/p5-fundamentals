@@ -164,7 +164,7 @@ rotateX(PI / 3);
 
 In order to add height/depth to our map, we have to change how we draw the squares on screen.
 
-Since we're going to want to control all $$3$$ dimensions of every vertex in our rectangles, instead of drawing flat rectangles we should consider drawing shapes using the p5js [`beginShape()`](https://p5js.org/reference/#/p5/beginShape) function. We could use `QUADS`, but `QUAD_STRIP` and `TRIANGLE_STRIP` will make it even easier for us to specify the vertices of all rectangles in any given row.
+Since we're going to want to control all $$3$$ dimensions of every vertex in our rectangles, instead of drawing flat rectangles we should consider drawing shapes using the p5.js [`beginShape()`](https://p5js.org/reference/#/p5/beginShape) function. We could use `QUADS`, but `QUAD_STRIP` and `TRIANGLE_STRIP` will make it even easier for us to specify the vertices of all rectangles in any given row.
 
 To put this into code, we just have to realize that when drawing row `y`, we actually also need vertices that would be at row `y + gridWidth`, so we're always drawing pairs of vertices.
 

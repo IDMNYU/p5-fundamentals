@@ -1,7 +1,13 @@
-<title>{{ page.title }}</title>
+{% assign page_title = site.title | append: " | " | append: site.subtitle %}
 
-<meta name="description" content="Basics of working with p5js at NYU IDM">
-<meta name="keywords" content="creative, coding, nyu, tandon, idm, p5, p5.js">
+{% if page.title != "Index" %}
+  {% assign page_title = page.title %}
+{% endif %}
+
+<title>{{ page_title }}</title>
+
+<meta name="description" content="{{ site.subtitle }}">
+<meta name="keywords" content="creative, coding, nyu, tandon, idm, p5, p5js, p5.js, JavaScript">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 

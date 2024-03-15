@@ -74,7 +74,7 @@ Let's start with the simpler case, where we don't care about $$(x, y)$$ position
 
 We are going to change the green value of every pixel in our image using the `mouseY` position. Since every pixel gets the same change, we don't care about its $$(x, y)$$ location within the image, and we can just iterate over `mImage.pixels` directly with one `for()` loop, whose index increments by $$4$$.
 
-Any time we change the values in a `p5.Image` `pixels` array we have to call `updatePixels()` so p5js can update some internal values for actually drawing our new image.
+Any time we change the values in a `p5.Image` `pixels` array we have to call `updatePixels()` so p5.js can update some internal values for actually drawing our new image.
 
 {% include p5-editor.html id="jz-RoYYTn" %}
 

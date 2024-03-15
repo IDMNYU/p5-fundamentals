@@ -31,7 +31,7 @@ $$y(t) = A \times sin\left(\frac{2\pi}{P}\times t\right)$$
 
 where $$A$$ is the amplitude and $$P$$ is the period.
 
-In p5js this could be rewritten as:
+In p5.js this could be rewritten as:
 ```js
 let x = A * sin(2 * PI / periodFrames * frameCount);
 ```

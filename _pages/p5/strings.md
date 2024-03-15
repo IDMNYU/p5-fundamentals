@@ -12,7 +12,7 @@ let s1 = 'This is also a string!';
 let s2 = `Another string`;
 ```
 
-In p5js we use the [`text()`](https://p5js.org/reference/#/p5/text) function to draw strings on the screen.
+In p5.js we use the [`text()`](https://p5js.org/reference/#/p5/text) function to draw strings on the screen.
 
 In addition to the string (or the variable that holds the string), we also have to give the `text()` function the `x` and `y` coordinates where the text is to be drawn:
 ```js
@@ -22,7 +22,7 @@ text(s0, 10, 10);
 
 {% include p5-editor.html id="UIFxGREsZ" %}
 
-In addition to `text()`, p5js also has a bunch of [functions](https://p5js.org/reference/#group-Typography) for controlling typography and text properties like font size, font type, alignments, etc:
+In addition to `text()`, p5.js also has a bunch of [functions](https://p5js.org/reference/#group-Typography) for controlling typography and text properties like font size, font type, alignments, etc:
 
 {% include p5-editor.html id="8s2cHbfAS" %}
 
@@ -68,7 +68,7 @@ This is trying to fit all of the letters of a long sentence along the diagonal o
 
 If we look at the documentation for the [`split()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) function we'll see that it takes a string as its parameter, and that string is used to split the original string into many substrings. We used the space character (`" "`) to split the sentence into words, but we could've used any string as the split parameter.
 
-And if we want to avoid having words that go beyond the edge of our canvas, we use the p5js function [`textWidth()`](https://p5js.org/reference/#/p5/textWidth) to calculate the width of each word, and use that to adjust the x-location of the word if it will overflow:
+And if we want to avoid having words that go beyond the edge of our canvas, we use the p5.js function [`textWidth()`](https://p5js.org/reference/#/p5/textWidth) to calculate the width of each word, and use that to adjust the x-location of the word if it will overflow:
 
 {% include p5-editor.html id="StBeYLsZq" %}
 
@@ -113,7 +113,7 @@ chosenIndex = floor(random(0, words.length));
 
 We can specify the font to use by passing a string to `textFont()` with the font name, but this only works if that font is installed on the computer where the sketch is running, or if we use generic font family names (`serif`, `sans-serif`, `monospace`).
 
-If we want to use very special, custom fonts, we have to tell p5js to load the font file first, and then pass it to `textFont()`.
+If we want to use very special, custom fonts, we have to tell p5.js to load the font file first, and then pass it to `textFont()`.
 
 The first step is to find or create a font file. For free and open-source fonts, check out the [League of Moveable Type](https://www.theleagueofmoveabletype.com/) and [Open Font Library](https://fontlibrary.org/).
 
@@ -141,7 +141,7 @@ In this sketch we are adding a small random number to each point's `x` and `y` l
 
 One last thing about working with texts and strings.
 
-Just like there are `loadJSON()` and `loadTable()` functions, p5js also has a [`loadStrings()`](https://p5js.org/reference/#/p5/loadStrings) function that can be used to read a text file (from our computer or the internet).
+Just like there are `loadJSON()` and `loadTable()` functions, p5.js also has a [`loadStrings()`](https://p5js.org/reference/#/p5/loadStrings) function that can be used to read a text file (from our computer or the internet).
 
 The result of calling the `loadStrings()` function is an array with the lines of the text file, so, if we use a `for()` loop we can iterate through the resulting array and draw one line of the text file at a time:
 

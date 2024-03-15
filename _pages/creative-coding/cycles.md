@@ -61,7 +61,7 @@ Let's start by creating a variable called `periodSec` that keeps track of how of
 
 $$periodFrames = periodSeconds \times frameRate$$
 
-`period` is the number of frames our action will last before it repeats. `frameRate` can be obtained in p5js using the [`getTargetFrameRate()`](https://p5js.org/reference/#/p5/getTargetFrameRate) function.
+`period` is the number of frames our action will last before it repeats. `frameRate` can be obtained in p5.js using the [`getTargetFrameRate()`](https://p5js.org/reference/#/p5/getTargetFrameRate) function.
 
 Now, we can think about the speed of our circle in units of $$\frac{pixels}{frames}$$ as:
 
@@ -98,7 +98,7 @@ Besides that we just copied the equation from wikipedia and it works:
 
 {% include p5-editor.html id="PImIcoREP" %}
 
-This works for any periodic functions that is expressed in terms of $$amplitude$$, $$period$$ and $$t$$. We can easily turn them into p5js code.
+This works for any periodic functions that is expressed in terms of $$amplitude$$, $$period$$ and $$t$$. We can easily turn them into p5.js code.
 
 This equation, for example:
 

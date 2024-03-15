@@ -5,7 +5,7 @@ We are now going to look at p5js's functions for accessing and manipulating the 
 
 Before we get started, it might be helpful to review our [Browser and JavaScript](../../intro/javascript/) material.
 
-First, The DOM (Document Object Model) is just the official way of referring to the collection of HTML elements that make up a webpage. These are the `<p>`, `<img>` and `<a>` elements for holding text, images and links, and also some more complex elements, like `<canvas>` elements, where our p5js sketch gets drawn or `<video>` and `<audio>` elements for displaying different kinds of media on a webpage.
+First, The DOM (Document Object Model) is just the official way of referring to the collection of HTML elements that make up a webpage. These are the `<p>`, `<img>` and `<a>` elements for holding text, images and links, and also some more complex elements, like `<canvas>` elements, where our p5.js sketch gets drawn or `<video>` and `<audio>` elements for displaying different kinds of media on a webpage.
 
 <div class="scaled-images left s75">
   <img src = "{{ '/assets/images/creative-coding/dom-00.jpg' | relative_url }}"/>
@@ -32,9 +32,9 @@ Elements in a webpage that are *static*, or, don't have to move around or change
 
 Nowadays it's become more common to use frameworks like [Angular](https://angular.io/), [React](https://react.dev/), [Vue](https://vuejs.org/) or [Svelte](https://svelte.dev/) to create webpages with elements that have more complex behaviors, like submitting forms, accessing databases, validating passwords, etc.
 
-And even though p5js is not the best tool to create these kinds of websites and interactions, it provides us with a [bunch of functions](https://p5js.org/reference/#group-DOM) to create and manipulate html elements on the page.
+And even though p5.js is not the best tool to create these kinds of websites and interactions, it provides us with a [bunch of functions](https://p5js.org/reference/#group-DOM) to create and manipulate html elements on the page.
 
-One important thing to note is that, the code for our sketch gets drawn in a `<canvas>` element that is part of our html page. All of the elements that we add with the p5js DOM functions will get added to our html page, and *NOT* our canvas. They're two separate, but connected worlds. And even though we can make DOM elements show up on top of our canvas, they're not *in* our canvas.
+One important thing to note is that, the code for our sketch gets drawn in a `<canvas>` element that is part of our html page. All of the elements that we add with the p5.js DOM functions will get added to our html page, and *NOT* our canvas. They're two separate, but connected worlds. And even though we can make DOM elements show up on top of our canvas, they're not *in* our canvas.
 
 Keep that in mind as we go through these examples and start using DOM elements in our sketches.
 
@@ -43,17 +43,17 @@ We can add links to our sketch like this:
 
 {% include p5-editor.html id="0Z8_vyT_f" %}
 
-And we can use our p5js `draw()` and `mouseClick()` functions to dynamically calculate the position for a link, or to dynamically keep adding links as we click:
+And we can use our p5.js `draw()` and `mouseClick()` functions to dynamically calculate the position for a link, or to dynamically keep adding links as we click:
 
 {% include p5-editor.html id="ahTW1X3gU" %}
 
 This is fine and fun, but unless there's a real good reason for creating these kinds of static elements dynamically in our p5js, it's best to have them defined and positioned in the html file, and styled with css.
 
-Creating elements to display dynamic content that comes from the p5js sketch could be more useful. For example, we can create elements to display our mouse's position and the current frame rate:
+Creating elements to display dynamic content that comes from the p5.js sketch could be more useful. For example, we can create elements to display our mouse's position and the current frame rate:
 
 {% include p5-editor.html id="sQ7CuXm9B" %}
 
-The same thing can be achieved using the p5js `text()` function, but what's nice about using a [`p5.Element`](https://p5js.org/reference/#/p5.Element) is that it's easy to detect interactions on those elements by attaching listeners to their `mousePressed()`, `mouseOver()`, etc, events:
+The same thing can be achieved using the p5.js `text()` function, but what's nice about using a [`p5.Element`](https://p5js.org/reference/#/p5.Element) is that it's easy to detect interactions on those elements by attaching listeners to their `mousePressed()`, `mouseOver()`, etc, events:
 
 {% include p5-editor.html id="eEUbnkAGI" %}
 

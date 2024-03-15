@@ -15,11 +15,11 @@ In order to do that we'll make use of a file format called [JSON](https://en.wik
 ]
 ```
 
-In this case we have an array of objects, each of which has $$3$$ key-value pairs. The syntax is almost exactly like in JavaScript, with the only exception being that the keys in a JSON file have to have the quote symbols (" ") around their names. It's no surprise that we can almost just read a JSON file directly into a JavaScript variable, and even less surprising that p5js has some functions that will help us do just that.
+In this case we have an array of objects, each of which has $$3$$ key-value pairs. The syntax is almost exactly like in JavaScript, with the only exception being that the keys in a JSON file have to have the quote symbols (" ") around their names. It's no surprise that we can almost just read a JSON file directly into a JavaScript variable, and even less surprising that p5.js has some functions that will help us do just that.
 
 The [`loadJSON()`](https://p5js.org/reference/#/p5/loadJSON) function takes the location of a JSON file (stored locally or online), and returns a JavaScript object with the data from the file. Since the file could be large, or be coming from somewhere else on the internet, it could take a long time to download and cause our sketch to freeze and become unresponsive.
 
-One way to avoid this situation is to define a special functions (like `setup()` and `draw()`) that p5js will use to fetch and load any data before it starts running any other part of our code.
+One way to avoid this situation is to define a special functions (like `setup()` and `draw()`) that p5.js will use to fetch and load any data before it starts running any other part of our code.
 
 If we look at the documentation for the [`preload()`](https://p5js.org/reference/#/p5/preload) function, it says that it's a function that is called once, immediately before `setup()`, that guarantees that any data loading happens before we start the sketch. It's also important to note that, according to the documentation, *Nothing besides load calls (`loadImage()`, `loadJSON()`, `loadFont()`, etc.) should be inside the preload function*.
 
@@ -41,7 +41,7 @@ Some things to note about the above sketch:
 
 1. We are loading a local file, so the location that we pass to the `loadJSON()` function specifies a file called `Winemag_100.json` that is located in the same folder as our `sketch.js` file.
 
-2. We first load the JSON into a variable called `dataObject` and then in `setup()` use that variable and some JavaScript functions to actually put the contents of the file into an array that we can iterate. This is not necessary all the time, only when our file specifies an array and we want to work with an array. If we look at the p5js documentation for [`loadJSON()`](https://p5js.org/reference/#/p5/loadJSON), it says: *Note that even if the JSON file contains an Array, an Object will be returned*. We use: `Object.values(dataObject)` to turn the Object into an array.
+2. We first load the JSON into a variable called `dataObject` and then in `setup()` use that variable and some JavaScript functions to actually put the contents of the file into an array that we can iterate. This is not necessary all the time, only when our file specifies an array and we want to work with an array. If we look at the p5.js documentation for [`loadJSON()`](https://p5js.org/reference/#/p5/loadJSON), it says: *Note that even if the JSON file contains an Array, an Object will be returned*. We use: `Object.values(dataObject)` to turn the Object into an array.
 
 3. During `setup()` we are iterating through all of the data points in our dataset to determine the minimum and maximum values for $$2$$ properties (`price` and `points`). This is needed so we can use `map()` in `draw()` to scale these values and use the whole canvas to visualize the data.
 
@@ -80,7 +80,7 @@ The name of the parameters (sometimes called *features* or *fields*) are specifi
 
 It's good to know about both JSON and CSV because sometimes the data you want to use is only available in one of the two formats.
 
-Luckily, p5js also has functions to help us load, process and use tabular data in CSV files. The [`loadTable()`](https://p5js.org/reference/#/p5/loadTable) function is very similar to `loadJSON()`, because it downloads the file, reads it, and organizes the data in a way that is easier to access in the rest of our sketch.
+Luckily, p5.js also has functions to help us load, process and use tabular data in CSV files. The [`loadTable()`](https://p5js.org/reference/#/p5/loadTable) function is very similar to `loadJSON()`, because it downloads the file, reads it, and organizes the data in a way that is easier to access in the rest of our sketch.
 
 Just like `loadJSON()`, `loadTable()` should also be placed inside our `preload()` function.
 ```js

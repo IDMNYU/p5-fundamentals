@@ -2,7 +2,7 @@
 title: Sound Files
 ---
 ## NOTE:
-To use the sound library, make sure to include the [p5.sound library](https://p5js.org/reference/#/libraries/p5.sound) in your project's `index.html` file after the p5js file, like this:
+To use the sound library, make sure to include the [p5.sound library](https://p5js.org/reference/#/libraries/p5.sound) in your project's `index.html` file after the p5.js file, like this:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
@@ -88,7 +88,7 @@ One more last thing, hopefully a fun one.
 
 Let's visualize the songs while they're playing.
 
-The p5js `SoundFile` object doesn't seem to have any function or variable that tells us the exact values of the samples that are currently playing. The closest thing it has is a [`getPeaks()`](https://p5js.org/reference/#/p5.SoundFile/getPeaks) function that gives us a simplified, resampled, version of values for the entire sound file.
+The p5.js `SoundFile` object doesn't seem to have any function or variable that tells us the exact values of the samples that are currently playing. The closest thing it has is a [`getPeaks()`](https://p5js.org/reference/#/p5.SoundFile/getPeaks) function that gives us a simplified, resampled, version of values for the entire sound file.
 
 The default length of the array returned by `getPeaks()` is $$5$$ times the canvas `width`, so no matter how long the song is, the length of the peaks array will always be the same. The numbers in this array represent samples, which are like the pixels of sound files. In this case they have been normalized to a range of $$[-1, 1]$$, where numbers with larger absolute values represent louder samples.
 
@@ -101,7 +101,7 @@ function toWidth(_peakVal) {
 waveDiameters = song.getPeaks().map(toWidth);
 ```
 
-Since `song.getPeaks()` returns an array of samples, we can use the JavaScript array special function [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to transform every sample in the array. The `toWidth()` function that we use to do the actual mapping of each array value uses the p5js [`map()`](https://p5js.org/reference/#/p5/map) function internally. They are both named `map()`, they both transform numbers from one range of values into another, but they are different functions.
+Since `song.getPeaks()` returns an array of samples, we can use the JavaScript array special function [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to transform every sample in the array. The `toWidth()` function that we use to do the actual mapping of each array value uses the p5.js [`map()`](https://p5js.org/reference/#/p5/map) function internally. They are both named `map()`, they both transform numbers from one range of values into another, but they are different functions.
 
 Once we have that array of ellipse diameters, we just have to know which one to draw at each frame. That's this code here in `draw()`:
 ```js

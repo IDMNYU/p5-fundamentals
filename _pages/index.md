@@ -37,8 +37,8 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
 {% assign title = "Creative Coding:The browser as a canvas" %}
 {% capture topics %}
   transformations
-  interaction
-  animation
+  interactions
+  animations
   state
   more-random
   cycles

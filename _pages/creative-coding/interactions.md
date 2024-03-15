@@ -1,5 +1,5 @@
 ---
-title: Interaction
+title: Interactions
 ---
 # Builtin Functions and Variables
 

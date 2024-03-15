@@ -44,12 +44,14 @@ title: "p5-fundamentals | Basics of working with p5js at IDM"
   cycles
   sincos
   vectors
+  3d
   the-dom
   images
   videos
   cv
   sound-files
   sound-processing
+  sound-synthesis
 {% endcapture %}
 {% include home-section.html section="creative-coding" title=title topics=topics %}
 

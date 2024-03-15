@@ -23,7 +23,7 @@ permalink: /
   counters
   functions
   random
-  math
+  maths
   arrays
   strings
   objects

@@ -1,0 +1,25 @@
+{% assign url = include.url %}
+
+{% unless url contains "images/" %}
+  {% assign url = "images/" | append: url %}
+{% endunless %}
+{% unless url contains "/assets/" %}
+  {% assign url = "/assets/" | append: url %}
+{% endunless %}
+
+{% assign webm = url | replace:"mp4", "webm" %}
+{% assign mp4 = url | replace:"webm", "mp4" %}
+
+{% assign width = include.width | default: "100" %}
+
+{% assign autoplay = "autoplay" %}
+{% if include.noautoplay %}
+  {% assign autoplay = "controls" %}
+{% endif %}
+
+<div class="video-container w{{ width }}">
+  <video class="video" playsinline muted loop {{ autoplay }}>
+    <source src="{{ webm | relative_url }}" type="video/webm">
+    <source src="{{ mp4 | relative_url }}" type="video/mp4">
+  </video>
+</div>

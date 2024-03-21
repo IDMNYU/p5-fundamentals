@@ -9,21 +9,11 @@ Now, let's see how to start a p5.js project.
 
 The most basic way of starting a project is to just create an empty directory somewhere on our computer:
 
-<div class="video-container w66">
-  <video class="video" playsinline autoplay muted loop>
-    <source src="{{ '/assets/images/p5/setup-00.webm' | relative_url }}" type="video/webm">
-    <source src="{{ '/assets/images/p5/setup-00.mp4' | relative_url }}" type="video/mp4">
-  </video>
-</div>
+{% include video.html url="p5/setup-00.webm" width="66" %}
 
 Next, we can open this directory in VSCode and create two empty files inside it: `index.html` and `sketch.js`.
 
-<div class="video-container w100">
-  <video class="video" playsinline autoplay muted loop>
-    <source src="{{ '/assets/images/p5/setup-01.webm' | relative_url }}" type="video/webm">
-    <source src="{{ '/assets/images/p5/setup-01.mp4' | relative_url }}" type="video/mp4">
-  </video>
-</div>
+{% include video.html url="p5/setup-01.webm" %}
 
 ### html
 
@@ -91,20 +81,10 @@ Luckily, we can use our VSCode IDE and the [Live Server](https://marketplace.vis
 
 All we have to do is navigate to our project directory in VSCode and click the "Go Live" button towards the lower right-hand side of the window. This will start a local server and open a browser with our project:
 
-<div class="video-container w100" style="overflow-x: hidden;">
-  <video class="video" playsinline autoplay muted loop style="margin-left:-2px;">
-    <source src="{{ '/assets/images/p5/setup-02.webm' | relative_url }}" type="video/webm">
-    <source src="{{ '/assets/images/p5/setup-02.mp4' | relative_url }}" type="video/mp4">
-  </video>
-</div>
+{% include video.html url="p5/setup-02.webm" %}
 
 And now that the server is running, any changes we make to our project code will be reflect on the browser:
 
-<div class="video-container w100" style="overflow-x: hidden;">
-  <video class="video" playsinline autoplay muted loop style="margin-left:-2px;">
-    <source src="{{ '/assets/images/p5/setup-03.webm' | relative_url }}" type="video/webm">
-    <source src="{{ '/assets/images/p5/setup-03.mp4' | relative_url }}" type="video/mp4">
-  </video>
-</div>
+{% include video.html url="p5/setup-03.webm" %}
 
 And that URL for our project, `http://127.0.0.1`, is only accessible from our own computer, so the project is ready to be hosted online, but isn't yet on the internet.

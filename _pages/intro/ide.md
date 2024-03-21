@@ -30,12 +30,7 @@ It can be downloaded [here](https://code.visualstudio.com/#alt-downloads), and t
 
 Installing extensions on VS Code is easy:
 
-<div class="video-container w100">
-  <video class="video" playsinline autoplay muted loop>
-    <source src="{{ '/assets/images/intro/ide-plugins.webm' | relative_url }}" type="video/webm">
-    <source src="{{ '/assets/images/intro/ide-plugins.mp4' | relative_url }}" type="video/mp4">
-  </video>
-</div>
+{% include video.html url="intro/ide-plugins.webm" %}
 
 The following extensions are really useful for developing HTML/JavaScript and p5.js projects:
 

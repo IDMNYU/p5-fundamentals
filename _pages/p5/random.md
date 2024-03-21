@@ -29,7 +29,7 @@ There are a few ways to fix this, but let's start by using the `random()` functi
 
 If we image a number line and $$50$$ random points along that line, about $$25$$ of them will be less than $$0.5$$ and the rest will be greater than $$0.5$$:
 
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src="{{ '/assets/images/p5/random-lottery-00.jpg' | relative_url }}">
 </div>
 
@@ -63,7 +63,7 @@ Gold and blue circles happen with similar frequency, but it seems like there are
 
 We implemented something like this:
 
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src="{{ '/assets/images/p5/random-lottery-01.jpg' | relative_url }}">
 </div>
 
@@ -71,7 +71,7 @@ What if we draw a random number between $$0$$ and $$1$$ and save it in a variabl
 
 We're now implementing something like this:
 
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src="{{ '/assets/images/p5/random-lottery-02.jpg' | relative_url }}">
 </div>
 
@@ -111,7 +111,7 @@ Doing a lottery selection like this is a bit cumbersome, but it gives us a way t
 Let's say we want to use six colors: black, white, gold, blue, green, grey and we want black one-third of the time, white one-quarter of the time and the other colors one-tenth of the time. To work with values that add up to $$100\%$$ let's use black: $$35\%$$, white: $$25\%$$, and $$10\%$$ for all others:
 
 Something like this:
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src="{{ '/assets/images/p5/random-lottery-03.jpg' | relative_url }}">
 </div>
 

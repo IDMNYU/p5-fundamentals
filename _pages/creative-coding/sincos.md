@@ -21,7 +21,7 @@ But, what's important to us here is to remember that both the sine and cosine fu
 In the case of sine, as the angle $$\theta$$ grows from $$0$$ to $$\frac{\pi}{2}$$, $$sin(\theta)$$ grows from $$0$$ to $$1$$. As $$\theta$$ grows from $$\frac{\pi}{2}$$ to $$\pi$$, $$sin(\theta)$$ decreases from $$1$$ to $$0$$. As $$\theta$$ grows from $$\pi$$ to $$\frac{3\pi}{2}$$, $$sin(\theta)$$ goes from $$0$$ to $$-1$$, and finally as $$\theta$$ grows from $$\frac{3\pi}{2}$$ to $$2\pi$$, $$sin(\theta)$$ increases from $$-1$$ to $$0$$. After that, as $$\theta$$ keeps growing, to $$3\pi$$, $$4\pi$$, $$5\pi$$, etc, the values of $$sin(\theta)$$ will keep repeating and always be between $$[-1 , 1]$$. In other words: \$$sin(\theta + 2\pi) = sin(\theta)$$
 
 Visually:
-<div class="scaled-images s75">
+<div class="scaled-images w75">
   <img src="{{ '/assets/images/creative-coding/sine-00.jpg' | relative_url }}">
 </div>
 

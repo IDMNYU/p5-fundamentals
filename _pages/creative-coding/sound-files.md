@@ -37,7 +37,7 @@ We are going to have $$3$$ buttons: skip to beginning, play/pause and stop. Our 
 
 This state diagram specifies the changes related to $$2$$ of our buttons:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/sound-files-00.jpg' | relative_url }}"/>
 </div>
 
@@ -51,7 +51,7 @@ Likewise, in the `PAUSED` state, pressing the `stop` button changes the state to
 
 Now we can add what happens when the `back` button is pressed:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/sound-files-01.jpg' | relative_url }}"/>
 </div>
 

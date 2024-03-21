@@ -21,7 +21,7 @@ We can use [`resize()`](https://p5js.org/reference/#/p5.Image/resize), another m
 
 After we scale our image we can compute some offsets to center it on the canvas. These offsets are half of the difference between the image size and the canvas size:
 
-<div class="scaled-images s100 left">
+<div class="scaled-images left w100">
   <img src = "{{ '/assets/images/creative-coding/images-00.jpg' | relative_url }}"/>
 </div>
 
@@ -54,13 +54,13 @@ There are two important things to note here:
 
 If we had a $$3$$ x $$3$$ image with $$9$$ pixels, the beginning of its pixel array would look something like this:
 
-<div class="scaled-images s100 left">
+<div class="scaled-images left w100">
   <img src = "{{ '/assets/images/creative-coding/images-01.jpg' | relative_url }}"/>
 </div>
 
 And the association between image pixel indices $$(x, y)$$ and array index $$i$$:
 
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/images-02.jpg' | relative_url }}"/>
 </div>
 
@@ -68,7 +68,7 @@ What this means is that, if we want to iterate over our image and do something w
 
 Let's start with the simpler case, where we don't care about $$(x, y)$$ position, but just want to manipulate every pixel in our array with the same logic, independent of its location. We'll have to iterate over all of the values in the pixel array, but instead of incrementing our loop index by $$1$$ we will increment it by $$4$$. This way our `i` variable always points to the first of the $$4$$ color values for a pixel.
 
-<div class="scaled-images s100 left">
+<div class="scaled-images left w100">
   <img src = "{{ '/assets/images/creative-coding/images-03.jpg' | relative_url }}"/>
 </div>
 
@@ -119,7 +119,7 @@ Now the only thing we have to do is get the color values at the image's $$(x, y)
 
 Let's consider the following $$4$$ x $$3$$ image with pixel indices $$(x, y)$$, and its corresponding array of pixel values with index $$i$$:
 
-<div class="scaled-images s100 left">
+<div class="scaled-images left w100">
   <img src = "{{ '/assets/images/creative-coding/images-04.jpg' | relative_url }}"/>
 </div>
 
@@ -141,7 +141,7 @@ Just one more adjustment, because unfortunately our image pixel array doesn't on
 
 When we increment $$x$$ by $$1$$ we actually want to increment our $$i$$ by $$4$$ to get to the next pixel's first color value. Likewise, when $$y$$ increases by $$1$$ we want to increment $$i$$ by $$4 \times width$$, so we again land on the first color value of a pixel:
 
-<div class="scaled-images s100 left">
+<div class="scaled-images left w100">
   <img src = "{{ '/assets/images/creative-coding/images-05.jpg' | relative_url }}"/>
 </div>
 

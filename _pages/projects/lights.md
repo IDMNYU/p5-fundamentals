@@ -15,6 +15,7 @@ This mini-project draws on materials from:
 
 ## Point Sources
 
+TODO
 
 ## Points and Lines
 
@@ -24,7 +25,7 @@ This is the shortest distance from a given point to any point on an infinite str
 
 It's the distance $$d$$ between $$(X, Y)$$ and the line $$y = \frac{m}{n}x + b$$ on the drawing below:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/projects/lights-00.jpg' | relative_url }}"/>
 </div>
 

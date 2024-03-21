@@ -7,7 +7,7 @@ Let's now take a look at other ways we can use these and other [trigonometric fu
 
 As a review: trigonometric functions are functions that, along with the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem), define relations between the angles of a right triangle and the length of its sides:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-00.jpg' | relative_url }}"/>
 </div>
 
@@ -15,7 +15,7 @@ As a review: trigonometric functions are functions that, along with the [Pythago
 
 We can use these relations to derive formulas for translating between [Cartesian](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) and [polar](https://en.wikipedia.org/wiki/Polar_coordinate_system) coordinate systems.
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-01.jpg' | relative_url }}"/>
 </div>
 
@@ -25,7 +25,7 @@ Just like we can use `for()` loops to iterate over the $$(x, y)$$ cartesian coor
 
 In this example, our outer `for()` loop iterates through different values for how far we want to be from the center of the canvas, in steps of $$20$$ pixels, and the inner `for()` loop iterates through all possible angles from the positive x-axis, in steps of $$1^{\circ}$$:
 
-<div class="scaled-images left s100">
+<div class="scaled-images left w100">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-02.jpg' | relative_url }}"/>
 </div>
 
@@ -203,7 +203,7 @@ Polar coordinates are lots of fun, and can also be very useful when we need to c
 
 If we image two points on our screen, with coordinates $$(x_0, y_0)$$ and $$(x_1, y_1)$$, we can get the distance between them by using the Pythagorean theorem:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-03.jpg' | relative_url }}"/>
 </div>
 
@@ -215,7 +215,7 @@ In this sketch the distance between two moving points is calculated using the fo
 
 Similarly, we can use the formula that calculates the polar angle of a point to get the angle between two points:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-04.jpg' | relative_url }}"/>
 </div>
 
@@ -223,7 +223,7 @@ Or, the angle between a point and itself in the future.
 
 If a moving point at $$(x, y)$$ has velocity $$v_x$$ and $$v_y$$, its position in the near future will be $$(x + v_x, y + v_y)$$. We can calculate the angle between the point now and the point in the future to get its heading angle:
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-05.jpg' | relative_url }}"/>
 </div>
 
@@ -237,7 +237,7 @@ p5.js actually has a class called [`Vector`](https://p5js.org/reference/#/p5.Vec
 
 This drawing shows two vectors/points and if we subtract $$_1$$ from $$v_0$$, we get a third vector that holds information about the distance and direction between them.
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/trigonometry-06.jpg' | relative_url }}"/>
 </div>
 

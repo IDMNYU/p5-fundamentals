@@ -21,7 +21,7 @@ In this mini-project we are going use classes to implement a kind of glitchy and
 
 We have a phrase and we want to repeatedly write it on our canvas, one letter at a time:
 
-<div class="scaled-images s75">
+<div class="scaled-images w75">
   <img src = "{{ '/assets/images/projects/all_work_and_no_play.jpg' | relative_url }}"/>
 </div>
 

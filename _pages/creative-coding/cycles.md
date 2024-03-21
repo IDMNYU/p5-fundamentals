@@ -5,7 +5,7 @@ We've seen how to loop through elements and repeat code execution using `for()` 
 
 One of the simplest ways to create a cycle is to think of a way to periodically reset a variable that just grows and grows. Think of the way an analog clock works: time just keeps going forward and growing, but the longer arm of the clock comes back to its beginning position every 60 minutes, and the shorter arm resets every 12 hours:
 
-<div class="scaled-images s33">
+<div class="scaled-images w33">
   <img src="https://cdn.shopify.com/s/files/1/0600/7023/2109/products/orville-clock-wall-decor-2.jpg">
 </div>
 

@@ -102,13 +102,13 @@ Kind of works, but it looks like we're only ever updating half of the pixels. Th
 
 What's happening is that we're only ever updating pixels that are in even rows AND even columns, or odd rows AND odd columns, but pixels in even rows and odd columns or odd rows and even columns don't ever get updated.
 
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/projects/pixel-groups-2.jpg' | relative_url }}"/>
 </div>
 
 What we have to do is split the pixels into $$4$$ groups, and iterate through every pixel in each of these groups every other $$4^{th}$$ frame.
 
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/projects/pixel-groups-4.jpg' | relative_url }}"/>
 </div>
 
@@ -169,12 +169,12 @@ Since we're going to want to control all $$3$$ dimensions of every vertex in our
 To put this into code, we just have to realize that when drawing row `y`, we actually also need vertices that would be at row `y + gridWidth`, so we're always drawing pairs of vertices.
 
 Order of visited locations for drawing rectangles:
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/projects/quad-strip-00.jpg' | relative_url }}"/>
 </div>
 
 Order of visited vertices for drawing `QUAD_STRIPS`:
-<div class="scaled-images s75 left">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/projects/quad-strip-01.jpg' | relative_url }}"/>
 </div>
 

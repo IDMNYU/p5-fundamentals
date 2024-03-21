@@ -7,7 +7,7 @@ Before we get started, it might be helpful to review our [Browser and JavaScript
 
 First, The DOM (Document Object Model) is just the official way of referring to the collection of HTML elements that make up a webpage. These are the `<p>`, `<img>` and `<a>` elements for holding text, images and links, and also some more complex elements, like `<canvas>` elements, where our p5.js sketch gets drawn or `<video>` and `<audio>` elements for displaying different kinds of media on a webpage.
 
-<div class="scaled-images left s75">
+<div class="scaled-images left w75">
   <img src = "{{ '/assets/images/creative-coding/dom-00.jpg' | relative_url }}"/>
 </div>
 

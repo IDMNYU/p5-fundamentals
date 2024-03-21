@@ -113,6 +113,102 @@ If we now check the history we'll see that we have a new commit, that shows exac
 
 If we make a mistake and create a commit before we meant to, or if we accidentally add the wrong code to a commit, we can always *undo* the last commit. This will restore our code to whatever it was right before the commit, allowing us to go back into our IDE to fix anything before updating the commit message (if necessary) and re-committing:
 
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ '/assets/images/intro/git-video-05.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/git-video-05.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
+
+## Branches
+
+Let's see how to create parallel *branches* of our project to experiment and test different versions of our code.
+
+We'll start with a common *base* commit where we are using `black` background and `white` fills in our project:
+
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ '/assets/images/intro/git-video-06.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/git-video-06.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
+
+Now's let's create a *branch* of our project where we can experiment with different colors.
+
+<div class="scaled-images left w75">
+  <img src="{{ '/assets/images/intro/git-03.jpg' | relative_url }}">
+</div>
+
+We'll call the new branch `bright-colors`. Once created, all of the history from the `main` branch up until this point will be copied into the new branch, but from this point forward they will most likely have different commit histories. Once we're in the new branch, any changes we commit will only be added to this branch's history:
+
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ '/assets/images/intro/git-video-07.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/git-video-07.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
+
+We can have many parallel branches, starting from the same *base* commit, or we can branch from branches.
+
+<div class="scaled-images left w75">
+  <img src="{{ '/assets/images/intro/git-04.jpg' | relative_url }}">
+</div>
+
+In our example, let's go back to our `main` branch and create a third branch called `pastel-colors` to experiment with another color palette. The workflow is the same as before: create the branch, change the code, commit to the new history:
+
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ '/assets/images/intro/git-video-08.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/git-video-08.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
+
+We now have access to all three versions of our code. Nothing was lost, we don't have to give our files funny names, and all of the changes are documented in our commit histories.
+
+Branching can also be useful when adding features or making extensive and complex changes to a large codebase because they create a separate space where we can easily track our progress and make sure we're not changing parts of the code that are not related to our task.
+
+Either way, after we've implemented some new features or experimented with multiple options for our project, we can *merge* one branch into another, basically combining their histories into one common history.
+
+<div class="scaled-images left w75">
+  <img src="{{ '/assets/images/intro/git-05.jpg' | relative_url }}">
+</div>
+
+In our example, after we explore and test our three color palettes, lets say we decide that the `bright-colors` palette is actually the best and we want that to become the `main` version of our code. We just have to use the merge option to bring the changes from `bright-colors` into `main`:
+
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ '/assets/images/intro/git-video-09.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/git-video-09.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
+
+## Conflicts
+
+When the histories between two branches diverge by too much, or when the exact same lines of code are changed in different branches, there could be *conflicts* that prevent a merge because `git` won't know how to automatically combine those changes.
+
+<div class="scaled-images left w75">
+  <img src="{{ '/assets/images/intro/git-06.jpg' | relative_url }}">
+</div>
+
+Conflicts are more common when working with other people, but they can happen between branches when working alone.
+
+In our example, if we try to merge the `pastel-colors` branch into `main` after we've merged `bright-colors` we'll get a conflict because those two branches changed the exact same lines of code. In this situation, `git` will stop the merge and ask us to *resolve* the conflict before it can continue. Our IDE has a nice built-in interface for selecting which of the sets of changes we want to keep. After that, we go back to the GitHub app and finish the merge:
+
+<div class="video-container w100">
+  <video class="video" playsinline autoplay muted loop>
+    <source src="{{ '/assets/images/intro/git-video-10.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/images/intro/git-video-10.mp4' | relative_url }}" type="video/mp4">
+  </video>
+</div>
+
+## Git Review
+
+- Repository: our project. The set of files under version control and their change history.
+- Commit: A single point in our history, made up of related changes and a descriptive message.
+- History: Collection of commits.
+- Branch: A separate version of the repository with its own history. Useful for tracking and testing different versions of our code or for implementing large complex changes separately from the main version of the code.
+- Merge: Combine the histories of two branches.
+
 
 {% comment %} <!--
 ## References

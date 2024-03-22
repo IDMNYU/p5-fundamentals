@@ -210,9 +210,11 @@ And between the `production` and `dev` branches we can have a `test` or `staging
 
 And now we always work in the `dev` branch. Code, save, commit, code, save, commit, push, code, commit, push... etc etc etc.
 
-Every once in a while `dev` gets merged into `test`, the code is tested, errors are fixed, and, eventually `test` gets merged into `prod`.
+Every once in a while `dev` gets merged into `test`, the code is tested, errors are fixed, and, eventually `test` gets merged into `prod`, and any changes made directly to `test` get branched into `dev`.
 
-IMG
+<div class="scaled-images left w100">
+  <img src="{{ '/assets/images/intro/github-02.jpg' | relative_url }}">
+</div>
 
 ## Pull Requests
 

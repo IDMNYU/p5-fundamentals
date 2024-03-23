@@ -9,8 +9,8 @@ This mini-project draws on materials from:
 - [Conditionals](../../p5/conditionals/)
 - [Arrays](../../p5/arrays/)
 - [Classes](../../p5/classes/)
-- [Interactions](../../creative-coding/interaction/)
-- [Animation](../../creative-coding/animation/)
+- [Interactions](../../creative-coding/interactions/)
+- [Animations](../../creative-coding/animations/)
 - [State Variables](../../creative-coding/state/)
 - [Images](../../creative-coding/images/)
 

@@ -9,7 +9,7 @@ This mini-project draws on materials from:
 - [Shapes and Colors](../../p5/drawing/)
 - [Drawing Patterns](../../p5/patterns/)
 - [Loops as Counters](../../p5/counters/)
-- [Translations and Transformations](../../creative-coding/transforms/)
+- [Translations and Transformations](../../creative-coding/transformations/)
 
 ## Tiling
 

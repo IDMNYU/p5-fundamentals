@@ -12,10 +12,10 @@ This mini-project draws on materials from:
 - [Functions](../../p5/functions/)
 - [Arrays](../../p5/arrays/)
 - [Classes](../../p5/classes/)
-- [Translations and Transformations](../../creative-coding/transforms/)
-- [Interactions](../../creative-coding/interaction/)
-- [Animation](../../creative-coding/animation/)
-- [State Variables](../../p5/state/)
+- [Translations and Transformations](../../creative-coding/transformations/)
+- [Interactions](../../creative-coding/interactions/)
+- [Animations](../../creative-coding/animations/)
+- [State Variables](../../creative-coding/state/)
 
 Let's get started.
 

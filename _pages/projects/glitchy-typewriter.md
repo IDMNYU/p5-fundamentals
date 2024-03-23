@@ -8,12 +8,12 @@ This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
 - [Loops as Counters](../../p5/counters/)
-- [Random](../../p5/random)
-- [Math](../../p5/math/)
+- [Random](../../p5/random/)
+- [Maths](../../p5/maths/)
 - [Arrays](../../p5/arrays/)
 - [Strings](../../p5/strings/)
 - [Classes](../../p5/classes/)
-- [Animation](../../creative-coding/animation/)
+- [Animations](../../creative-coding/animations/)
 
 ## Typing
 

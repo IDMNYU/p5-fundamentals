@@ -9,8 +9,8 @@ This mini-project draws on materials from:
 - [Drawing Patterns](../../p5/patterns/)
 - [Loops as Counters](../../p5/counters/)
 - [Random](../../p5/random/)
-- [Interaction](../../creative-coding/interaction/)
-- [Animation](../../creative-coding/animation/)
+- [Interactions](../../creative-coding/interactions/)
+- [Animations](../../creative-coding/animations/)
 - [Noise](../../creative-coding/more-random/)
 - [Images](../../creative-coding/images/)
 

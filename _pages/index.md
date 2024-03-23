@@ -62,5 +62,6 @@ permalink: /
   glitchy-typewriter
   sprites
   terrain
+  lights
 {% endcapture %}
 {% include home-section.html section="projects" title=title topics=topics %}

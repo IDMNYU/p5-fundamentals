@@ -65,6 +65,6 @@ Without worrying too much about the details, but just to check that whatever we 
 
 {% include p5-editor.html id="P25aS7yev" %}
 
-That special `frameCount` keyword keeps track of how many times our code has executed and we can that value to draw our ellipses at a slightly different location every time.
+That special `frameCount` keyword keeps track of how many times our code has executed and we can use that value to draw our ellipses at a slightly different location every time.
 
 We'll sometimes refer to each execution of the `draw()` function as a *frame* because it is often used to redraw our entire canvas every time it runs, just like a film or flip-book animation frame.

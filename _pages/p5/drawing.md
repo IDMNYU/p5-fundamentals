@@ -149,8 +149,13 @@ So now, we can use this drawing as reference to help us draw some partial ellips
 
 ## Non-regular and Custom Shapes
 
-shape with vertex
+p5.js has a method for allowing us to draw custom and non-regular shapes.
 
+First, we call the [`beginShape()`](https://p5js.org/reference/#/p5/beginShape) function, then we add as many vertices as we want to our shape, with the [`vertex()`](https://p5js.org/reference/#/p5/vertex) function, in the order they are to drawn, and finally we let p5.js know we finished our shape by calling the [`endShape()`](https://p5js.org/reference/#/p5/endShape) function.
+
+We can call `endShape(CLOSE)` to close our shape without having to replicate the first vertex as the last vertex.
+
+{% include p5-editor.html id="e5rBPYVby" %}
 
 
 ## Colors

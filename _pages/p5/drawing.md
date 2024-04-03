@@ -20,7 +20,7 @@ We can see the difference by running the following two sketches:
 
 {% include p5-editor.html id="oL9Ziyev4" %}
 
-And, whether our canvas is created with specific pixel dimensions or using `(windowWidth, windowHeight)`, we can always ask p5.js for the exact size of our canvas by accessing the `width` and `height` *variables*.
+And, whether our canvas is created with specific pixel dimensions or using `(windowWidth, windowHeight)`, we can always ask p5.js for the exact size of our canvas by accessing the [`width`](https://p5js.org/reference/#/p5/width) and [`height`](https://p5js.org/reference/#/p5/height) *variables*.
 
 (clear any cookie warnings and look at the *Console* section after running the sketch below)
 
@@ -36,7 +36,7 @@ Just like `createCanvas()` required two numbers, for $$(width, height)$$, to def
   <img src="{{ '/assets/images/p5/canvas-00.jpg' | relative_url }}">
 </div>
 
-This is useful when we want to specify positions that are relative to the overall size of our canvas. For example, the pixel that's exactly in the center of our canvas can always be specified with coordinates $$(\frac{width}{2}, \frac{height}{2})$$, independent of the exact size of our canvas.
+And now, the p5.js [`width`](https://p5js.org/reference/#/p5/width) and [`height`](https://p5js.org/reference/#/p5/height) variables can be very useful when we want to specify positions that are relative to the overall size of our canvas. For example, the pixel that's exactly in the center of our canvas can always be specified with coordinates $$(\frac{width}{2}, \frac{height}{2})$$, independent of the exact size of our canvas.
 
 Likewise, the pixel furthest away from the origin has coordinates $$(width - 1, height - 1)$$. The $$-1$$ is necessary because even though our canvas is $$width$$ pixels wide and $$height$$ pixels tall, we have a pixel at $$(0, 0)$$, and if the first pixel along the $$x$$ direction is at coordinate $$0$$, the second pixel at coordinate $$1$$, ..., etc, ..., the last pixel will be at coordinate $$width - 1$$.
 
@@ -45,6 +45,113 @@ Likewise, the pixel furthest away from the origin has coordinates $$(width - 1, 
 </div>
 
 ## Drawing Shapes
+
+Now that we know how to use coordinates to specify locations on our canvas we can start drawing.
+
+The p5.js commands [`rect()`](https://p5js.org/reference/#/p5/rect) and [`ellipse()`](https://p5js.org/reference/#/p5/ellipse) can be used to draw rectangles and ellipses, respectively. They're very similar in a lot of ways, but also have some differences worth noting.
+
+In their simplest form, they both take $$3$$ parameters: `x-location`, `y-location` and `size`.
+
+```js
+rect(10, 10, 80);
+ellipse(200, 200, 100);
+```
+
+If we want the shapes to have different proportions, we just have to use a fourth parameter for the `height` of the shape:
+
+```js
+rect(10, 100, 80, 40);
+ellipse(200, 300, 100);
+```
+
+{% include p5-editor.html id="afP8colwV" %}
+
+We can play with the coordinates and sizes on the sketch above ☝️ to gain some familiarity and intuition about the coordinate system and these two functions.
+
+Now, for some of the differences between `rect()` and `ellipse()`. Let's say we want to draw an ellipse to the right of a rectangle. They'll be next to each other, in the same vertical location, so we could try something like this:
+
+```js
+rect(210, 300, 80);
+ellipse(310, 300, 80);
+```
+
+{% include p5-editor.html id="Knyx636O8" %}
+
+# 🤔
+
+Even though the first $$2$$ parameters for `rect()` and `ellipse()` specify `x` and `y` coordinates, what they mean is different. For `rect()`, we specify the top-left corner of our shape and for `ellipse()` we specify its center.
+
+Drawing them next to each other requires some adjusting to the coordinates. We can offset the ellipse's `x` and `y` location by half of its diameter:
+
+```js
+rect(210, 300, 80);
+ellipse(350, 340, 80);
+```
+
+{% include p5-editor.html id="VP8LS3AyI" %}
+
+We can also use the p5.js functions [`rectMode()`](https://p5js.org/reference/#/p5/rectMode) and [`ellipseMode()`](https://p5js.org/reference/#/p5/ellipseMode) to change how rectangles and ellipses are drawn.
+
+To draw rectangles by specifying their center location, we can use
+```js
+rectMode(CENTER);
+```
+
+To draw ellipses by specifying their top-left corner, we can use:
+```js
+ellipseMode(CORNER);
+```
+
+{% include p5-editor.html id="6b8_Md_OH" %}
+
+One thing to note is that once we call `rectMode()` or `ellipseMode()`, every shape that we draw afterwards will be drawn using the mode specified. To undo this, we can call:
+
+```js
+rectMode(CORNER);
+ellipseMode(CENTER);
+```
+
+{% include p5-editor.html id="NQue6BJ0_" %}
+
+Or, better yet, we can just pick one mode in the beginning, whichever we think will be most useful for our sketch, and keep it throughout the whole sketch.
+
+Let's say we want to draw a grid of squares, rectangles and circles. In this situation, where we are starting at the top-left corner of our canvas and drawing to the right and to the bottom, it might be easier to do math for the locations of the top-left corners of our shapes. Since we'll keep the same mode throughout the whole sketch, we can just put `ellipseMode(CORNER)` inside our `setup()` function.
+
+{% include p5-editor.html id="ynFFkUkkY" %}
+
+But, on the other hand, if we are drawing concentric shapes, or placing them relative to the center of the canvas, we might find it easier to use `rectMode(CENTER)` throughout our whole sketch:
+
+{% include p5-editor.html id="ppJz3hsm3" %}
+
+## More Shapes
+
+p5.js has commands for a bunch of [other shapes](https://p5js.org/reference/#group-Shape) besides rectangles and ellipses.
+
+The [`quad()`](https://p5js.org/reference/#/p5/quad) function can be used to draw non-rectangle quadrilaterals by specifying $$4$$ pairs of `x` and `y` coordinates.
+
+Similarly, the [`triangle()`](https://p5js.org/reference/#/p5/triangle) function draws a triangle from $$3$$ pairs of `x` and `y` coordinates.
+
+{% include p5-editor.html id="7QJVfGZhC" %}
+
+The [`arc()`](https://p5js.org/reference/#/p5/arc) function draws partial ellipses, and its first $$4$$ parameters are just like the `ellipse()` parameters for `x` and `y` coordinates, `width` and `height`, but the 5$$^{th}$$ an 6$$^{th}$$ parameters specify the angles of where the arc starts and stops, respectively.
+
+Angles in p5.js are measured in [radians](https://en.wikipedia.org/wiki/Radian) in relation to the positive `x` direction. And because our `y` values increase as we go down the canvas, increasing angles will also go towards this positive `y` direction.
+
+How angles are measured in p5.js and degree/radian equivalents for some common angles:
+
+<div class="scaled-images">
+  <img src="{{ '/assets/images/p5/drawing-angles.jpg' | relative_url }}">
+</div>
+
+So now, we can use this drawing as reference to help us draw some partial ellipses:
+
+{% include p5-editor.html id="YzR3THvWu" %}
+
+## Non-regular and Custom Shapes
+
+shape with vertex
+
+
 
 ## Colors
 

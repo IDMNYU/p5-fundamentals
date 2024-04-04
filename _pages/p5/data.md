@@ -78,7 +78,7 @@ zip,rent,bedrooms
 
 The name of the parameters (sometimes called *features* or *fields*) are specified in the first row of the file, and after that, each row represents one data point, with their feature values separated by commas (,).
 
-It's good to know about both JSON and CSV because sometimes the data you want to use is only available in one of the two formats.
+It's good to know about both JSON and CSV because sometimes the data we want to use is only available in one of the two formats.
 
 Luckily, p5.js also has functions to help us load, process and use tabular data in CSV files. The [`loadTable()`](https://p5js.org/reference/#/p5/loadTable) function is very similar to `loadJSON()`, because it downloads the file, reads it, and organizes the data in a way that is easier to access in the rest of our sketch.
 

@@ -157,24 +157,54 @@ We can call `endShape(CLOSE)` to close our shape without having to replicate the
 
 {% include p5-editor.html id="e5rBPYVby" %}
 
-
 ## Colors
 
-### RGB color picker
-<script type="text/p5"
-  data-p5-version="1.9.0"
-  src="{{ site.baseurl }}/assets/sketches/rgbpicker.js"
-  data-preview-width="400"
-  data-preview-height="400"
-  data-width="1600"
-  data-height="600">
-</script>
+We saw some possibilities for drawing shapes.
+
+Let's talk about colors.
+
+The default color mode for p5.js sketches is `RGB`, or `RGBA`, which means that colors are specified using $$3$$ or $$4$$ values between $$0$$ and $$255$$.
+
+The first value corresponds to the amount of red in the color, the second to the amount of green and the third to the amount of blue. Those are the $$3$$ color channels in `RGB` mode because they correspond to the physical pixels on a monitor, which have tiny red, green and blue lights.
+
+The fourth value, when specified, corresponds to the amount of opacity of our color, where $$0$$ is a fully transparent color and $$255$$ fully opaque.
+
+We can also specify `RGB` colors by just using $$1$$ value. This is a shortcut to specify that all three values for the red, green and blue channels are the same, and the result is a grayscale color.
+
+Besides the `background()` command, which we've been using to specify the pink color of our background, we can also use the [`fill()`](https://p5js.org/reference/#/p5/fill) and [`stroke()`](https://p5js.org/reference/#/p5/stroke) commands to specify the fill and outline colors for our shapes.
+
+And, just like the `rectMode()` and `ellipseMode()` commands, once we call `fill()` or `stroke()`, everything drawn afterwards will have the same color.
+
+{% include p5-editor.html id="QtNXHohZt" %}
+
+Colors can also be specified using [html color names](https://www.w3schools.com/tags/ref_colornames.asp), or [hex notation](https://www.w3schools.com/html/html_colors_hex.asp).
+
+Hex notation might be familiar from image-editing software. It contains the exact same information as the `RGB` format, but represented in [hexadecimal notation](https://byjus.com/maths/hexadecimal-number-system/), where each of the $$3$$ channel values between $$0$$ and $$255$$ is represented as a hexadecimal number between `00` and `FF`, where `FF` is the hexadecimal notation for the number $$255$$.
+
+{% include p5-editor.html id="AQDIxUZ39" %}
+
+We can explore the equivalencies between all of these representations in the sketch below.
+
+The sliders can be used to select values for the $$3$$ `RGB` channels of the background color. The `RGB` and hex representations of this color are then written out, and the closest of the $$140$$ html colors is displayed in a rectangle.
+
+{% include p5-editor.html id="GphYuqjLb" %}
 
 ### Color Modes
 
-<!-- 
-## color modes
-<script type="text/p5" src="{{ site.baseurl }}/assets/sketches/colormodes.js" data-preview-width="400" data-height="600"></script>
- -->
+In addition to the default `RGB` color mode, p5.js also allows us to describe colors using the `HSB` color mode.
 
-<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+`HSB` stands for Hue, Saturation and Brightness, and sometimes is also referred to as [`HSV`](https://en.wikipedia.org/wiki/HSL_and_HSV) for Hue-Saturation-Value.
+
+The Hue value describes the color itself: whether it's red, blue, purple, orange, etc. The Saturation and Brightness components are attributes of the color, where Saturation describes how "*colorful*" the color is and Brightness its "*illuminance*". Decreasing the saturation value will make the color more gray, where decreasing its Brightness will make it more black.
+
+In order to enable the `HSB` color mode in p5.js we have to call the [`colorMode()`](https://p5js.org/reference/#/p5/colorMode) function with `HSB` for its parameter: `colorMode(HSB)`.
+
+After that, all of the color commands like `background()`, `fill()` and `stroke()` will interpret their $$3$$ parameters as `HSB` values.
+
+In `HSB` mode the Hue value has a range from $$0$$ to $$359$$, and Saturation and Brightness go from $$0$$ to $$100$$. The unit for Saturation and Brightness is $$\%$$, where the Hue value is represented in degrees. This means that hue values wrap around their range, and a hue value of $$359$$ is actually right next to the hue value of $$0$$.
+
+This sketch is very similar to the previous one, but now the $$3$$ sliders control the Hue, Saturation and Brightness values for our background color.
+
+{% include p5-editor.html id="3ot6sUcoX" %}
+
+Some people find it easier to interpolate between colors and create color transitions in the `HSB` space because we can go through a wide palette of colors by just varying hue value. Where in `RGB` we always have to account for all $$3$$ channels when creating transitions or interpolating colors.

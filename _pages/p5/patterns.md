@@ -1,5 +1,5 @@
 ---
-title: "Loops: Drawing Patterns"
+title: Loops as Patterns
 ---
 ## On Repeat
 

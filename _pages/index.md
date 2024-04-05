@@ -23,7 +23,6 @@ permalink: /
   counters
   functions
   random
-  maths
   arrays
   strings
   objects
@@ -39,6 +38,7 @@ permalink: /
   interactions
   animations
   state
+  maths
   more-random
   cycles
   sincos

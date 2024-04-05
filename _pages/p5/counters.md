@@ -57,7 +57,7 @@ In the more complex case, with the offset, it becomes:
 
 $$x = \frac{i}{10} \times (width - offset) + offset$$.
 
-But, we can also use the p5.js [`map()`](https://p5js.org/reference/#/p5/map) function to do this math for us and keep our code easier to read and maintain (a detailed explanation of `map()` can be found [here](../maths/)).
+But, we can also use the p5.js [`map()`](https://p5js.org/reference/#/p5/map) function to do this math for us and keep our code easier to read and maintain (a detailed explanation of `map()` can be found [here](../../creative-coding/maths/)).
 
 {% include p5-editor.html id="3igLJ6nXo" %}
 

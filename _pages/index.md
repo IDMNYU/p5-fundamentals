@@ -37,11 +37,11 @@ permalink: /
   transformations
   interactions
   animations
-  state
   maths
-  more-random
   cycles
   sincos
+  state
+  more-random
   vectors
   3d
   the-dom

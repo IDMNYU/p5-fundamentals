@@ -3,57 +3,39 @@ title: Cycles
 ---
 We've seen how to loop through elements and repeat code execution using `for()` loops. That structure is good for when we have repetitions with a well-defined beginning and an end, but sometimes we might want to repeat some computation or action for an indefinite amount of time with a certain rhythm or frequency. So... cycles.
 
-One of the simplest ways to create a cycle is to think of a way to periodically reset a variable that just grows and grows. Think of the way an analog clock works: time just keeps going forward and growing, but the longer arm of the clock comes back to its beginning position every 60 minutes, and the shorter arm resets every 12 hours:
+One of the simplest ways to create a cycle is to think of a way to periodically reset a variable that just grows and grows. Think of the way an analog clock works: time just keeps going forward and growing, but the longer arm of the clock comes back to its beginning position every $$60$$ minutes, and the shorter arm resets every $$12$$ hours:
 
-<div class="scaled-images w33">
-  <img src="https://cdn.shopify.com/s/files/1/0600/7023/2109/products/orville-clock-wall-decor-2.jpg">
+<div class="scaled-images left w33">
+  <img src="{{ 'assets/images/creative-coding/clock.jpg' |relative_url }}">
 </div>
 
-Before we create any cycles, let's just visualize a variable that keeps growing and growing in p5js: [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This variable keeps track of how many times the `draw()` function has executed:
+Before we create any cycles, let's just visualize a variable that keeps growing and growing in p5.js: [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This variable keeps track of how many times the `draw()` function has executed during the execution of our program.
+
+In our sketch we are using it to set the horizontal position of the circle, but since `frameCount` grows unbounded, the `x` position will also keep growing and eventually the circle leaves the screen.
 
 {% include p5-editor.html id="GDSfaAYYC" %}
 
-Ok, the horizontal position of the circle "grows" as `frameCount` (or time) grows, and eventually it leaves the screen.
+Now, let's turn this variable that grows and grows and grows into a cyclic variable that repeats with a certain frequency.
 
-We could instead create a variable that increments once per frame, just like `frameCount`, but once it gets bigger than `width` it resets:
+We just saw how to do this using the [modulo operator](../maths/) ('%'), but let's review.
 
-{% include p5-editor.html id="c8SmJmXy0" %}
-
-This is nice because we can also control the speed of the circle by changing the amount `x` grows with each `draw()`.
-
-Try it out! Change `x += 1` to `x += 2`, or `x += 10` on the sketch above.
-
-This works, and we can extend it to keep track of different cycles, with different start positions, end positions and speeds:
-
-{% include p5-editor.html id="EIk3qFSfZ" %}
-
-We'll learn how to keep track of many positions like this at a later time, using a different programming paradigm called "object-oriented programming", but for now, when thinking about cycles it's useful to be able to abstract what we're trying to do into a more general mathematical formulation.
-
-## Rinse and Repeat
-
-Just as a reminder of what it is that we're trying to do: turn a variable that grows linearly into a cyclic variable that repeats with a certain frequency.
-
-Well, there's a nice operator in JavaScript (and most programming languages) that can help us do just that: the [modulo operator](https://betterexplained.com/articles/fun-with-modular-arithmetic/).
-
-Let's say we want our circle to move 10 pixels and then go back to 0, move 10 pixels, back to 0, etc etc. That sequence of values that repeats every `10` numbers is: $$[0,1,2,3,4,5,6,7,8,9, 0,1,2,3,4,5,6,7,8,9, 0,1,2,...]$$. Those are just the *remainders* of the natural numbers ($$[0,1,2,3,...]$$) when they get divided by `10`.
-
-And if we want to repeat the sequence after `width` elements, like: $$[0,1,2,...,width - 2,width - 1, 0,1,2,...,width - 2,width-1, 0,1,...]$$, we can just use the remainder of the natural numbers when they are divided by `width`:
+Since we want to create a sequence that repeats after `width` elements, like: $$[0,1,2,...,width - 2,width - 1, 0,1,2,...,width - 2,width-1, 0,1,...]$$, we can just use the remainder of the natural numbers when they are divided by `width`. And in our case, using p5.js, the [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable gives us a sequence of the natural numbers.
 
 {% include p5-editor.html id="A_1Rjsrd3" %}
 
-In our case, using p5js, the [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable already gives us a sequence of the natural numbers. And, in this example, the `width` number is acting as the amplitude of our cycle (how far the circle goes before it repeats), and there's no offset (starting position), but we could add one:
+In this example, the `width` number is acting as the *amplitude* of our cycle (how far the circle goes before it repeats), and there's no *offset* to its starting position, but we could add one:
 
 {% include p5-editor.html id="iriHwwAt3" %}
 
-This circle moves a distance of $$\frac{width}{2}$$ pixels, starting at $$\frac{width}{4}$$, so the amplitude of this cycle is $$\frac{width}{2}$$ and its offset is $$\frac{width}{4}$$.
+Now, this circle moves a distance of $$\frac{width}{2}$$ pixels, starting at $$\frac{width}{4}$$, so the amplitude of this cycle is $$\frac{width}{2}$$ and its offset is $$\frac{width}{4}$$.
 
-Let's say we now want to make it move faster. We could just multiply the `frameCount` variable so that instead of growing by $$1$$ it grows by $$2$$ or by $$3$$, etc: (`2 * frameCount`), (`3 * frameCount`), etc...
+We can always make it move faster by multiplying the `frameCount` variable by a constant, so that instead of growing by $$1$$ it grows by $$2$$ or by $$3$$, etc.
 
 {% include p5-editor.html id="j8duRwv3O" %}
 
 ## Period and Amplitude
 
-This is good, but sometimes it's useful to control the frequency of a repeating action using actual time units, like: *seconds*, *milliseconds* or *minutes*. And in our code, even though we can control how often the action repeats, it's not clear how to change it if we want to, for example, make the action repeat every 1 second or 2 seconds or 15 seconds.
+This is good, but sometimes it's useful to control the frequency of a repeating action using actual time units, like: *seconds*, *milliseconds* or *minutes*. And in our code, even though we can control how often the action repeats, it's not clear how to change it if we want to, for example, make the action repeat every $$1$$ second or $$2$$ seconds or $$15$$ seconds.
 
 In order to do that in this case, we need to keep track of how often our frame is updating in terms of seconds, and more generally, we need some way to define the period of our repetition in terms of seconds.
 

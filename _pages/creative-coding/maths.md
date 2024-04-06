@@ -5,15 +5,86 @@ title: "Maths: mod and map"
 
 Now that we know how to set up animations using the `draw()` cycle, and also detect user input using event functions, we'll very often find ourselves having to deal with *boundary conditions*. Boundary conditions sometimes involve physical boundaries on our canvas, like, detecting and deciding what to do when a shape moves beyond our screen boundary, Other times, these boundary conditions involve setting limits for the minimum and maximum values a variable can have.
 
+In this tutorial we are going to take a look at $$2$$ strategies/techniques/functions for handling boundary conditions elegantly.
+
 ## Mod
 
+Let's consider a simple animation of a circle that moves across our canvas.
 
+We'll use the p5.js [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable to set the `x` location of our circle. This variable keeps track of how many times the `draw()` function has executed in our program, and since it starts at $$0$$ and grows indefinitely, our circle will start at $$0$$ and go infinitely to the right, eventually leaving the screen.
+
+{% include p5-editor.html id="GDSfaAYYC" %}
+
+If we wanted to keep the circle always on the screen, we could create a separate variable that increments once per frame, just like `frameCount`, but once it gets bigger than `width` it resets back to $$0$$.
+
+This also has the advantage of letting us control the speed of the circle by changing how much `x` grows with each `draw()`.
+
+{% include p5-editor.html id="c8SmJmXy0" %}
+
+Try it out! Change `x += 4` to `x += 8`, or `x += 12` on the sketch above ☝️.
+
+Another way to write this exact same logic, but without an `if()` statement, is using the [modulo operator](https://betterexplained.com/articles/fun-with-modular-arithmetic/) (`%`). This operator calculates the remainder of a division between two numbers.
+
+$$\frac{10}{2} = 5$$ (remainder: $$0$$)
+
+$$\frac{11}{3} = 3$$ (remainder: $$2$$)
+
+$$\frac{13}{6} = 2$$ (remainder: $$1$$)
+
+In JavaScript:
+
+```js
+10 % 2; // 0
+11 % 3; // 2
+13 % 6; // 1
+```
+
+And this is useful to us because we can use the modulo operator to create repeating sequences of numbers.
+
+Let's say we have a variable that grows and grows and grows, and we want it to *reset* back to $$0$$ once it gets to $$10$$. So, we have a sequence $$[0,1,2,3,4,...,10,11,12,13,...,20,21,22,23,...]$$ and we want to get another sequence $$[0,1,2,3,4,5,6,7,8,9, 0,1,2,3,4,5,6,7,8,9, 0,1,2,...]$$. The second sequence is just the list of values we get when we calculate the *remainder* of dividing all of the numbers on the first sequence by $$10$$.
+
+More generally, if we have a variable `X` that grows and grows and grows and we want a sequence that repeats after $$N$$ values, all we have to do is calculate `X % N`.
+
+If we want to repeat the sequence after `width` elements, so, turn $$[0,1,2,3,4,...,10,11,12,13,...,20,21,22,23,...]$$ into $$[0,1,2,...,width - 2,width - 1, 0,1,2,...,width - 2,width-1, 0,1,...]$$, we can just use the remainder of the natural numbers when they are divided by `width`.
+
+In our case, using p5.js, the [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable already gives us a sequence of the natural numbers. And, since in this example we want the circle to reset to $$0$$ once it gets to `width`, all we have to do is set the `x` position of our circle to be `frameCount % width`.
+
+{% include p5-editor.html id="A_1Rjsrd3" %}
+
+And if we now want to make it move faster, we just multiply the `frameCount` variable by a constant, so instead of growing by $$1$$ it grows by $$2$$ or by $$3$$, etc:
+
+```js
+2 * frameCount; // [0, 2, 4, 6, 8, ...]
+3 * frameCount; // [0, 3, 6, 9, 12, ...]
+```
+
+Either way, no matter how fast our initial sequence grows, as long as we calculate its remainder when divided by `width`, the `x` position of our circle will wrap around to $$0$$ once it gets bigger than `width`.
+
+{% include p5-editor.html id="u0z73i0o8" %}
+
+It's good to keep the modulo operator (`%`) in mind whenever we are working with *sequences*, or, *cycles*, and want to create a sequence of values that *start over*, or *reset*.
+
+For example, let's say we want to cycle our background colors between $$3$$ values, changing color every time there's a click on the canvas.
+
+We can just create a variable that will count the number of clicks and use the modulo operator (`%`) to calculate which color to show. In this case, the `clickCount` variable is the sequence that just grows and grows and grows, but since what we want is a sequence that repeats after $$3$$ values, we'll use `% 3`.
+
+{% include p5-editor.html id="A_2scizHo" %}
+
+And what if we want the background color to change automatically every second?
+
+There is a function in p5.js called [`second()`](https://p5js.org/reference/#/p5/second) that gives us the number of seconds from our computer's clock. This number itself repeats after $$60$$ values, but since we still only have $$3$$ options for colors, we'll still use `% 3`.
+
+{% include p5-editor.html id="mH6Eqrv1h" %}
+
+This is an example of converting an *input* signal that we don't control into an *output* parameter to control our animation.
+
+Let's look at this in more detail.
 
 ## Tying Variables Together
 
 It's not uncommon to want to use a value read or generated in one part of your program to control the physical properties of objects in other parts of your program. This is how we can create drawings that are reactive to user input, or animations that vary according to data that comes from a sensor or from a database somewhere on the internet.
 
-In these situations, we will have to define relationships between our *input* signals and the parameters we want to use for our *output*. And very often the input signals and output parameters don't even have the same ranges, units or data types. For example, we might want to convert temperatures measured in `Celsius` to circle diameters in `pixels`, or the passage of time measured in `seconds` to a fill color especified in `RGB`.
+In these situations, we will have to define relationships between our *input* signals and the parameters we want to use for our *output*. And very often the input signals and output parameters don't even have the same ranges, units or data types. For example, we might want to convert temperatures measured in `Celsius` to circle diameters in `pixels`, or the passage of time measured in `seconds` to a fill color specified in `RGB`.
 
 Let's look at an example.
 

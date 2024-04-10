@@ -1,8 +1,12 @@
 ---
 title: Loading Data (JSON/CSV)
 ---
+
+We've seen how [arrays](../../p5/arrays/) and [objects](../../p5/objects/) can be used for organizing our data, and also how to use `for()` loops to create, store and process values in those structures. We've also seen how the [`map()`](../maths/) function can be used to transform input values in different ranges and units into parameters for visualizations.
+
+We can now look at ways of acquiring, processing and visualizing data that has been previously created and stored in files locally or online.
+
 ## JSON
-Now that we've seen how [arrays](../arrays/) and [objects](../objects/) can be used for organizing our data, and also how to use `for()` loops to create, store and process values in those structures, we can now look at ways of getting and processing data that has been previously created and stored in files locally or online.
 
 In order to do that we'll make use of a file format called [JSON](https://en.wikipedia.org/wiki/JSON), or, JavaScript Object Notation. *JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects*. If we take a look at a JSON file we'll see that it's structured exactly like a JavaScript object, with data organized into key-value pairs:
 ```json

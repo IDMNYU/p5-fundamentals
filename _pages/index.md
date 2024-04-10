@@ -26,7 +26,6 @@ permalink: /
   arrays
   strings
   objects
-  data
   classes
 {% endcapture %}
 {% include home-section.html section="p5" title=title topics=topics %}
@@ -40,6 +39,7 @@ permalink: /
   maths
   cycles
   sincos
+  data
   state
   more-random
   vectors

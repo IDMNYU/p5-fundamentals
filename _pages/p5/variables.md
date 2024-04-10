@@ -46,7 +46,7 @@ let area = (base * height);
 let perimeter = 2 * base + 2 * height;
 ```
 
-Writing `base * height` and `2 * base + 2 * height` is certainly easier and more meaningful than `14 + 23` and `2 * 14 + 2 * 23`. And using the variables `area` and `perimeter` later in our code is also easier than having to re-calculate those values every time.
+Writing `base * height` and `2 * base + 2 * height` is certainly easier and more meaningful than `14 * 23` and `2 * 14 + 2 * 23`. And using the variables `area` and `perimeter` later in our code is also easier than having to re-calculate those values every time.
 
 Variables not only make it so we don't have to remember specific numbers in our program, but they also give some semantics to our code: we now know what those values mean.
 
@@ -67,7 +67,7 @@ Or, have to fit it into a smaller area:
 
 Both of these look bad; not only are they not centered, the small one has lots of overflow.
 
-One way we can *parameterize* our code is to use a variable to keep track of our canvas's center:
+One way we can *parameterize* our code is to use a variable to keep track of the center of our canvas, and define other parameters of our logo in relation to the center of the canvas:
 {% include p5-editor.html id="nw_8y3h6f" %}
 
 Now we can just update those two variables: `centerX` and `centerY` every time we change the size of our canvas and the shapes will remain centered. Try it out above ☝️ !
@@ -88,11 +88,11 @@ We can change the size of our canvas now and our logo will mostly follow. Try ch
 
 Let's continue adjusting our design by changing our code to use variables for more of the `arc()` parameters.
 
-Where we had circumferences of $$100$$, $$200$$ and $$300$$ in the original code, we can use `minDim / 4`, `minDim / 2` and `3 * minDim / 4`, respectively, for one-quarter, one-half and three-quarters of our smallest canvas dimension.
+The circumferences of $$100$$, $$200$$ and $$300$$ in the original code can be turned into `minDim / 4`, `minDim / 2` and `3 * minDim / 4`, respectively, for one-quarter, one-half and three-quarters of the smallest canvas dimension.
 
 We'll also use `minDim / 12` for our [strokeWeight()](https://p5js.org/reference/#/p5/strokeWeight).
 
-These changes should make our whole logo fit our canvas:
+These changes should make our whole logo fit our canvas independent of the exact size of the canvas:
 {% include p5-editor.html id="yJBHf93MkH" %}
 
 One last minor modification is to reorganize (*refactor*) our `3 * minDim / 4` calculation and put it in a variable just to make the code a bit more legible. Variables can also help with that. And now that our logo is pretty much defined using variables, in terms of relative values, it will change and adjust to changes in the size of our canvas:

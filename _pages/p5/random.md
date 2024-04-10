@@ -170,7 +170,7 @@ else if aRandomNumber < 0.75: move up
 else: move down
 ```
 
-We'll have to use some extra variables to calculate how far we want to move the ellipses (`dValue`) and keep track of which direction to change (`dx` and `dy`).
+We'll use an extra variable called `dValue` to calculate how far we want to move the ellipses, and variables called `dx` and `dy` to keep track of which direction to change.
 
 This calculation makes the smaller ellipses move further, and larger ellipses move less:
 ```js

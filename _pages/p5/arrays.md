@@ -132,6 +132,29 @@ All we have to do is add elements to the `x` and `y` arrays, but the rest of the
 
 {% include p5-editor.html id="3wCddvEDi" %}
 
+We can easily put back the overlap detection function and change the logic for selecting the colors of the ellipses to work with our arrays.
+
+We'll use a simpler version of the `ellipseOverlap()` function:
+
+```js
+function ellipseOverlap(x0, y0, diam0, x1, y1, diam1) {
+  let d = sqrt((x1 - x0) ** 2 + (y1 - y0) ** 2);
+  return d < diam0 / 2 + diam1 / 2;
+}
+```
+
+This function implements this logic from the [functions](../functions/) tutorial:
+
+<div class="scaled-images">
+  <img src="{{ '/assets/images/p5/overlap-03.jpg' | relative_url }}">
+</div>
+
+It uses euclidean distances to determine if two ellipses are closer than the sum of their radii, and returns `true` if they are overlapping and `false` otherwise. It doesn't draw the concentric circles like the original one because we'll see how to do that in a more elegant manner when we look at [classes](../classes/).
+
+{% include p5-editor.html id="SPijB1Iul" %}
+
+## Out of Control
+
 And, if we get bored of writing the `x` and `y` coordinates by hand, we can use what we learned about [`random()`](../random/) to create some random positions for our obstacles inside `setup()`.
 
 We can start with empty `x` and `y` arrays:
@@ -155,8 +178,8 @@ let mx = random(0, width);
 x.push(mx);
 ```
 
-We can use something like this for the `x` and `y` coordinates in our sketch.
+We can use something like this for the `x` and `y` coordinates in our sketch. And besides changing how the ellipse coordinates get initialized, we didn't have to change anything in our sketch. The `draw()` function is exactly the same as before.
 
 {% include p5-editor.html id="Ip0z34XuC" %}
 
-We'll see how to make sure the obstacles don't overlap when we talk about [classes](../classes/)., but for now, arrays, FTW!
+We'll see how to make it so the obstacles don't overlap when we talk about [classes](../classes/), but for now, arrays, FTW!

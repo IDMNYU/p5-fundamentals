@@ -41,13 +41,13 @@ permalink: /
   sincos
   data
   state
+  the-dom
   more-random
   vectors
-  3d
-  the-dom
   images
   videos
   cv
+  3d
   sound-files
   sound-processing
   sound-synthesis

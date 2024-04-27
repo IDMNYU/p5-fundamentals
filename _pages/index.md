@@ -60,6 +60,7 @@ permalink: /
   patterns-2d
   procedural-drawing
   glitchy-typewriter
+  simple-game
   sprites
   terrain
   lights

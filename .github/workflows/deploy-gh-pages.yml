@@ -19,7 +19,7 @@ jobs:
       - name: Deploy GH pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          deploy_key: ${{ secrets.PUSH_TOKEN }}
+          personal_token: ${{ secrets.PUSH_TOKEN }}
           external_repository: IDMp5/IDMp5.github.io
           publish_branch: gh-pages
           publish_dir: ./

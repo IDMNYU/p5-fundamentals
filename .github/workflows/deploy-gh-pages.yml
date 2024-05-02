@@ -1,0 +1,25 @@
+name: Deploy idm p5 fundamentals gh-pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Dev Repo
+        uses: actions/checkout@v3
+
+      - name: Fix Config
+        run: sed -i 's/\/p5-fundamentals//' _config.yml
+
+      - name: Deploy GH pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.PUSH_TOKEN }}
+          external_repository: IDMp5/IDMp5.github.io
+          publish_branch: gh-pages
+          publish_dir: ./

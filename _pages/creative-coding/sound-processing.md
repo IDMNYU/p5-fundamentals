@@ -41,7 +41,6 @@ In this case, the Amplitude module will give us an audio signal's amplitude (how
   <img src="{{ '/assets/images/creative-coding/sound-processing-02.jpg' | relative_url }}"/>
 </div>
 
-
 By default, any [`p5.SoundFile`](https://p5js.org/reference/#/p5.SoundFile) object we create will send its output to the [`p5.soundOut`](https://p5js.org/reference/#/p5/soundOut) module/object, which is our final output: the signal that goes to our speaker.
 
 And, also by default, the Amplitude module gets its input from this same [`p5.soundOut`](https://p5js.org/reference/#/p5/soundOut) object.

@@ -11,10 +11,9 @@ Nowadays, Integrated Development Environments (IDEs) allow us to work in differe
 
 Some popular IDEs that we can use for developing HTML/JavaScript projects are:
 - [VS Code](https://code.visualstudio.com/)
-- [Brackets](https://brackets.io/)
+- [Phoenix](https://phcode.io/#/home)
 - [Sublime Text](https://www.sublimetext.com/)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-- ~~[Atom](https://atom-editor.cc/)~~
 
 They are all very similar in their basic functionalities. Some are better suited for working with specific languages, or operating systems. Others are more customizable and extendable through plugins.
 

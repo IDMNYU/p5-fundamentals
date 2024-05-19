@@ -35,8 +35,8 @@ permalink: /
 {% capture topics %}
   transformations
   interactions
-  animations
   maths
+  animations
   cycles
   sincos
   data

@@ -19,6 +19,7 @@ body {
   --text-color-a-h: #6da0dc;
   --bgnd-color: #fff;
   --bgnd-color-h: #eaeaea;
+  --banner-color: #2e7bcf;
   --mobile-max: $mobile-max;
   --desktop-max: 800px;
 
@@ -76,7 +77,7 @@ th {
 
   .nav-container {
     color: var(--bgnd-color);
-    background: #2e7bcf url("{{ '/assets/images/header-bg.jpg' | relative_url }}") 0 0 repeat-x;
+    background: var(--banner-color) url("{{ '/assets/images/header-bg.jpg' | relative_url }}") 0 0 repeat-x;
 
     a.nav-home-link {
       color: var(--bgnd-color);
@@ -152,7 +153,7 @@ th {
 
   .p5-editor-wrapper {
     --editor-height: 640px;
-    --editor-y-offset: -45px;
+    --editor-y-offset: -69px;
     --editor-x-offset: -18px;
   }
 

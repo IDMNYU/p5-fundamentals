@@ -47,7 +47,7 @@ Some things to note about the above sketch:
 
 2. We first load the JSON into a variable called `dataObject` and then in `setup()` use that variable and some JavaScript functions to actually put the contents of the file into an array that we can iterate. This is not necessary all the time, only when our file specifies an array and we want to work with an array. If we look at the p5.js documentation for [`loadJSON()`](https://p5js.org/reference/#/p5/loadJSON), it says: *Note that even if the JSON file contains an Array, an Object will be returned*. We use: `Object.values(dataObject)` to turn the Object into an array.
 
-3. During `setup()` we are iterating through all of the data points in our dataset to determine the minimum and maximum values for $$2$$ properties (`price` and `points`). This is needed so we can use [`map()`](https://p5js.org/reference/#/p5/map) later in `draw()` to scale these values and use the whole canvas to visualize the data (a detailed explanation of `map()` can be found [here](../../creative-coding/maths/)).
+3. During `setup()` we are iterating through all of the data points in our dataset to determine the minimum and maximum values for $$2$$ properties (`price` and `points`). This is needed so we can use [`map()`](https://p5js.org/reference/#/p5/map) later in `draw()` to scale these values and use the whole canvas to visualize the data (a detailed explanation of `map()` can be found [here](../maths/)).
 
 One more thing about parameters/fields from a JSON: sometimes the field names will have spaces ("final price", "CRASH TIME") or special characters ("pm2.5", "U$D") and accessing them with just the dot notation won't work:
 ```js

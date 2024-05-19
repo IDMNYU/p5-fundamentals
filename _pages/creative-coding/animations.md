@@ -82,7 +82,7 @@ We now have a simple, infinite, animation using our `draw()` loop.
 
 ## More Animation Dimensions
 
-Both the `mod(%)` operator and `map()` function that we looked at [here](../../p5/math/) can be really useful when doing animation.
+Both the `mod(%)` operator and `map()` function that we looked at [here](../maths/) can be really useful when doing animation.
 
 We can use the `map()` function to create an animation based on time. In this example we map the seconds that have passed in the current minute of time to the diameter of a circle. We know seconds has a range $$[0, 59]$$, so it's just a matter of choosing the smallest and largest values for the diameter.
 

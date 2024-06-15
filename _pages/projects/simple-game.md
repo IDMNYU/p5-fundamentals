@@ -15,7 +15,7 @@ This mini-project draws on materials from:
 ## NOTE:
 Depending on the browser, using the keyboard in our game will also make this page scroll up and down, which is very annoying.
 
-A more pleasant experience is had by opening each example in its own window.
+A more pleasant experience is achieved by opening each example in its own window.
 
 ## Main Character
 

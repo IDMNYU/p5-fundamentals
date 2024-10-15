@@ -26,7 +26,7 @@ permalink: /
   arrays
   strings
   objects
-  advanced-arrays
+  advanced-arraying
   classes
 {% endcapture %}
 {% include home-section.html section="p5" title=title topics=topics %}

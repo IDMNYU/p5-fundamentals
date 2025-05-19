@@ -16,7 +16,7 @@ function draw() {
 }
 ```
 
-{% include p5-editor.html id="z3QMRJrup" %}
+{% include p5-editor.html id="bvmSu50O6a" %}
 
 ## Setup & Draw
 
@@ -43,7 +43,7 @@ stroke('orange');
 fill('blue');
 ```
 
-{% include p5-editor.html id="ea1JkTXgx" %}
+{% include p5-editor.html id="Z6jv5gVTo" %}
 
 ### `draw()`
 This is where we'll want to put commands that actually *draw* anything on the screen, whether they are shapes, images, movie frames or animations.
@@ -63,7 +63,7 @@ Unlike the `setup()` function, the `draw()` function runs repeatedly as long as 
 
 Without worrying too much about the details, but just to check that whatever we put inside `draw()` is always running, let's modify the code above and use the number of times that the `draw()` function has executed to move the ellipses across the canvas:
 
-{% include p5-editor.html id="P25aS7yev" %}
+{% include p5-editor.html id="tmnnt_GsQ" %}
 
 That special `frameCount` keyword keeps track of how many times our code has executed and we can use that value to draw our ellipses at a slightly different location every time.
 

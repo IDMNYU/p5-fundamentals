@@ -16,15 +16,15 @@ The `createCanvas()` command takes two parameters, or, two numbers, that specify
 
 We can see the difference by running the following two sketches:
 
-{% include p5-editor.html id="X6r53LRgo" %}
+{% include p5-editor.html id="AHvLeXMJM" %}
 
-{% include p5-editor.html id="oL9Ziyev4" %}
+{% include p5-editor.html id="FJCJwnz7V" %}
 
 And, whether our canvas is created with specific pixel dimensions or using `(windowWidth, windowHeight)`, we can always ask p5.js for the exact size of our canvas by accessing the [`width`](https://p5js.org/reference/#/p5/width) and [`height`](https://p5js.org/reference/#/p5/height) *variables*.
 
 (clear any cookie warnings and look at the *Console* section after running the sketch below)
 
-{% include p5-editor.html id="qaXGLCGN_" %}
+{% include p5-editor.html id="E_GTsCI-4" %}
 
 ## Coordinate System
 
@@ -64,7 +64,7 @@ rect(10, 100, 80, 40);
 ellipse(200, 300, 100);
 ```
 
-{% include p5-editor.html id="afP8colwV" %}
+{% include p5-editor.html id="TyHTKL3db" %}
 
 We can play with the coordinates and sizes on the sketch above ☝️ to gain some familiarity and intuition about the coordinate system and these two functions.
 
@@ -75,7 +75,7 @@ rect(210, 300, 80);
 ellipse(310, 300, 80);
 ```
 
-{% include p5-editor.html id="Knyx636O8" %}
+{% include p5-editor.html id="2iZYx1nuv" %}
 
 # 🤔
 
@@ -88,7 +88,7 @@ rect(210, 300, 80);
 ellipse(350, 340, 80);
 ```
 
-{% include p5-editor.html id="VP8LS3AyI" %}
+{% include p5-editor.html id="KiSnvsQhf" %}
 
 We can also use the p5.js functions [`rectMode()`](https://p5js.org/reference/#/p5/rectMode) and [`ellipseMode()`](https://p5js.org/reference/#/p5/ellipseMode) to change how rectangles and ellipses are drawn.
 
@@ -102,7 +102,7 @@ To draw ellipses by specifying their top-left corner, we can use:
 ellipseMode(CORNER);
 ```
 
-{% include p5-editor.html id="6b8_Md_OH" %}
+{% include p5-editor.html id="3frUheLXu" %}
 
 One thing to note is that once we call `rectMode()` or `ellipseMode()`, every shape that we draw afterwards will be drawn using the mode specified. To undo this, we can call:
 
@@ -111,17 +111,17 @@ rectMode(CORNER);
 ellipseMode(CENTER);
 ```
 
-{% include p5-editor.html id="NQue6BJ0_" %}
+{% include p5-editor.html id="WTddwWpvG" %}
 
 Or, better yet, we can just pick one mode in the beginning, whichever we think will be most useful for our sketch, and keep it throughout the whole sketch.
 
 Let's say we want to draw a grid of squares, rectangles and circles. In this situation, where we are starting at the top-left corner of our canvas and drawing to the right and to the bottom, it might be easier to do math for the locations of the top-left corners of our shapes. Since we'll keep the same mode throughout the whole sketch, we can just put `ellipseMode(CORNER)` inside our `setup()` function.
 
-{% include p5-editor.html id="ynFFkUkkY" %}
+{% include p5-editor.html id="NL-wqSSL1" %}
 
 But, on the other hand, if we are drawing concentric shapes, or placing them relative to the center of the canvas, we might find it easier to use `rectMode(CENTER)` throughout our whole sketch:
 
-{% include p5-editor.html id="ppJz3hsm3" %}
+{% include p5-editor.html id="hmROElyh4" %}
 
 ## More Shapes
 
@@ -131,7 +131,7 @@ The [`quad()`](https://p5js.org/reference/#/p5/quad) function can be used to dra
 
 Similarly, the [`triangle()`](https://p5js.org/reference/#/p5/triangle) function draws a triangle from $$3$$ pairs of `x` and `y` coordinates.
 
-{% include p5-editor.html id="7QJVfGZhC" %}
+{% include p5-editor.html id="rkWRuOQ26" %}
 
 The [`arc()`](https://p5js.org/reference/#/p5/arc) function draws partial ellipses, and its first $$4$$ parameters are just like the `ellipse()` parameters for `x` and `y` coordinates, `width` and `height`, but the 5$$^{th}$$ an 6$$^{th}$$ parameters specify the angles of where the arc starts and stops, respectively.
 
@@ -145,7 +145,7 @@ How angles are measured in p5.js and degree/radian equivalents for some common a
 
 So now, we can use this drawing as reference to help us draw some partial ellipses:
 
-{% include p5-editor.html id="YzR3THvWu" %}
+{% include p5-editor.html id="12qrmbjku" %}
 
 ## Non-regular and Custom Shapes
 
@@ -155,7 +155,7 @@ First, we call the [`beginShape()`](https://p5js.org/reference/#/p5/beginShape) 
 
 We can call `endShape(CLOSE)` to close our shape without having to replicate the first vertex as the last vertex.
 
-{% include p5-editor.html id="e5rBPYVby" %}
+{% include p5-editor.html id="_ewE9wElh" %}
 
 ## Colors
 
@@ -175,19 +175,19 @@ Besides the `background()` command, which we've been using to specify the pink c
 
 And, just like the `rectMode()` and `ellipseMode()` commands, once we call `fill()` or `stroke()`, everything drawn afterwards will have the same color.
 
-{% include p5-editor.html id="QtNXHohZt" %}
+{% include p5-editor.html id="EgHkkOsUR" %}
 
 Colors can also be specified using [html color names](https://www.w3schools.com/tags/ref_colornames.asp), or [hex notation](https://www.w3schools.com/html/html_colors_hex.asp).
 
 Hex notation might be familiar from image-editing software. It contains the exact same information as the `RGB` format, but represented in [hexadecimal notation](https://byjus.com/maths/hexadecimal-number-system/), where each of the $$3$$ channel values between $$0$$ and $$255$$ is represented as a hexadecimal number between `00` and `FF`, where `FF` is the hexadecimal notation for the number $$255$$.
 
-{% include p5-editor.html id="AQDIxUZ39" %}
+{% include p5-editor.html id="oCr-eh9CB" %}
 
 We can explore the equivalencies between all of these representations in the sketch below.
 
 The sliders can be used to select values for the $$3$$ `RGB` channels of the background color. The `RGB` and hex representations of this color are then written out, and the closest of the $$140$$ html colors is displayed in a rectangle.
 
-{% include p5-editor.html id="GphYuqjLb" %}
+{% include p5-editor.html id="4ycW7yWmV" %}
 
 ### Color Modes
 
@@ -205,6 +205,6 @@ In `HSB` mode the Hue value has a range from $$0$$ to $$359$$, and Saturation an
 
 This sketch is very similar to the previous one, but now the $$3$$ sliders control the Hue, Saturation and Brightness values for our background color.
 
-{% include p5-editor.html id="3ot6sUcoX" %}
+{% include p5-editor.html id="b4WQsPPyN" %}
 
 Some people find it easier to interpolate between colors and create color transitions in the `HSB` space because we can go through a wide palette of colors by just varying hue value. Where in `RGB` we always have to account for all $$3$$ channels when creating transitions or interpolating colors.

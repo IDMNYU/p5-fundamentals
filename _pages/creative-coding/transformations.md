@@ -10,15 +10,15 @@ Let's say we have a collection of simple shapes that make up a more complicated 
 
 We can draw this at a particular location by specifying all of the coordinates of our basic shapes:
 
-{% include p5-editor.html id="gU_q28-fj" %}
+{% include p5-editor.html id="xGwHq_J9j" %}
 
 If we want to draw this shape at a different location we'll have to *manually* recompute all of the `x` and `y` coordinates of the basic shapes:
 
-{% include p5-editor.html id="KSWOss5Yt" %}
+{% include p5-editor.html id="9-CBxr1ca" %}
 
 We can use variables, which helps a bit:
 
-{% include p5-editor.html id="nb5Vg3bn0" %}
+{% include p5-editor.html id="7AeMM-06s" %}
 
 Or functions, like we did [previously](../../p5/functions/):
 
@@ -28,7 +28,7 @@ These all work, but there's another way to do this, which might seem more diffic
 
 Instead of changing the `x` and `y` locations of where we want to draw our shape on our canvas, we can change the location of our canvas' origin. We'll always draw our shapes at the $$(0, 0)$$ location, but we'll change where that location is in our canvas. We can use the p5.js function [`translate()`](https://p5js.org/reference/#/p5/translate) to change our origin location.
 
-{% include p5-editor.html id="cPULz8_fc" %}
+{% include p5-editor.html id="5rd2HyU5c" %}
 
 The code that actually draws the heart is exactly the same. We just changed where on our canvas the $$(0, 0)$$ reference point is.
 
@@ -44,11 +44,11 @@ The code that actually draws the heart is exactly the same. We just changed wher
 
 One thing to note is that calls to `translate()` are cumulative and permanent, so calling `translate(150, 150)` twice will actually move the origin to $$(300, 300)$$ and everything that is drawn afterwards will use the new origin location. This is just like when we call `fill(0)` and everything that is drawn afterwards gets filled in black.
 
-{% include p5-editor.html id="5fvafbo_N" %}
+{% include p5-editor.html id="KmoPjGRfu" %}
 
 We can always *undo* our translations by using negative values, so calling `translate(150, 150)` followed by `translate(-150, -150)` will move the origin back to the top-left corner of our canvas.
 
-{% include p5-editor.html id="TE-7odPbK" %}
+{% include p5-editor.html id="Xc1_4qBVQ" %}
 
 An easier way to do this is to use the [`push()`](https://p5js.org/reference/#/p5/push) and [`pop()`](https://p5js.org/reference/#/p5/pop) functions. When we can `push()` we are telling p5.js to pay extra close attention to our transformations and keep track of them for us. After we are done drawing, we call `pop()`, which now tells p5.js to undo all of the transformations made after `push()`. Or, in other words, the `push()` function tells p5.js to *save* the current state of our transformations, and the `pop()` function tells p5.js to go back to that state.
 
@@ -69,7 +69,7 @@ pop();
 
 It's good practice to always *wrap* our translations and transformations with calls to `push()` and `pop()`. This way we can always recover the initial location of our origin.
 
-{% include p5-editor.html id="o3LXLk27v" %}
+{% include p5-editor.html id="T5i7Fe0NJ" %}
 
 ## Rotation
 
@@ -88,7 +88,7 @@ translate(150, 150);
 
 But this might not have the desired effect, since `rotate()` doesn't rotate our shapes, but the whole canvas!
 
-{% include p5-editor.html id="gEMLHbPL6" %}
+{% include p5-editor.html id="uKQuVIr3U" %}
 
 This is important to remember: all of these transformation functions aren't changing our shapes, but the underlying canvas, relative to its current origin.
 
@@ -115,7 +115,7 @@ rotate(PI / 8);
 pop();
 ```
 
-{% include p5-editor.html id="IAqrjgXvL" %}
+{% include p5-editor.html id="jXO-XHvb8" %}
 
 ## More Transformations
 
@@ -138,8 +138,8 @@ pop();
 
 And since we're using `push()` and `pop()` we can easily combine calls to `scale()` and `rotate()`.
 
-{% include p5-editor.html id="SBx2z39WR" %}
+{% include p5-editor.html id="TKHl8dijK" %}
 
 We can now combine everything with some `for()` loops to create non-predictable patterns where the code that actually draws our shapes is always exactly the same, but the location, size and rotation of each shape is determined by calls to `translate()`, `scale()` and `rotate()`, respectively.
 
-{% include p5-editor.html id="6F4vlePiY" %}
+{% include p5-editor.html id="RMOpkEKK0" %}

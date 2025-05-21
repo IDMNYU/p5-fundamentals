@@ -24,3 +24,34 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./
           enable_jekyll: true
+
+  push:
+    runs-on: ubuntu-latest
+
+    env:
+      GHTOKEN: ${{ secrets.PUSH_TOKEN }}
+
+    steps:
+      - name: Checkout Dev Repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Setup git
+        run: |
+          git remote add idmp5 https://thiagohersan:$GHTOKEN@github.com/IDMp5/IDMp5.github.io.git
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@users.noreply.github.com"
+          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
+
+      - name: Push
+        run: |
+          sed -i 's/\/p5-fundamentals//' _config.yml
+          git add _config.yml
+          git rm -rf .github
+          git status
+          git commit -m "update site: $GITHUB_SHA_SHORT" &> /dev/null
+          git status
+          git remote -v
+          git push -f idmp5 main

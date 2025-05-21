@@ -55,6 +55,15 @@ permalink: /
 {% endcapture %}
 {% include home-section.html section="creative-coding" title=title topics=topics %}
 
+<!-- AI -->
+{% assign title = "AI:Machine Learning and AI Models" %}
+{% capture topics %}
+  nn
+  concurrency
+  ml5
+{% endcapture %}
+{% include home-section.html section="ai" title=title topics=topics %}
+
 <!-- Projects -->
 {% assign title = "Mini Projects:Putting it all together" %}
 {% capture topics %}

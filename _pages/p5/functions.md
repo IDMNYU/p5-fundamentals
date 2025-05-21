@@ -26,17 +26,17 @@ We've seen how to draw simple shapes like squares, rectangles and ellipses, but 
 
 We can start by trying to piece together some simple shapes like triangles and ellipses or arcs:
 
-{% include p5-editor.html id="09VVK9rPf" %}
+{% include p5-editor.html id="VLcKw3Lu1" %}
 
 Doesn't look so bad if we turn off the shape strokes:
 
-{% include p5-editor.html id="Y1CdHZ8TJ" %}
+{% include p5-editor.html id="d0RXiJS3K" %}
 
 And what if now we want to draw many hearts, of potentially different sizes, in different locations?
 
 We could try to come up with the specific pixel locations for all of our hearts like this:
 
-{% include p5-editor.html id="v6ASn7sz1" %}
+{% include p5-editor.html id="0Ma3DR5HQ" %}
 
 But this is tedious and prone to mistakes.
 
@@ -50,11 +50,11 @@ One possible way to do this is to pick a point sort of in the center of our hear
 
 For our heart, let's set $$x_0 = 200$$ and $$y_0 = 150$$ and express all of the `x` and `y` parameters of our shapes in terms of these two variables:
 
-{% include p5-editor.html id="hu1zWWUM_" %}
+{% include p5-editor.html id="fWqOx2u9U" %}
 
 Now, we could copy-paste the lines that draws the shapes and just change the values of $$x_0$$ and $$y_0$$ before calling them:
 
-{% include p5-editor.html id="RAM5FUyR3" %}
+{% include p5-editor.html id="8UQDXlWOb" %}
 
 This is already easier to read and modify, but let's say that now we want to parameterize the size of our heart shape. We would have to very carefully find all places in our sketch where we are drawing hearts in order to update the correct lines of code with the changes.
 
@@ -72,23 +72,23 @@ function heart(x0, y0) {
 
 We just copied the code from before, but now that these lines are inside a function, the `x0` and `y0` parameters reference specific x and y locations that get passes to the function each time it is *called*. Drawing the heart in different locations is as easy as this now:
 
-{% include p5-editor.html id="lMWMmDprr" %}
+{% include p5-editor.html id="qBPTEhE6I" %}
 
 And now we can invest in adding a size parameter to our heart shape:
 
-{% include p5-editor.html id="Zn6HXaQK-" %}
+{% include p5-editor.html id="xTVlTFlBH" %}
 
 The math is not very intuitive, but it only had to be figured out once, and now we can call our `heart()` function repeatedly at different locations and with different sizes:
 
-{% include p5-editor.html id="108BoKQNB" %}
+{% include p5-editor.html id="VUMYTzsIT" %}
 
 Or use [`for()`](../patterns/) loops to create patterns on our canvas:
 
-{% include p5-editor.html id="YlyqER3Tn" %}
+{% include p5-editor.html id="v096x_jMT" %}
 
 That vary in size based on the distance from the center of the canvas:
 
-{% include p5-editor.html id="YuYDboWz-" %}
+{% include p5-editor.html id="pVStO6jxX" %}
 
 ## Compute and Return
 
@@ -98,7 +98,7 @@ Functions can also be defined to act a little bit more like the [mathematical fu
 
 Let's see what that means by revisiting a collision detection situation:
 
-{% include p5-editor.html id="vHx3uKNOt" %}
+{% include p5-editor.html id="UB-XWHKuP" %}
 
 If we want to detect when the mouse circle is overlapping with the larger circle, we can first calculate the distance between the center of the two circles and see if that value is smaller than the sum of their radii:
 
@@ -126,16 +126,16 @@ if(d < oDiam / 2 + mDiam / 2){
 }
 ```
 
-{% include p5-editor.html id="Tfv297Z4m" %}
+{% include p5-editor.html id="8ZRnyGWwr" %}
 
 
 It works, but ... what if we have more than just one obstacle circle?
 
-{% include p5-editor.html id="9GBZCWw0D" %}
+{% include p5-editor.html id="444Zq22any" %}
 
 We could put a bunch of `sqrt((mouseX - xi)**2 + (mouseY - yi)**2)` expressions all over our code, but this quickly becomes hard to read and adjust:
 
-{% include p5-editor.html id="0o5qbmHhb" %}
+{% include p5-editor.html id="iKnvWbH94" %}
 
 As it is, it wouldn't be very simple to update this code to also change the color of the obstacle circles upon collision.
 
@@ -155,7 +155,7 @@ The other thing to note is the last line of the function: `return d;`. This tell
 
 Putting this in our code:
 
-{% include p5-editor.html id="kKKZ5CnWV" %}
+{% include p5-editor.html id="dZFmGMkbe" %}
 
 This is already better, but we still have some repeated code.
 
@@ -171,11 +171,11 @@ function ellipseOverlap(x0, y0, diam0, x1, y1, diam1) {
 
 This time the `return` statement will compute and return the boolean value of the expression `(d < diam0 / 2 + diam1 / 2)`. It will be `true` if the circles overlap, or `false` otherwise.
 
-{% include p5-editor.html id="D9MqtwoDq" %}
+{% include p5-editor.html id="Z4nagBNTZ" %}
 
 Now that we have separate variables that tell us whether our mouse circle is overlapping with any of the obstacle circles, we can more easily change the color of the obstacle circles and add some other visual indications to our sketch:
 
-{% include p5-editor.html id="r8XrQXLj1" %}
+{% include p5-editor.html id="cJ8ryLXID" %}
 
 The `||` in the statement `if (o0 || o1 || o2 || o3 || o4)` is the logical *OR* operator. An expression built with the `||`  operator evaluates to `true` if any one of its conditions is true. In our case, we're asking if there is overlap on *any* of the obstacles, and if so, to change the color of the mouse circle.
 
@@ -192,7 +192,7 @@ function obstacle(x, y, overlap) {
 
 And it's easy to add more obstacles now:
 
-{% include p5-editor.html id="ZnF5XdxL_" %}
+{% include p5-editor.html id="Z7H4RJXv4" %}
 
 And, looking at the code, we can actually put the `ellipseOverlap()` function call inside the `obstacle()` function, as long as the new function returns whether there is an overlap or not:
 ```js
@@ -211,6 +211,6 @@ function obstacle(x, y) {
 
 The code for the overlap function became a little more complicated, but we only have to write it once. The benefit is that our main code becomes even easier to read and maintain, add and remove obstacles, etc:
 
-{% include p5-editor.html id="FXP8atSEcM" %}
+{% include p5-editor.html id="2A9QJrOcR" %}
 
 We'll see how [arrays](../arrays/) that keep track of lists of numbers could help us add more obstacles to a sketch like this without having to enumerate their values individually like we're doing here with `x0`, `x1`, `x2`, etc.

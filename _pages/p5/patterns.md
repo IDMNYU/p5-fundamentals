@@ -13,13 +13,13 @@ We are going to take a look at for loops and how to parametrize and nest them.
 
 First, let's start with a simple sketch that draws circles:
 
-{% include p5-editor.html id="RIw-EBN5e" %}
+{% include p5-editor.html id="DZtkQ823q" %}
 
 But, 😱 ....  there's so much repeated code and so much that can be improved here...
 
 First, variables! Let's make it so we can easily change circle diameter, start location and spacing:
 
-{% include p5-editor.html id="eIciIRIbO" %}
+{% include p5-editor.html id="ZtfI2lnFnE" %}
 
 Better ! This way we can easily change the size of our circles (`cDiam`), where they start (`xOffset`), the distance between their centers (`xSpacing`) and their vertical location (`yPos`). Take some time to change those variables and re-run the code to see exactly what each of them does. Fun, right? But we're still repeating a bunch of code!
 
@@ -36,17 +36,17 @@ Where:
 - `condition` is a boolean expression that specifies what keeps the loop running
 - `increment` is an expression that runs at the end of each iteration
 
-{% include p5-editor.html id="yCTAMB2Hb" %}
+{% include p5-editor.html id="dkYky6guC" %}
 
 The resulting drawing is a little bit different; the circles go right off the canvas. We can try to control that in a couple of ways.
 
 The first way is to use our `xOffset` variable to stop the for loop once `xPos` gets to `width - xOffset` instead of `width`:
 
-{% include p5-editor.html id="8aAz3QjKm" %}
+{% include p5-editor.html id="9d0QfkWQx" %}
 
 The second way requires more changes to the code, so we can keep track of the number of circles instead of where they are being drawn:
 
-{% include p5-editor.html id="HSm5NKWcx" %}
+{% include p5-editor.html id="4SwKr6hBz" %}
 
 There's a lot of new stuff there. We declared a new variable `numCircles` that defines how many circles we want to draw (7 for now). In our `for` statement we have `cCnt` now, which keeps track of the number of circles drawn. It iterates from 0 to `numCircles`. In this case it goes from $$0$$ to $$6$$. *Wait... what!? Weren't we drawing 7 circles??* Yes!, but if we count from $$0$$ to $$6$$ $$(0, 1, 2, 3, 4, 5, 6)$$ that's actually $$7$$ numbers. That's a bit confusing at first, but we'll see this a lot and get used to the fact that in programming we usually start counting from 0.
 
@@ -60,7 +60,7 @@ It's important to take a moment here and understand the difference between the t
 
 Let's go back to the first way (by location) and add some variables for looping in the other direction:
 
-{% include p5-editor.html id="5jGMXDOXb" %}
+{% include p5-editor.html id="vR8b0db59" %}
 
 Take some time to play with the variables to see how they affect our drawing.
 
@@ -70,29 +70,29 @@ And now, let's say that when we're looping in the horizontal direction, instead 
 
 Nested `for()` loops to the rescue! We can just copy the whole loop statement that draws a column of circles and put that inside the first loop that iterates in the horizontal direction (and make sure the `ellipse()` command uses the `xPos` and `yPos` variables):
 
-{% include p5-editor.html id="28Cn1Jm1t" %}
+{% include p5-editor.html id="YH8DMpfdM" %}
 
 Now we can play with all the variables and see how they change the drawing:
 
-{% include p5-editor.html id="x7siTe66c" %}
+{% include p5-editor.html id="iY-DlVY-9" %}
 
 Or we can start adding variations to the circles based on their position, like, changing color based on the x and y location for the circle:
 
-{% include p5-editor.html id="i4jEMnah8" %}
+{% include p5-editor.html id="I9DpHPDAx" %}
 
 Or, increase diameter along with the x position:
 
-{% include p5-editor.html id="WlYELno6E" %}
+{% include p5-editor.html id="xT4rSb4IC" %}
 
 Or, color based on x position and size based on y position:
 
-{% include p5-editor.html id="-ESdy4zlH" %}
+{% include p5-editor.html id="8KVrenWPx" %}
 
 ## For Loops With For Loops With For Loops...
 
 And if we really want to stretch our looping abilities we can add another level of `for()` looping to draw concentric circles at each x and y position:
 
-{% include p5-editor.html id="RULC2evDI" %}
+{% include p5-editor.html id="cfOHbCjAs" %}
 
 Take some time to play with this code and make sure all the variables and loops make sense.
 
@@ -100,4 +100,4 @@ Loops are very powerful constructs in programming. Looking at the code above, we
 
 As always, since we are using variables everywhere we can change their values or use them to change our circle at each iteration of our loop:
 
-{% include p5-editor.html id="-SVhzd5m3" %}
+{% include p5-editor.html id="riWYeR2Zf" %}

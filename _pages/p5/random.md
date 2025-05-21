@@ -9,7 +9,7 @@ Let's start with a simple grid of circles.
 
 Note the use of a variable to set the circle diameter:
 
-{% include p5-editor.html id="tnZGosI3j" %}
+{% include p5-editor.html id="CyTtdVfBe" %}
 
 One way to add variability to our pattern would be to pick a slightly different value for the diameter or the color of each of our circles.
 
@@ -21,7 +21,7 @@ We want them to be mixed and shuffled.
 
 We could use `random(0, 255)` to pick a random grayscale value between $$0$$ and $$255$$ to fill each circle:
 
-{% include p5-editor.html id="uGsJzT5oW" %}
+{% include p5-editor.html id="DjylI5wj-N" %}
 
 Hmmmm.... there is an issue with this: we are not drawing black and white circles. All the values between $$0$$ and $$255$$ are equally likely to occur!
 
@@ -49,7 +49,7 @@ if(random() < 0.5) {
 }
 ```
 
-{% include p5-editor.html id="nHxhbdN7G" %}
+{% include p5-editor.html id="Myfh7bORq" %}
 
 Cool ! What if want to use $$3$$ colors now? Like some gold, blue and white circles?
 
@@ -57,7 +57,7 @@ We could do something similar:
 
 Draw a number, if it's less than half, draw a black circle, otherwise, draw another number and repeat the process to pick between gold and blue. This works, but what do we notice about the frequency of the three colors?
 
-{% include p5-editor.html id="5XJLVOqcm" %}
+{% include p5-editor.html id="0fZEyVwJz" %}
 
 Gold and blue circles happen with similar frequency, but it seems like there are more black circles. Twice as many black circles, actually. In this code we were asking p5.js to draw black circles half of the time, and then to split the remaining half again in half, so blue and gold only happen $$25\%$$ of the time each.
 
@@ -97,7 +97,7 @@ else: draw blue
 
 In code:
 
-{% include p5-editor.html id="sgrPdiBeQ" %}
+{% include p5-editor.html id="w2bda32Ty" %}
 
 Hooray. Much better.
 ### ✨✨🎉✨✨
@@ -130,7 +130,7 @@ The thresholds we check against are accumulating. When we are checking for black
 
 In code, the above logic becomes:
 
-{% include p5-editor.html id="jKQSSL9dS" %}
+{% include p5-editor.html id="Rf4yj-5hf" %}
 
 Can we use something like this to pick different shapes or different sizes from a set of pre-determined options ?
 
@@ -140,7 +140,7 @@ The process is similar, but now we'll have another random number and another blo
 
 Let's go back to just $$3$$ colors with equal probabilities:
 
-{% include p5-editor.html id="sgrPdiBeQ" %}
+{% include p5-editor.html id="gHh7Q8k7g" %}
 
 Now we'll add this logic to select the size of the ellipse:
 
@@ -154,7 +154,7 @@ else: draw extra-small
 
 And we'll use a variable called `maxDiam` to keep track of the maximum diameter of our ellipses, so we don't have to fix the spacing we are using in the `for` loops.
 
-{% include p5-editor.html id="ad4PieH-W" %}
+{% include p5-editor.html id="Ps_Z5TmvK" %}
 
 ## Position Lottery
 
@@ -179,7 +179,7 @@ let dValue = (maxDiam - eDiam) / 2;
 
 And in code:
 
-{% include p5-editor.html id="yJUzdSbXz" %}
+{% include p5-editor.html id="Rlaj-c9Ft" %}
 
 What's useful about this is that we now have a way to create non-regular patterns that don't really look like patterns. The `for` loops are still there, so in the background of our logic we have a grid, but visually it doens't necessarily look like a grid.
 
@@ -197,7 +197,7 @@ let blueRandom = random(0, 255);
 fill(redRandom, greenRandom, blueRandom);
 ```
 
-{% include p5-editor.html id="kSSq7lHku" %}
+{% include p5-editor.html id="H7qqVMUwt" %}
 
 ## 🤮
 
@@ -208,7 +208,7 @@ This will pick a random diameter between $$4$$ and $$40$$ when `maxDiam` is $$40
 eDiam = random(maxDiam / 4, maxDiam);
 ```
 
-{% include p5-editor.html id="yTYMhDbo-" %}
+{% include p5-editor.html id="2JCHEP_4g" %}
 
 And this will add random variations in both the `x` and `y` directions, based on the value of the ellipse's diameter. The difference is that now *ANY* number between `-dValue` and `dValue` is possible:
 
@@ -218,10 +218,10 @@ let dx = random(-dValue, dValue);
 let dy = random(-dValue, dValue);
 ```
 
-{% include p5-editor.html id="MHKGsFTJH" %}
+{% include p5-editor.html id="zcNqTwUpM" %}
 
 This looks pretty cool. Our underlying grid is almost unnoticeable.
 
 And combining random positions and size:
 
-{% include p5-editor.html id="rd3B0vM3C" %}
+{% include p5-editor.html id="p1yFq_-SN" %}

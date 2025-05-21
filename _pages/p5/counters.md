@@ -15,7 +15,7 @@ for(let x = startPosition; x < endPosition; x += spacing) {
 }
 ```
 
-{% include p5-editor.html id="0iazqBfqD" %}
+{% include p5-editor.html id="KjD5w25YP" %}
 
 In this example we specify where on our canvas we want our drawing to begin and end. It's like we're specifying the area we want to fill with shapes.
 
@@ -27,19 +27,19 @@ One way to think about this is that the `for()` command is a counter, counting f
 
 We can use it to repeat an action a set number of times:
 
-{% include p5-editor.html id="UGguNyDn8" %}
+{% include p5-editor.html id="JFR877sol" %}
 
 Or to do some math on sequences of numbers, like finding the sum of all numbers between $$N_{0}$$ and $$N_{1}$$;
 
-{% include p5-editor.html id="g3Zstv9-4" %}
+{% include p5-editor.html id="YBCKfi7Ct" %}
 
 Or, to iterate through a collection of items, in an [array](#):
 
-{% include p5-editor.html id="GaVnWe0bi" %}
+{% include p5-editor.html id="yqdys8Sff" %}
 
 Let's explore the situation where we want to repeat something a set number of times, and instead of drawing squares all the way across the canvas, we just want rows with $$5$$ squares:
 
-{% include p5-editor.html id="Xy4oqzF61" %}
+{% include p5-editor.html id="drA7SCEvq" %}
 
 This is different from before. We are not iterating through pixel values, and counting from a starting *position* to a final *position*, we are now counting the number of squares to draw, from $$0$$ to $$4$$.
 
@@ -59,17 +59,17 @@ $$x = \frac{i}{10} \times (width - offset) + offset$$.
 
 But, we can also use the p5.js [`map()`](https://p5js.org/reference/#/p5/map) function to do this math for us and keep our code easier to read and maintain (a detailed explanation of `map()` can be found [here](../../creative-coding/maths/)).
 
-{% include p5-editor.html id="3igLJ6nXo" %}
+{% include p5-editor.html id="sbt2pVmzK" %}
 
 Now, what if we want to draw $$15$$ squares instead of $$10$$?
 
-{% include p5-editor.html id="jDC95eddA" %}
+{% include p5-editor.html id="23jR5o-ij" %}
 
 Just using `map()` is not enough; we see there are gaps in the top row and overlap in the bottom.
 
 To fix this, before we loop we have to calculate a new width for each of the two cases, based on the number of squares we want and the space we have to fill:
 
-{% include p5-editor.html id="EgpqLQcPE" %}
+{% include p5-editor.html id="TKAcfArNy" %}
 
 ## Review All the Possibilities
 
@@ -123,15 +123,15 @@ for(let count = 0; count < maxCount; count += 1) {
 }
 ```
 
-{% include p5-editor.html id="cJRitSc_i" %}
+{% include p5-editor.html id="y-LqGkGbt" %}
 
 The spacing and sizing looks good. We just have to fix the color. We want black and white squares to alternate, which means painting the even numbered squares black and the odd numbered squares white. Since we have a variable that keeps track of which square we are drawing (`col`), we can just check if that's an even number (`col % 2 == 0`) and select the color accordingly:
 
-{% include p5-editor.html id="gQ9D2frvM" %}
+{% include p5-editor.html id="syltJiw2g" %}
 
 Now we just have to nest some `for()` loops to get all of our rows, and we'll be done:
 
-{% include p5-editor.html id="F0jEms0uu" %}
+{% include p5-editor.html id="mIbZgIy0y" %}
 
 The square colors are alternating in the horizontal direction because we are checking if `col` is even, but to get the correct pattern we should also alternate the pattern by row.
 
@@ -163,6 +163,6 @@ if (col evenness == row evenness) {
 
 And in JavaScript `if(col % 2 == row % 2)` will check if the *evenness* of the values is the same:
 
-{% include p5-editor.html id="I4pAf4ysF" %}
+{% include p5-editor.html id="rbQjyjGJf" %}
 
 Try changing the size of the canvas in the sketch above. As long as the canvas is a square, our code should work as expected.

@@ -7,7 +7,7 @@ Now that we've seen how to create [variables](../variables/) to keep track of ch
 
 Let's start with a square, centered on our canvas. Notice the use of variables for setting the location and dimensions of the ```rect()```. This will be important soon.
 
-{% include p5-editor.html id="pL0Eu59vX" %}
+{% include p5-editor.html id="jLZVEU6rq" %}
 
 Now, let's say we want to detect when the mouse is inside the square and change its color from white to gold.
 
@@ -35,7 +35,7 @@ Let's start with the leftmost edge. For the mouse to be inside the square, its x
 if(mouseX > rectX)
 ```
 
-{% include p5-editor.html id="9e-EW8ovX" %}
+{% include p5-editor.html id="w7AcLo3Ai" %}
 
 As we move the mouse around the canvas we'll notice that, yes, the square changes color when the mouse goes from the left side of the canvas into the square, but it also stays gold when the mouse exits on the right side, or when the mouse is above or below the square. Let's fix that.
 
@@ -65,7 +65,7 @@ Putting it into JavaScript and using our variables this becomes:
 ```js
 if(mouseX > rectX && mouseX < rightEdge)
 ```
-{% include p5-editor.html id="wuduCLW9M" %}
+{% include p5-editor.html id="8bEIeXtHV" %}
 
 Better! But the square is still gold when the mouse is directly above or below the square.
 
@@ -91,7 +91,7 @@ if (mouseX > rectX && mouseX < rightEdge &&
     mouseY > rectY && mouseY < bottomEdge)
 ```
 
-{% include p5-editor.html id="dtj2fo9O_" %}
+{% include p5-editor.html id="EqZNExq9y" %}
 
 The `if()` statement in the code above is actually one long line, but the editor has separated it into more lines for better legibility.
 
@@ -99,17 +99,17 @@ The `if()` statement in the code above is actually one long line, but the editor
 
 Since we used variables to define all of the parameters for our square, we could easily change its dimensions and move it anywhere else on the screen by only changing its parameters `rectX`, `rectY`, `rectWidth` and `rectHeight`:
 
-{% include p5-editor.html id="nTnZwh9SL" %}
+{% include p5-editor.html id="SG0OB3O50" %}
 
 We can even extend it to multiple shapes:
 
-{% include p5-editor.html id="GZZ2GtQU4" %}
+{% include p5-editor.html id="IOAIaoJ2b" %}
 
 There is a lot of repeated code here, which makes the sketch look messy and more complicated than it is.
 
 We'll later see how to use [functions](../functions/), [arrays](../arrays/) and [objects](../objects/) to clean this up and make it easier to understand, extend and maintain:
 
-{% include p5-editor.html id="DmmKJw7Sl" %}
+{% include p5-editor.html id="Htlpfx91a" %}
 
 ## Collision
 
@@ -117,11 +117,11 @@ This kind of logic is actually a common pattern in certain types of programming.
 
 In the sketch below, can we detect when our circle overlaps with the rectangle?
 
-{% include p5-editor.html id="qZVEJPx5M" %}
+{% include p5-editor.html id="ez8oUpy_o" %}
 
 We can start with the logic from before, except it won't detect when the circle overlaps with the rectangle, only when the center of the circle goes inside the rectangle.
 
-{% include p5-editor.html id="eHgxTWFt2" %}
+{% include p5-editor.html id="ZGC9WPXig" %}
 
 If we look at a diagram of what's happening and what we want to happen, we can see that instead of detecting when the center of the circle is inside the rectangle, we should instead detect when the center of the circle is within $$r$$ pixels from the edge of the rectangle (where $$r$$ is the circle's radius, or, half of its diameter):
 
@@ -153,7 +153,7 @@ if (mouseX > oRectX && mouseX < oRightEdge &&
     mouseY > oRectY && mouseY < oBottomEdge)
 ```
 
-{% include p5-editor.html id="KFpI5C0sT" %}
+{% include p5-editor.html id="Pm6T8XToP" %}
 
 It would be a nice touch to have the circle and rectangle turn different colors when they overlap.
 
@@ -186,6 +186,6 @@ let overlap = mouseX > oRectX && mouseX < oRightEdge &&
               mouseY > oRectY && mouseY < oBottomEdge;
 ```
 
-{% include p5-editor.html id="3Roffk9Y0" %}
+{% include p5-editor.html id="RIBXWiq2-" %}
 
 This could still be improved to account for the cases where it wrongly detects an overlap when the circle moves near the corners of the rectangle (a literal [corner case](https://en.wikipedia.org/wiki/Corner_case)), but we'll wait until we see [functions](../functions/) and a little bit of [trigonometry](../../creative-coding/vectors/).

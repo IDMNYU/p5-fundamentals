@@ -113,4 +113,4 @@ If we want to classify other types of images or sounds, we have to train our own
 
 Luckily, `ml5` has a way to load models that we can train quickly using something called [Teachable Machine](https://teachablemachine.withgoogle.com/).
 
-Let's take a look at that [next](../tm/).
+Let's take a look at that [next](../teachable-machine/).

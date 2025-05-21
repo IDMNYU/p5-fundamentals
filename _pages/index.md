@@ -58,9 +58,10 @@ permalink: /
 <!-- AI -->
 {% assign title = "AI:Machine Learning and AI Models" %}
 {% capture topics %}
-  nn
+  neural-nets
   concurrency
   ml5
+  teachable-machine
 {% endcapture %}
 {% include home-section.html section="ai" title=title topics=topics %}
 

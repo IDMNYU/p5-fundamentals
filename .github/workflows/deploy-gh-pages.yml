@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    if: false
     runs-on: ubuntu-latest
 
     steps:
@@ -50,8 +51,5 @@ jobs:
           sed -i 's/\/p5-fundamentals//' _config.yml
           git add _config.yml
           git rm -rf .github
-          git status
           git commit -m "update site: $GITHUB_SHA_SHORT" &> /dev/null
-          git status
-          git remote -v
           git push -f idmp5 main

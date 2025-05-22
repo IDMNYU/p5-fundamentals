@@ -2,7 +2,7 @@
 title: Transformers.js
 ---
 
-The [`ml5` library](../ml5/) and the [Teachable Machine](/../teachable-machine/) projects are the easiest ways start using AI models in our sketches. They're well documented and maintained, and they provide an easy interface for some of the most common ML tasks.
+The [`ml5` library](../ml5/) and the [Teachable Machine](/../teachable-machine/) projects are the easiest ways to start using AI models in our sketches. They're well documented and maintained, and they provide an easy interface for some of the most common ML tasks.
 
 But, there are other models out there. Lots of them.
 

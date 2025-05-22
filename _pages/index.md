@@ -62,6 +62,7 @@ permalink: /
   concurrency
   ml5
   teachable-machine
+  transformers
 {% endcapture %}
 {% include home-section.html section="ai" title=title topics=topics %}
 

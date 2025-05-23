@@ -64,6 +64,7 @@ permalink: /
   teachable-machine
   transformers
   gradio
+  gemini
 {% endcapture %}
 {% include home-section.html section="ai" title=title topics=topics %}
 

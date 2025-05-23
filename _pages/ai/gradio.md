@@ -6,7 +6,11 @@ We can't really talk about AI without talking about LLMs and diffusion models.
 
 One step up in complexity from the models [we just saw](../transformers/), these generative models usually require more resources to run. It doesn't mean that we can't use them in our sketches, but we have to offload their processing and execution to computers with large amounts of memory, faster processors and usually some GPUs.
 
-We'll do this by making _API_ calls to servers or services that run these bigger models.
+We'll do this by making _API_ calls to servers or services that run these bigger models:
+
+<div class="scaled-images left w75">
+  <img src="{{ 'assets/images/ai/gradio-server-00.jpg' |relative_url }}">
+</div>
 
 Let's take a look at a few examples.
 

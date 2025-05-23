@@ -210,7 +210,7 @@ And ...
 Results may vary. This model is not super smart, or controllable, but it does tend to make people in the image sort of smile, even if it distorts their face a little bit. That's part of the tradeoff of these _Turbo_ models:
 
 <div class="scaled-images left w75">
-  <img src="{{ 'assets/images/ai/gradio-diffusion-00.jpg' |relative_url }}">
+  <img src="{{ 'assets/images/ai/gradio-diffusion-01.jpg' |relative_url }}">
 </div>
 
 Adapting some of the parameters might also help:

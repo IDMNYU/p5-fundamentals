@@ -63,6 +63,7 @@ permalink: /
   ml5
   teachable-machine
   transformers
+  gradio
 {% endcapture %}
 {% include home-section.html section="ai" title=title topics=topics %}
 

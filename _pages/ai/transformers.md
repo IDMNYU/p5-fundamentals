@@ -114,7 +114,7 @@ It takes a bit longer to get started, but that's because we have $$3$$ models to
 
 {% include p5-editor.html id="-e2pGdczT" %}
 
-Now, we have to create variables to hold the results of our story model and of our sentiment analysis model.
+We just have to create variables to hold the results of our story model and of our sentiment analysis model.
 
 First, let's see what they return:
 ```js
@@ -136,7 +136,9 @@ let strResult = await strModel(caption, { max_new_tokens: 256 });
 
 {% include p5-editor.html id="qTC_hvDVF" %}
 
-Now, we're all set to go forth and explore the vast, wonderful, and often poorly-documented, world of Hugging Face transformer image models.
+## Image Models
+
+We're all set to go forth and explore the vast, wonderful, and often poorly-documented, world of Hugging Face transformer image models.
 
 One thing to keep in mind: models that receive _images_ as inputs don't work with `p5.js` image objects, but their `dataUrl` representation. We can get the `dataUrl` for `p5.js` images and video streams using:
 ```js
@@ -146,7 +148,7 @@ mImage.canvas.toDataURL();
 
 ## Audio Models
 
-Audio models are a little trickier to use. This is due to two reasons: first, `p5.js` has a very complicated and non-intuitive process for recording audio from the microphone, and second, audio models require their inputs to have very specific audio formats, which `p5.js` doesn't always directly support.
+Audio models are a little trickier to use. This is due to two reasons: first, `p5.js` has a very complicated and non-intuitive process for recording audio from the microphone, and second, audio models require their inputs to have very specific audio formats, which `p5.js` and `JavaScript` don't always directly support.
 
 Let's take a look at an audio model called [whisper](https://huggingface.co/Xenova/whisper-tiny.en) that transcribes audio.
 
@@ -169,7 +171,7 @@ Now, when we press the record button, we just start recording:
 mRecorder.record(mRecSound, 100, captionAudio);
 ```
 
-The `captionAudio` parameter is a [callback function](../concurrency/) that will be called whenever we stop recording by calling:
+The `captionAudio` parameter is a [callback function](../concurrency/) that will be called whenever we stop recording, which we can do by calling:
 ```js
 mRecorder.stop();
 ```
@@ -197,9 +199,9 @@ print(sttResult);
 
 But, if we look at `sttResult.text`, we'll see that we're getting garbage.
 
-The `mRecSound.buffer.getChannelData(0)` function definitely returns our recorded samples, but, if we print `mRecSound.buffer.sampleRate`, we'll see that our browser likes to record audio at $$44\text{,}100$$ or $$48\text{,}000$$ samples per second, where our model wants to analyze audio recorded at $$16\text{,}00$$ samples per second.
+The `mRecSound.buffer.getChannelData(0)` function definitely returns our recorded samples, but, if we print `mRecSound.buffer.sampleRate`, we'll see that our browser likes to record audio at $$44\text{,}100$$ or $$48\text{,}000$$ samples per second, where our model wants to analyze audio recorded at $$16\text{,}000$$ samples per second.
 
-Resampling audio in `JavaScript` isn't easy or fun. Luckily, there's a function called `resample()` included in this sketch that will do just that. It takes $$3$$ arguments: the samples, the original sample rate and the target sample rate, and returns a resampled version of the audio, ready to be analyzed and transcribed by our model:
+Resampling audio in `JavaScript` isn't easy nor fun. Luckily, there's a function called `resample()` included in this sketch that will do just that. It takes $$3$$ arguments: the list of samples, the original sample rate and the target sample rate. It eventually (asynchronously) returns a resampled version of the audio, ready to be analyzed and transcribed by our model:
 
 ```js
 let samples16k = await resample(
@@ -209,6 +211,6 @@ let samples16k = await resample(
 );
 ```
 
-Using it before calling our model fixes the sampling issue and now we should be able to get clean transcribed audios:
+Using it before calling our model fixes the sampling issue and we are now able to get clean transcribed audios:
 
 {% include p5-editor.html id="1VNjI7XFs" %}

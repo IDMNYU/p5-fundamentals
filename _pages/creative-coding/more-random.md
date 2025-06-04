@@ -5,7 +5,7 @@ We've already seen how to generate continuous [random numbers](../../p5/random/)
 
 Just to review, let's use `random()` to generate a grid of ellipses with different, unpredictable, diameters:
 
-{% include p5-editor.html id="nqcZuTl9E" %}
+{% include p5-editor.html id="JYdWqKl2W" %}
 
 We're using `random(0.2 * gridW, 0.8 * gridW)` to pick random ellipse diameter values that are between $$20\%$$ and $$80\%$$ of the grid width.
 
@@ -16,13 +16,13 @@ We can visually this in a couple of ways.
 
 In one-dimension, using a random variable to set the diameter of ellipses. All values between $$0$$ and `width` are equally likely:
 
-{% include p5-editor.html id="OwwacY5KB" %}
+{% include p5-editor.html id="--jfZGT-3" %}
 
 We can rerun the sketch and get different results, but overall, the ellipses don't seem to follow any pattern.
 
 We can also visually the distribution of the `random()` function in two-dimensions, using random variables to pick `x` and `y` positions for ellipses. All positions on the canvas are equally likely:
 
-{% include p5-editor.html id="qcwQ-Q_iy" %}
+{% include p5-editor.html id="I6-rCuYnY" %}
 
 And, again, we can rerun the sketch and get slightly different results, but it will always look like the ellipses are equally spread throughout our canvas.
 
@@ -49,27 +49,27 @@ Let's use it to repeat the same two visualizations we used for the `random()` fu
 
 In one-dimension, let's use $$0$$ for the mean and $$\frac{width}{3}$$ for the standard deviation for our ellipses's diameters. One way to pick the value for the standard deviation is to take whatever we would like to be the largest value returned by `randomGaussian()` and divide it by $$3$$. We want our ellipses to have a maximum diameter of `width`, so our standard deviation should be $$\frac{1}{3}$$ of that value. This should make it so that most of the ellipses fall within the canvas:
 
-{% include p5-editor.html id="0RF_McaiH" %}
+{% include p5-editor.html id="5X5OnNGP_" %}
 
 In two-dimensions, we want our ellipses to be clustered around the center and mostly stay within the canvas. This makes our means $$\frac{width}{2}$$ and $$\frac{height}{2}$$, and since we would like our `x` position to be at most $$\frac{width}{2}$$ away from the mean (at $$0$$ or `width`), we divide $$\frac{width}{2}$$ by $$3$$ to get the standard deviation. The same logic is used to calculate the standard deviation for the `y` position and the values we'll use for $$\sigma$$ are: $$\frac{width}{6}$$ and $$\frac{height}{6}$$.
 
 From the reasoning above we can see that a more general way to pick standard deviation values when using `randomGaussian()` is: $$\sigma = \frac{max - mean}{3}$$.
 
-{% include p5-editor.html id="p0VBk3vqq" %}
+{% include p5-editor.html id="6f5jIIUOj" %}
 
 We can even plot some markers at $$1$$, $$2$$ and $$3$$ standard deviations to check that the values returned by the `randomGaussian()` function follow the expected $$68\%$$, $$95\%$$ and $$99.6\%$$ distributions.
 
-{% include p5-editor.html id="8as0gBfqU" %}
+{% include p5-editor.html id="dds08wUTa" %}
 
 In the sketch above, $$68\%$$ of the ellipses should be within the smallest white circle, $$27\%$$ should be between the two smallest white circles, $$4\%$$ between the two largest white circles, and very rarely we'll see an ellipse outside the largest white circle. So, $$68\%$$ of the ellipses are within $$1$$ $$\sigma$$ from the mean, $$95\%$$ ($$68\% + 27\%$$) are within $$2$$ $$\sigma$$ and almost all of them are within $$3$$ $$\sigma$$ from the mean of $$0$$.
 
 We can see something similar in our two-dimensional example:
 
-{% include p5-editor.html id="vpYlh8--H" %}
+{% include p5-editor.html id="jArRRDRhN" %}
 
 Finally, let's see what happens if we use a gaussian distribution to pick ellipse diameters for the grid pattern we looked at in the beginning of this section. Let's try $$0$$ for the mean and $$\frac{gridW}{3}$$ for the standard deviation (since we want our largest possible diameter to be `gridW`):
 
-{% include p5-editor.html id="GPw3zcXJV" %}
+{% include p5-editor.html id="yxSDQp5CL" %}
 
 Since it's very unlikely that we'll get $$2$$ maximum diameter ellipses next to each other, we can even experiment with slightly larger values for $$\sigma$$, like $$\frac{gridW}{2.5}$$ or even $$\frac{gridW}{2}$$.
 
@@ -146,7 +146,7 @@ for (let i = 0; i < width; i++) {
 
 Since the values returned by `noise()` are in the range $$[0, 1]$$, we multiply them by `width` and `height` to get values that stretch across our whole canvas:
 
-{% include p5-editor.html id="HIvfP6n6A" %}
+{% include p5-editor.html id="Go0Xi5bXM" %}
 
 ## 🤔
 
@@ -161,7 +161,7 @@ for (let i = 0; i < width; i++) {
 }
 ```
 
-{% include p5-editor.html id="DaEHpR96I" %}
+{% include p5-editor.html id="VOGOgVAa6" %}
 
 This is better, but it still looks a lot like the `random()` or the `randomGaussian()` functions. This is because the parameter that we are giving to the `noise()` function vary by $$1$$ between iterations, and from our exploration above we saw that calling `noise()` with consecutive whole numbers will return numbers that change by about $$0.2$$ between consecutive calls.
 
@@ -176,7 +176,7 @@ for (let i = 0; i < width; i++) {
 }
 ```
 
-{% include p5-editor.html id="sUTOMTBIU" %}
+{% include p5-editor.html id="7xkp7ELGy" %}
 
 Oh, whoa. So now both the `x` and `y` locations for our ellipses vary by small amounts between each iteration, and since each value is slightly related to the previous one we get something that looks like the trail of a moving ellipse.
 
@@ -188,23 +188,23 @@ Try it out ☝️ !
 
 Let's see what `noise()` looks like in the one-dimension visualization. We'll again use `noise(i / 100)` so that our diameter doesn't vary too much between iterations:
 
-{% include p5-editor.html id="_wXaMf290" %}
+{% include p5-editor.html id="FwqCTeqRU" %}
 
 We can see that the diameters vary by small smalls between iterations and we almost get patterns when all the ellipses overlap.
 
 Let's try `noise()` in our grid example:
 
-{% include p5-editor.html id="zOkED7f5v" %}
+{% include p5-editor.html id="HPub93Kv5" %}
 
 ## 🤔
 
 Maybe if we use `y / 100` ? ...
 
-{% include p5-editor.html id="YroRyfkQ0" %}
+{% include p5-editor.html id="oib4-fdue" %}
 
 Or, `(x + y) / 100` ?
 
-{% include p5-editor.html id="CuPcSotDv" %}
+{% include p5-editor.html id="Qjh-iKRFm" %}
 
 Even thought the last one looks kind of cool, all of these are predictable: either their rows, columns or diagonals are the same. Which makes sense since we're calling `noise()` with repeating values coming from `x`, `y` or `x + y`.
 
@@ -215,7 +215,7 @@ let d = noise(x / 100, y / 100);
 
 Now, the `noise()` function will take both sequences into account when it returns a value, so even if one of the values stays the same, the other changes and the resulting value will change:
 
-{% include p5-editor.html id="Z6qcrMtXO" %}
+{% include p5-editor.html id="cLIOZhjLs" %}
 
 Pretty cool. We'll soon see how to use this version of 2D and even 3D noise.
 

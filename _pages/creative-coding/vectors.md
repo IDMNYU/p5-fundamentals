@@ -29,7 +29,7 @@ In this example, our outer `for()` loop iterates through different values for ho
   <img src = "{{ '/assets/images/creative-coding/trigonometry-02.jpg' | relative_url }}"/>
 </div>
 
-{% include p5-editor.html id="X3zrbKW8G" %}
+{% include p5-editor.html id="bmn6wQ1G4" %}
 
 This one is pretty simple and could've been done by drawing concentric ellipses. If we untangle some of our logic we'll see we're implementing the [trigonometric functions for defining a circle](https://en.wikipedia.org/wiki/Unit_circle#Trigonometric_functions_on_the_unit_circle).
 
@@ -52,7 +52,7 @@ let x = r * cos(radians(3 * a));
 
 we get this:
 
-{% include p5-editor.html id="reDI6Py1F" %}
+{% include p5-editor.html id="rubKcJet3" %}
 
 Yeah... polar coordinates FTW! I don't think we can draw *that* with circles.
 
@@ -62,7 +62,7 @@ let x = r * cos(radians(3 * a));
 let y = r * sin(radians(7 * a));
 ```
 
-{% include p5-editor.html id="t4JR5wd3k" %}
+{% include p5-editor.html id="GEZiG_ZtF" %}
 
 Try out some new values for the angle multipliers in the code above ☝️. Cool, right?
 
@@ -72,7 +72,7 @@ let x = r * cos(radians(a + 2 * r));
 let y = r * sin(radians(a));
 ```
 
-{% include p5-editor.html id="1dDVH1zAx" %}
+{% include p5-editor.html id="0_Y0yn7F7" %}
 
 Or, both:
 ```js
@@ -80,7 +80,7 @@ let x = r * cos(radians(2 * a + 2 * r));
 let y = r * sin(radians(a));
 ```
 
-{% include p5-editor.html id="4HJBJ3zFD" %}
+{% include p5-editor.html id="DxBh1M06F" %}
 
 ## Dimensions
 
@@ -96,7 +96,7 @@ Let's start by using a single variable from a `for()` loop to derive our `r` val
 
 If we make `r` grow proportional to the angle, we get a spiral:
 
-{% include p5-editor.html id="vmsdrtUln" %}
+{% include p5-editor.html id="CJx8B5IdN" %}
 
 And if we increase the frequency of the angles, like we did before by multiplying them by a constant, and also increase the range of our `r`:
 ```js
@@ -107,7 +107,7 @@ let y = r * sin(radians(8 * a));
 
 We get a tighter spiral that goes all the way to the corners of our canvas:
 
-{% include p5-editor.html id="EcHwwd2jw" %}
+{% include p5-editor.html id="TReOUnK3F" %}
 
 We can also add an offset to our angles (this is often called the [*phase*](https://en.wikipedia.org/wiki/Phase_(waves)) of an angle) that changes where the spiral starts:
 ```js
@@ -117,7 +117,7 @@ let y = r * sin(radians(8 * a - phaseVal));
 
 It's kind of subtle, but if we re-run the following sketch and look at the center of the spiral we'll notice the effect of the phase value:
 
-{% include p5-editor.html id="C72WsABv9" %}
+{% include p5-editor.html id="jHVl6Ujpf" %}
 
 It's easier to see its effects if that offset increases or decreases with every frame:
 
@@ -126,7 +126,7 @@ let x = r * cos(radians(8 * a - 8 * frameCount));
 let y = r * sin(radians(8 * a - 8 * frameCount));
 ```
 
-{% include p5-editor.html id="FbTKcNL-3" %}
+{% include p5-editor.html id="wZBKzbmpg" %}
 
 Our canvas is spinning slowly, but the shape makes it seem like it's a line that is being drawn infinitely, or circles that are growing ! We can play with the phase multiplier above ☝️ to make the spiral spin faster, slower and even backwards.
 
@@ -136,7 +136,7 @@ let x = r * cos(radians(9 * a - 8 * frameCount));
 let y = r * sin(radians(8 * a - 8 * frameCount));
 ```
 
-{% include p5-editor.html id="3mfHR24rj" %}
+{% include p5-editor.html id="WaUKMrtyz" %}
 
 ## Parametric Equations
 
@@ -156,7 +156,7 @@ y &= B \cdot sin(\beta t) \end{align*}$$
 
 where $$A$$, $$B$$, $$\alpha$$, $$\beta$$ and $$\delta$$ are just different constants.
 
-{% include p5-editor.html id="cuxnKIgiL" %}
+{% include p5-editor.html id="GYdDCpGed" %}
 
 We can change them above ☝️ and see what happens to the drawing.
 
@@ -167,7 +167,7 @@ x &= sin(t) \cdot \left(\exp^{cos(t)} - 2 \cdot cos(4t) \right) \\
 y &= cos(t) \cdot \left(\exp^{cos(t)} - 2 \cdot cos(4t) \right)
 \end{align*}$$
 
-{% include p5-editor.html id="3UZCUTavF" %}
+{% include p5-editor.html id="BguyBnLPD" %}
 
 ### [Cardioid Curves](https://en.wikipedia.org/wiki/Cardioid):
 
@@ -178,13 +178,13 @@ y &= r \cdot \left(1 - cos(\alpha \cdot t) \right) \cdot sin(t)
 
 where $$\alpha$$ is just an integer constant that we can change.
 
-{% include p5-editor.html id="71LibEZ-T" %}
+{% include p5-editor.html id="SrvjUkELi" %}
 
 Change `alphaVal` above ☝️ and see what happens!
 
 Or, better yet, let's have our `loop()` increase the value of `alphaVal`:
 
-{% include p5-editor.html id="Qw2JHfI5J" %}
+{% include p5-editor.html id="LxBye1J6n" %}
 
 ### [Bonus Curve](https://mathworld.wolfram.com/HeartCurve.html):
 
@@ -193,7 +193,7 @@ And, finally, this special kind of cardioid curve:
 $$\begin{align*} x &= 16 \cdot sin^3(t) \\
 y &= 13 \cdot cos(t) - 5 \cdot cos(2t) - 2 \cdot cos(3t) - cos(4t) \end{align*}$$
 
-{% include p5-editor.html id="drP6XPWGj" %}
+{% include p5-editor.html id="gGk2wUk3b" %}
 
 Pretty cool!
 
@@ -209,7 +209,7 @@ If we image two points on our screen, with coordinates $$(x_0, y_0)$$ and $$(x_1
 
 In this sketch the distance between two moving points is calculated using the formula for [Euclidean Distance](https://en.wikipedia.org/wiki/Euclidean_distance) $$\sqrt{(x_1 - x_0)^2 + (y_1 - y_0)^2}$$ and the p5.js function [`dist()`](https://p5js.org/reference/#/p5/dist). When those distances are used as the diameter for two circles centered on the canvas, we can see that they are exactly the same:
 
-{% include p5-editor.html id="BM0IF01HH" %}
+{% include p5-editor.html id="ZpMRkDtCM" %}
 
 ## Angles
 
@@ -229,7 +229,7 @@ If a moving point at $$(x, y)$$ has velocity $$v_x$$ and $$v_y$$, its position i
 
 We can use the heading angle of a moving object to rotate its shape and emphasize its direction of motion:
 
-{% include p5-editor.html id="McuKrbsvl" %}
+{% include p5-editor.html id="SqaUjqGvq" %}
 
 ## Vectors
 
@@ -279,7 +279,7 @@ And the distance between the two circles can now be calculated with:
 ps[0].loc.dist(ps[1].loc);
 ```
 
-{% include p5-editor.html id="c5YCY8pXv" %}
+{% include p5-editor.html id="9xx13qjZP" %}
 
 ## Vector Angles
 
@@ -295,4 +295,4 @@ let hAngle = xAxis.angleBetween(p.vel);
 
 This way we get the heading angles relative to the reference point of zero rotation, and then use that value to rotate our objects.
 
-{% include p5-editor.html id="4laz8uFA4" %}
+{% include p5-editor.html id="68Q5wrokg" %}

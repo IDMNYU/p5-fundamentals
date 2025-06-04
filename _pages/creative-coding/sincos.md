@@ -4,7 +4,7 @@ title: Sine & Cosine
 
 In the previous [section](../cycles/) we saw how to define a cycle in terms of $$amplitude$$, $$period$$ and $$\mathit{offset}$$:
 
-{% include p5-editor.html id="lVu_eb7oP" %}
+{% include p5-editor.html id="Qw8RJhauV" %}
 
 A little review:
 
@@ -38,36 +38,36 @@ let x = A * sin(2 * PI / periodFrames * frameCount);
 
 where $$A$$ is the amplitude, $$P$$ is the period in number of frames and `frameCount` is the variable that keeps growing indefinitely:
 
-{% include p5-editor.html id="q6P1VmLpY" %}
+{% include p5-editor.html id="nN5UJPZkB" %}
 
 Hmmm.... this kind of works. Since the range of `sin()` is $$[-1, 1]$$, our circle is oscillating between $$[-amplitude, amplitude]$$, which isn't really what we want. One easy way to fix this is to add 1 to the `sin()` function so we have a range that goes between $$[0, 2]$$, then divide that by $$2$$ to bring the range down to $$[0, 1]$$ and, finally, multiply by the amplitude:
 
 $$x = \frac{A}{2}\times \left(sin\left(\frac{2\pi}{P}\times frameCount\right) + 1\right)$$
 
-{% include p5-editor.html id="vXXjgxnoq" %}
+{% include p5-editor.html id="92DpmSO0y" %}
 
 Much better. And this same equation works for other parameters, like the circle radius. We just have to define an $$amplitude$$, $$period$$ and $$\mathit{offset}$$ that makes sense for radius values:
 
-{% include p5-editor.html id="0Ihnoz1jH" %}
+{% include p5-editor.html id="rlVJhxgnD" %}
 
 We can take some time to play with the parameters here and build some intuition about how they affect the motion of the circle. Try changing `xPeriodSec`, `rPeriodSec`, `rAmplitude` and `rOffset`.
 
 If we want, we can easily change the variable names and equations to make the circle oscillate vertically:
 
-{% include p5-editor.html id="EDewPuJ1t" %}
+{% include p5-editor.html id="TtPK-g8nM" %}
 
 Here $$amplitude$$ is the whole screen `height` and there's no $$\mathit{offset}$$, so it starts at $$0$$.
 
 Now, we can combine *harmonic motion* in the `x` and `y` direction to get *elliptic cycles*:
 
-{% include p5-editor.html id="u4OjI0_At" %}
+{% include p5-editor.html id="kSxgebmnj" %}
 
 We just have to make sure we use $$sin()$$ for one direction and $$cos()$$ for the other, or else we'll just get motion in a straight diagonal line.
 
 If we make the `x` and `y` functions have different periods, we will get a nice [Lissajous](https://en.wikipedia.org/wiki/Lissajous_curve) movement:
 
-{% include p5-editor.html id="355jxvkxk" %}
+{% include p5-editor.html id="9P_BKTs_5" %}
 
 Putting it all together, and using $$sin()$$ and $$cos()$$ for the `x`, `y` and `radius` parameters ends up giving our sketch a 3D effect:
 
-{% include p5-editor.html id="FOr644eN8" %}
+{% include p5-editor.html id="qN37xEOH9" %}

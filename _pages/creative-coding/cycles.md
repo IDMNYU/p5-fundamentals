@@ -13,7 +13,7 @@ Before we create any cycles, let's just visualize a variable that keeps growing 
 
 In our sketch we are using it to set the horizontal position of the circle, but since `frameCount` grows unbounded, the `x` position will also keep growing and eventually the circle leaves the screen.
 
-{% include p5-editor.html id="GDSfaAYYC" %}
+{% include p5-editor.html id="06bX4FQ5h" %}
 
 Now, let's turn this variable that grows and grows and grows into a cyclic variable that repeats with a certain frequency.
 
@@ -21,17 +21,17 @@ We just saw how to do this using the [modulo operator](../maths/) ('%'), but let
 
 Since we want to create a sequence that repeats after `width` elements, like: $$[0,1,2,...,width - 2,width - 1, 0,1,2,...,width - 2,width-1, 0,1,...]$$, we can just use the remainder of the natural numbers when they are divided by `width`. And in our case, using p5.js, the [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable gives us a sequence of the natural numbers.
 
-{% include p5-editor.html id="A_1Rjsrd3" %}
+{% include p5-editor.html id="IWnsMnLdZ" %}
 
 In this example, the `width` number is acting as the *amplitude* of our cycle (how far the circle goes before it repeats), and there's no *offset* to its starting position, but we could add one:
 
-{% include p5-editor.html id="iriHwwAt3" %}
+{% include p5-editor.html id="pPNtbCHT8" %}
 
 Now, this circle moves a distance of $$\frac{width}{2}$$ pixels, starting at $$\frac{width}{4}$$, so the amplitude of this cycle is $$\frac{width}{2}$$ and its offset is $$\frac{width}{4}$$.
 
 We can always make it move faster by multiplying the `frameCount` variable by a constant, so that instead of growing by $$1$$ it grows by $$2$$ or by $$3$$, etc.
 
-{% include p5-editor.html id="j8duRwv3O" %}
+{% include p5-editor.html id="PN1Ka5QAq" %}
 
 ## Period and Amplitude
 
@@ -55,7 +55,7 @@ $$ x = frameCount \times speed$$
 
 Putting that in the code with the modulo and the offset, we get:
 
-{% include p5-editor.html id="lVu_eb7oP" %}
+{% include p5-editor.html id="Qw8RJhauV" %}
 
 ## Triangles and Other Functions
 
@@ -78,7 +78,7 @@ But that is the only change!
 
 Besides that we just copied the equation from wikipedia and it works:
 
-{% include p5-editor.html id="PImIcoREP" %}
+{% include p5-editor.html id="vLW_lAv3P" %}
 
 This works for any periodic functions that is expressed in terms of $$amplitude$$, $$period$$ and $$t$$. We can easily turn them into p5.js code.
 
@@ -93,7 +93,7 @@ We just have to remember that $$t$$ is our `frameCount` and $$mod()$$ is the `%`
 x = amplitude * (2 * (frameCount % periodFrames) / periodFrames - 1) ** 2;
 ```
 
-{% include p5-editor.html id="xesyDHecX" %}
+{% include p5-editor.html id="epm33qbdE" %}
 
 And this:
 <div class="scaled-images">
@@ -105,6 +105,6 @@ becomes:
 x = amplitude * (2 * (frameCount % periodFrames) / periodFrames - 1) ** 4;
 ```
 
-{% include p5-editor.html id="CK8OyPzxF" %}
+{% include p5-editor.html id="2F1O5mE0h" %}
 
 Next, we'll take a look at some periodic functions from trigonometry. They're so common and useful that they get their own [page](../sincos/).

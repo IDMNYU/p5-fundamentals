@@ -6,7 +6,7 @@ We’ve been learning about [arrays](../arrays/) and [objects](../objects/), and
 
 Let's review our object exercise. We have an array of obstacles, and each obstacle is an object that keeps track of its `x` and `y` positions, `diameter`, `fill color` and `overlap color`.
 
-{% include p5-editor.html id="-A0-X1RFb" %}
+{% include p5-editor.html id="X7DALVA_q" %}
 
 ## Classy Code
 
@@ -58,7 +58,7 @@ let mObs = new Obstacle();
 print("x is: ", mObs.x, " y is: ", mObs.y);
 ```
 
-{% include p5-editor.html id="mguZfHieR" %}
+{% include p5-editor.html id="zspwKXIMx" %}
 
 ## Classy Behavior
 
@@ -66,7 +66,7 @@ So, other than the class definition and how we instantiate our obstacles in `set
 
 Since we only care about overlap with the mouse ellipse, let's call that function `hovered()` and only check for overlap with the mouse ellipse. Since all of the information about the obstacle is available within itself using the `this` operator, the `hovered()` function doesn't need any input parameters.
 
-{% include p5-editor.html id="yXqOkazQG" %}
+{% include p5-editor.html id="CmGNj7rt2" %}
 
 The resulting overall behavior is the same, but all of the logic necessary for defining the functionality of our obstacles is now inside our `Obstacle` class definition and that makes it easier for us to read and update our code and add new functionality and behavior to our obstacles.
 
@@ -76,7 +76,7 @@ Now that we have a way to *encapsulate* parameters, behavior and functionality f
 
 In order to fully *encapsulate* this inside the class objects, let's create a function inside our class that will be responsible for checking for overlap and for drawing the shape based on the result of the check. The logic will be similar to what is implemented in `draw()`, but now it will be the object's responsibility to check for overlap and draw itself.
 
-{% include p5-editor.html id="ViqfYSmWw" %}
+{% include p5-editor.html id="FFQ9SNAk5" %}
 
 This is what *encapsulation* means: we've separated the internal logic of our obstacles from our main `setup()` and `draw()` functions. If we look at the loops in our `setup()` and `draw()` functions, they are very easy to read and understand. One creates new `Obstacle` objects, the other draws every `Obstacle` object.
 
@@ -118,8 +118,8 @@ let mDiameterMultiplier = 4 - i;
 
 Now when the mouse hovers over an obstacle, concentric circles get drawn, but all of the logic is implemented inside the `Obstacle` class: our main `setup()` and `draw()` functions stayed the same.
 
-{% include p5-editor.html id="ohl3IUqHL" %}
+{% include p5-editor.html id="gG464xVSH" %}
 
 Now it's easier to add even more obstacles to our sketch and have obstacles with different number of *rings*.
 
-{% include p5-editor.html id="RZ4BP5rgse" %}
+{% include p5-editor.html id="q565eCcti" %}

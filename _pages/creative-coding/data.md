@@ -39,7 +39,7 @@ function preload() {
 
 The `url` variable could also specify a local file, but regardless, by the time the `setup()` function runs, our `data` variable will already have all of the information that is inside the `rent.json` file, and we can then use `for()` loops to process it however we want:
 
-{% include p5-editor.html id="OWvUgepQs" %}
+{% include p5-editor.html id="HxGSOzMFS" %}
 
 Some things to note about the above sketch:
 
@@ -102,6 +102,6 @@ Instead of using `data.length` to know how many data points are in our dataset, 
 
 Let's take a look at a full example that does the same thing as the JSON example above:
 
-{% include p5-editor.html id="A6W6rQWWE" %}
+{% include p5-editor.html id="DUn4Pd1-a" %}
 
 Just like in the JSON example, we first calculate the minimum and maximum values in the `price` and `points` fields, so we can later scale the values in those fields and use the whole canvas when drawing our visualization.

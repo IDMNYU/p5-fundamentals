@@ -66,7 +66,7 @@ These are the exact connections shown in the diagram above.
 
 Our `p5.Amplitude` object can now be used at every iteration of our `draw()` function to get the sound's amplitude and display it visually using ellipses:
 
-{% include p5-editor.html id="Dvc9L6y-_" %}
+{% include p5-editor.html id="-DxgXbZeG" %}
 
 ## Filters
 
@@ -124,7 +124,7 @@ mFilter.connect(mAmp);
 
 And use `mouseX` to pick the filter's center frequency $$f$$:
 
-{% include p5-editor.html id="XS4zAXpiS" %}
+{% include p5-editor.html id="iM1QxgAch" %}
 
 ## FFT
 
@@ -148,7 +148,7 @@ The `p5.FFT` object also has a [`getEnergy()`](https://p5js.org/reference/#/p5.F
 
 Knowing this, we can use the `p5.FFT` object and the `FFT.analyze()` and `getEnergy()` functions to visualize the effects of the filter from the previous example:
 
-{% include p5-editor.html id="J1rT_BiA8" %}
+{% include p5-editor.html id="5qBkXuygI" %}
 
 Instead of just drawing one circle, we now draw five, one for each of the predefined frequency ranges, and as we move the mouse from the left to the right we will see movement go from the bottom circles to the top, which correspond to the higher frequency ranges.
 
@@ -173,7 +173,7 @@ mDelay.delayTime(0.15);
 
 But, no matter how we adjust this parameter, the resulting signal just won't sound like a _natural_ echo. Try it :
 
-{% include p5-editor.html id="b_8iEba2t" %}
+{% include p5-editor.html id="564xTeOZl" %}
 
 This is because all we are hearing is the "wet" sound, the sound with the delay, where in a real-world situation any kind of echo is a combination of the delayed sound ("wet" signal) with the original sound ("dry" signal).
 
@@ -194,7 +194,7 @@ mSound.connect(p5.soundOut);
 mDelay.connect(p5.soundOut);
 ```
 
-{% include p5-editor.html id="OcNSvyt6B" %}
+{% include p5-editor.html id="F6AAOMTLS" %}
 
 Now we can play with the parameters to adjust the delay and we'll have a little bit more control of how the overall final signal will sound.
 
@@ -218,7 +218,7 @@ In p5js, if we wire it up to hear just the reverb, like this:
 
 the _wet_ signal will sound like this:
 
-{% include p5-editor.html id="mFZ-XEiNK" %}
+{% include p5-editor.html id="ojgRZ3kNN" %}
 
 But, like the delay, if we wire it up like this, mixing the _wet_ and _dry_ signals:
 
@@ -228,7 +228,7 @@ But, like the delay, if we wire it up like this, mixing the _wet_ and _dry_ sign
 
 and adjust some of the parameters, we can get it to make the original signals sound like it's coming from a large empty room:
 
-{% include p5-editor.html id="gtUXYqYRW" %}
+{% include p5-editor.html id="NQ1N_LQCO" %}
 
 ## Pushing Delay
 
@@ -264,7 +264,7 @@ mDelays[mDelays.length - 1].connect(p5.soundOut);
 
 And the full sketch, with some adjustable parameters:
 
-{% include p5-editor.html id="X9QILrsQ3" %}
+{% include p5-editor.html id="Sn5kPD97Y" %}
 
 ## Audio Input
 
@@ -278,7 +278,7 @@ We just add a [`p5.AudioIn`](https://p5js.org/reference/#/p5.AudioIn) object to 
 
 ### NOTE: sketches that use the microphone won't work here. They have to be opened in a new window directly from their [LINK](https://editor.p5js.org/thiagohersan/sketches/94vJFO1dT_).
 
-{% include p5-editor.html id="94vJFO1dT_" %}
+{% include p5-editor.html id="8Ic-7bIUq" %}
 
 ## Full Effect
 
@@ -302,7 +302,7 @@ mDelay.connect(p5.soundOut);
 
 With a toggle, to check the effect:
 
-{% include p5-editor.html id="98WIWW9xU" %}
+{% include p5-editor.html id="JLZd2lAgV" %}
 
 Now, the high-frequency path:
 
@@ -313,7 +313,7 @@ mReverb.connect(p5.soundOut);
 ```
 
 With a toggle:
-{% include p5-editor.html id="FDLTm6orf" %}
+{% include p5-editor.html id="7he8PvvNq" %}
 
 And, putting it all together, with a toggle:
-{% include p5-editor.html id="GkVqKhU2t" %}
+{% include p5-editor.html id="azmXfYrYo" %}

@@ -19,25 +19,25 @@ To use the sound library, we have to include the [p5.sound library](https://p5js
   <img src="{{ '/assets/images/creative-coding/sound-synthesis-01.jpg' | relative_url }}"/>
 </div>
 
-{% include p5-editor.html id="MN_NFnKtK" %}
+{% include p5-editor.html id="nXn6zbfSE" %}
 
 <div class="scaled-images left">
   <img src="{{ '/assets/images/creative-coding/sound-synthesis-02.jpg' | relative_url }}"/>
 </div>
 
-{% include p5-editor.html id="QcdtusOiTL" %}
+{% include p5-editor.html id="q8TkMheW5" %}
 
 <div class="scaled-images left">
   <img src="{{ '/assets/images/creative-coding/sound-synthesis-03.jpg' | relative_url }}"/>
 </div>
 
-{% include p5-editor.html id="KyShmYHvS" %}
+{% include p5-editor.html id="wmTPsEiRC" %}
 
 ## Monosynth
 
 DIY Monosynth from oscillators
 
-{% include p5-editor.html id="75x3A-SAd" %}
+{% include p5-editor.html id="CKv3B6So_" %}
 
 ## Attack, Decay, Sustain, Release
 
@@ -49,8 +49,8 @@ DIY Monosynth from oscillators
   <img src="{{ '/assets/images/creative-coding/sound-synthesis-05.jpg' | relative_url }}"/>
 </div>
 
-{% include p5-editor.html id="GjbUx3543" %}
+{% include p5-editor.html id="52N5KRgX4" %}
 
 ## Sequencer
 
-{% include p5-editor.html id="zvsKQ5bsA" %}
+{% include p5-editor.html id="xVCALCTDo" %}

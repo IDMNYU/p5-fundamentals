@@ -16,7 +16,7 @@ First, we'll load an audio file using the [`loadSound()`](https://p5js.org/refer
 
 The `loadSound()` function returns a [`SoundFile`](https://p5js.org/reference/#/p5.SoundFile) object, and we can use its [`play()`](https://p5js.org/reference/#/p5.SoundFile/play) function to play the song whenever we click the mouse:
 
-{% include p5-editor.html id="aLnj1hrsv" %}
+{% include p5-editor.html id="kZLiBslTX" %}
 
 What happens if we click the mouse multiple times? It sounds like the `song` object starts playing the file multiple times over itself.
 
@@ -24,11 +24,11 @@ There are two ways we can fix this.
 
 First, we can specify the file's [`playMode()`](https://p5js.org/reference/#/p5.SoundFile/playMode) to be either `restart` or `untilDone`, and that will make it only play one instance of the file, either by starting the song over or not doing anything until it plays until the end:
 
-{% include p5-editor.html id="yD2bhgfPO" %}
+{% include p5-editor.html id="U8GL6qdUD" %}
 
 The other way is to check first if the object is already playing the file and only call `play()` if it's not. We can also use [`isPlaying()`](https://p5js.org/reference/#/p5.SoundFile/isPlaying) to change the background color as an indication of the play state:
 
-{% include p5-editor.html id="cKAbzWY2a" %}
+{% include p5-editor.html id="hABEaYEA1" %}
 
 ## Sound Player
 Now that we know how to play a sound file, let's organize our sound player.
@@ -59,13 +59,13 @@ What this diagram is saying is that, no matter what state we're in, if the `back
 
 Let's write some pseudo-code:
 
-{% include p5-editor.html id="v5Pbvv6Z2" %}
+{% include p5-editor.html id="r5r5Y3QRq" %}
 
 We'll have to double check some things that aren't so clear from the documentation, like whether the [`stop()`](https://p5js.org/reference/#/p5.SoundFile/stop) function also resets the tracks position, and what happens if we call [`jump(0)`](https://p5js.org/reference/#/p5.SoundFile/jump) on a file that is not playing.
 
 Let's use this code to check:
 
-{% include p5-editor.html id="g1s3upXIH" %}
+{% include p5-editor.html id="SLCmRcdbd" %}
 
 Some things to note about the code:
 
@@ -74,11 +74,11 @@ Some things to note about the code:
 
 Let's make a [class](../../p5/classes/) for our buttons to encapsulate their style and behavior:
 
-{% include p5-editor.html id="XENqVU0Gt" %}
+{% include p5-editor.html id="H4SNKePvH" %}
 
 Now, let's add a fourth button for skipping to the next song, and detect double clicks on the back button to skip to the previous song:
 
-{% include p5-editor.html id="DcCgrtEbU" %}
+{% include p5-editor.html id="gBeE2zqYi" %}
 
 Again, there's some extra logic that we have to use to set `shouldRestart` every time we change songs or states while paused.
 
@@ -120,6 +120,6 @@ This value then goes through `floor()` and `constrain()` in order to guarantee t
 
 After that we use it to index into our arrays of diameters and draw an ellipse whose size is proportional to the volume of the current sample being played:
 
-{% include p5-editor.html id="LqkTuPJ0j" %}
+{% include p5-editor.html id="DnPLOOgea" %}
 
 Try it out on both tracks, and remember to adjust the `DELAY` value to get better synchronization if using bluetooth speakers/earbuds or if the browser is overloaded.

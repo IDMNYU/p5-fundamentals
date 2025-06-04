@@ -8,7 +8,7 @@ This sketch has $$9$$ obstacle ellipses, and each obstacle has its own `x` and `
 
 When we want to draw an obstacle we get values from the `x` and `y` arrays using the same *index* value. For example, the position for the $$4^{th}$$ obstacle is given by `(x[3], y[3])`.
 
-{% include p5-editor.html id="SPijB1Iul" %}
+{% include p5-editor.html id="S--4o9Nzw" %}
 
 Let's say we now want each obstacle to also have its own diameter.
 
@@ -33,7 +33,7 @@ for (let i = 0; i < x.length; i += 1) {
 }
 ```
 
-{% include p5-editor.html id="R4lTL3FtQ" %}
+{% include p5-editor.html id="XK9Pc24G0" %}
 
 Cool. That works.
 
@@ -152,7 +152,7 @@ if (mOverlap) {
 ellipse(anObstacle.x, anObstacle.y, anObstacle.diameter);
 ```
 
-{% include p5-editor.html id="M8A7942X7" %}
+{% include p5-editor.html id="7v8q-YF94" %}
 
 This is powerful because now we have a way of addressing each of our objects at once, with all of their parameters. No need to keep multiple arrays with separate parameters scattered around our code.
 
@@ -175,7 +175,7 @@ let oDiam = random(maxDiam / 2, maxDiam);
 let pctDiam = oDiam / maxDiam;
 ```
 
-{% include p5-editor.html id="unMpj-cQH" %}
+{% include p5-editor.html id="FScgsqLKX" %}
 
 Ok. The color works. But we still want to draw the bigger diameters first.
 
@@ -196,6 +196,6 @@ And when we call `sort()` like this, it will sort the obstacles by diameter from
 allObstacles.sort(byDiameter);
 ```
 
-{% include p5-editor.html id="uyVxY2kii" %}
+{% include p5-editor.html id="l27k2dsat" %}
 
 Next we're gonna take a look at how to organize our objects so we can more easily change their shapes and colors when they collide.

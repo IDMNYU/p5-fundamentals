@@ -13,13 +13,13 @@ Let's consider a simple animation of a circle that moves across our canvas.
 
 We'll use the p5.js [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable to set the `x` location of our circle. This variable keeps track of how many times the `draw()` function has executed in our program, and since it starts at $$0$$ and grows indefinitely, our circle will start at $$0$$ and go infinitely to the right, eventually leaving the screen.
 
-{% include p5-editor.html id="GDSfaAYYC" %}
+{% include p5-editor.html id="sq5gwzjWb" %}
 
 If we wanted to keep the circle always on the screen, we could create a separate variable that increments once per frame, just like `frameCount`, but once it gets bigger than `width` it resets back to $$0$$.
 
 This also has the advantage of letting us control the speed of the circle by changing how much `x` grows with each `draw()`.
 
-{% include p5-editor.html id="c8SmJmXy0" %}
+{% include p5-editor.html id="s8NNTlNKp" %}
 
 Try it out! Change `x += 4` to `x += 8`, or `x += 12` on the sketch above ☝️.
 
@@ -49,7 +49,7 @@ If we want to repeat the sequence after `width` elements, so, turn $$[0,1,2,3,4,
 
 In our case, using p5.js, the [`frameCount`](https://p5js.org/reference/#/p5/frameCount) variable already gives us a sequence of the natural numbers. And, since in this example we want the circle to reset to $$0$$ once it gets to `width`, all we have to do is set the `x` position of our circle to be `frameCount % width`.
 
-{% include p5-editor.html id="A_1Rjsrd3" %}
+{% include p5-editor.html id="KanH50nEv" %}
 
 And if we now want to make it move faster, we just multiply the `frameCount` variable by a constant, so instead of growing by $$1$$ it grows by $$2$$ or by $$3$$, etc:
 
@@ -60,7 +60,7 @@ And if we now want to make it move faster, we just multiply the `frameCount` var
 
 Either way, no matter how fast our initial sequence grows, as long as we calculate its remainder when divided by `width`, the `x` position of our circle will wrap around to $$0$$ once it gets bigger than `width`.
 
-{% include p5-editor.html id="u0z73i0o8" %}
+{% include p5-editor.html id="-QT45J7JU" %}
 
 It's good to keep the modulo operator (`%`) in mind whenever we are working with *sequences*, or, *cycles*, and want to create a sequence of values that *start over*, or *reset*.
 
@@ -68,13 +68,13 @@ For example, let's say we want to cycle our background colors between $$3$$ valu
 
 We can just create a variable that will count the number of clicks and use the modulo operator (`%`) to calculate which color to show. In this case, the `clickCount` variable is the sequence that just grows and grows and grows, but since what we want is a sequence that repeats after $$3$$ values, we'll use `% 3`.
 
-{% include p5-editor.html id="A_2scizHo" %}
+{% include p5-editor.html id="ZK24vFjmJ" %}
 
 And what if we want the background color to change automatically every second?
 
 There is a function in p5.js called [`second()`](https://p5js.org/reference/#/p5/second) that gives us the number of seconds from our computer's clock. This number itself repeats after $$60$$ values, but since we still only have $$3$$ options for colors, we'll still use `% 3`.
 
-{% include p5-editor.html id="mH6Eqrv1h" %}
+{% include p5-editor.html id="0-XZ391uE" %}
 
 This is an example of converting an *input* signal that we don't control into an *output* parameter to control our animation.
 
@@ -90,7 +90,7 @@ Let's look at an example.
 
 This is a sketch that draws a circle at `(mouseX, mouseY)` and sets the circle diameter to be equal to the `mouseY` value: the further down the canvas, the bigger the circle; the circle is almost not visible when the mouse is near the top of the canvas, and, likewise, it's kind of too big when it's at the very bottom.
 
-{% include p5-editor.html id="RcUoHjoJz" %}
+{% include p5-editor.html id="J9txjcvGj" %}
 
 One way to make this a bit more controllable is to set a `maxDiameter` variable and then calculate the actual diameter as a percentage of this value based on the mouse position:
 
@@ -100,7 +100,7 @@ The $$\frac{mouseY}{height}$$ term is the location of the mouse as a percentage 
 
 We can now use this to set the diameter:
 
-{% include p5-editor.html id="ONb2xFJqu" %}
+{% include p5-editor.html id="PEHUu0w-y" %}
 
 And we can do something similar if we want to set a minimum value for the circle diameter:
 
@@ -108,7 +108,7 @@ $$diameter = \frac{mouseY}{height} \times (maxDiameter - minDiameter) + minDiame
 
 The $$(maxDiameter - minDiameter)$$ term is the magnitude of our output (how much it's allowed to vary), and multiplying it by $$\frac{mouseY}{height}$$ gives us how far along this magnitude our output should be. We still have to add the $$minDiameter$$ term to make sure our output is in the range $$[minDiameter, maxDiameter]$$:
 
-{% include p5-editor.html id="-lhWT-K5U" %}
+{% include p5-editor.html id="t1C6SSfop" %}
 
 We have just created a very precise relationship that sets our circle's diameter based on an input signal.
 
@@ -121,7 +121,7 @@ let mDiamInv = (mouseY / height) * (maxDiam - minDiam) + minDiam;
 let mDiam = maxDiam - mDiamInv + minDiam;
 ```
 
-{% include p5-editor.html id="tNOf62UFa" %}
+{% include p5-editor.html id="6AdmlEjeR" %}
 
 The logic for calculating the circle diameter is getting a bit complicated...
 
@@ -133,7 +133,7 @@ If we want to map the value of `mouseY` from `height` values to `diameter` value
 let mDiam = map(mouseY, 0, height, minDiam, maxDiam);
 ```
 
-{% include p5-editor.html id="SPem8nNRO" %}
+{% include p5-editor.html id="XJlqeKXnW" %}
 
 Likewise, if we want to reverse the logic and have larger circle at the top of the screen and smaller circle at the bottom, we just swap `minDiam` and `maxDiam`:
 
@@ -141,7 +141,7 @@ Likewise, if we want to reverse the logic and have larger circle at the top of t
 let mDiam = map(mouseY, 0, height, maxDiam, minDiam);
 ```
 
-{% include p5-editor.html id="5d4Q2aSJ6" %}
+{% include p5-editor.html id="1xiOT--Ci" %}
 
 ## Mapping Between Ranges
 
@@ -149,23 +149,23 @@ let mDiam = map(mouseY, 0, height, maxDiam, minDiam);
 
 We have a `for()` loop that counts from $$0$$ to $$16$$ and with `map()` we can just transform the counter variable to the position we want because we know our counter has a range $$[0, 16]$$ and our line positions will have a range $$[0, width]$$:
 
-{% include p5-editor.html id="_1qLp6Hf4" %}
+{% include p5-editor.html id="NqqsgY5IA" %}
 
 We can map the same counter to two different output ranges: $$[0, 16] \rightarrow [0, width]$$ and $$[0, 16] \rightarrow [width, 0]$$. The first going from left to right and the other from right to left, as the counter increases:
 
-{% include p5-editor.html id="I-0zfItKy" %}
+{% include p5-editor.html id="2CbfzdpbU" %}
 
 Using the same counter we can map $$[0, 16] \rightarrow [0, width]$$ and $$[0, 16] \rightarrow [0, \frac{width}{10}]$$:
 
-{% include p5-editor.html id="xI7qrR_jt" %}
+{% include p5-editor.html id="zJ9WBx5Mz" %}
 
 Or, with an offset for one of the output ranges, map $$[0, 16] \rightarrow [0, width]$$ and $$[0, 16] \rightarrow [\frac{width}{4}, \frac{width}{3}]$$:
 
-{% include p5-editor.html id="ESNSos3lN" %}
+{% include p5-editor.html id="xoCvCTcuz" %}
 
 We can even do something where our counter $$[0, 16]$$ gets mapped to *three* different output ranges:
 
-{% include p5-editor.html id="iOMArqVae" %}
+{% include p5-editor.html id="xwmzj1UIx" %}
 
 ## Mapping Between Units
 
@@ -175,4 +175,4 @@ In this example we map the seconds value from our computer's clock to the diamet
 
 Let's map $$[0, 59] \rightarrow [20, width]$$ for the diameter, and while we're at it, let's also map the seconds value to the amount of green in our `fill()` color. We know each of the $$3$$ color parameters has a maximum value of $$255$$, and if we always want a bit of green in our color we can map $$[0, 59] \rightarrow [128, 255]$$.
 
-{% include p5-editor.html id="p84wngLLR" %}
+{% include p5-editor.html id="thbVYgT-l" %}

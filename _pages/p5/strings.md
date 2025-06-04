@@ -20,19 +20,19 @@ let s0 = "This is a string";
 text(s0, 10, 10);
 ```
 
-{% include p5-editor.html id="UIFxGREsZ" %}
+{% include p5-editor.html id="N7dBcauPF" %}
 
 In addition to `text()`, p5.js also has a bunch of [functions](https://p5js.org/reference/#group-Typography) for controlling typography and text properties like font size, font type, alignments, etc:
 
-{% include p5-editor.html id="8s2cHbfAS" %}
+{% include p5-editor.html id="cy5No5rwW" %}
 
 Text [alignment](https://p5js.org/reference/#/p5/textAlign) is something worth reading about and experimenting with:
 
-{% include p5-editor.html id="2wjTge4MA" %}
+{% include p5-editor.html id="B7k5Ytn_v" %}
 
 In cases where our text is really long, we can have it wrap around and display in multiple lines by giving the `text()` function a couple of extra parameters:
 
-{% include p5-editor.html id="qUQqHpfnf" %}
+{% include p5-editor.html id="dZpYMQAEJ" %}
 
 This is just like `rect()` where we specify `x`, `y` locations and `width`, `height`, except the width and height now are for a textbox.
 
@@ -56,21 +56,21 @@ There are a whole bunch of [functions](https://developer.mozilla.org/en-US/docs/
 
 And just like with an array of numbers, we can iterate over a string and draw its characters one at a time:
 
-{% include p5-editor.html id="m6jmIOGf4G" %}
+{% include p5-editor.html id="ic4ok1ann" %}
 
 Independent of the size of the string, we can always iterate over it using `length` and accessing the letters using array index notation:
 
-{% include p5-editor.html id="gbF_-Tsb_" %}
+{% include p5-editor.html id="tVJ12ATX2" %}
 
 This is trying to fit all of the letters of a long sentence along the diagonal of our canvas, but instead we could first split the sentence into words, and then iterate over the array of words:
 
-{% include p5-editor.html id="yh84WDAuL" %}
+{% include p5-editor.html id="2M95jO8ab" %}
 
 If we look at the documentation for the [`split()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) function we'll see that it takes a string as its parameter, and that string is used to split the original string into many substrings. We used the space character (`" "`) to split the sentence into words, but we could've used any string as the split parameter.
 
 And if we want to avoid having words that go beyond the edge of our canvas, we use the p5.js function [`textWidth()`](https://p5js.org/reference/#/p5/textWidth) to calculate the width of each word, and use that to adjust the x-location of the word if it will overflow:
 
-{% include p5-editor.html id="StBeYLsZq" %}
+{% include p5-editor.html id="JkBUZgdQr" %}
 
 ## More Splitting
 
@@ -107,7 +107,7 @@ We'll use:
 chosenIndex = floor(random(0, words.length));
 ```
 
-{% include p5-editor.html id="8A1qHB7Ls" %}
+{% include p5-editor.html id="4efFuRnvn" %}
 
 ## Loading Fonts
 
@@ -121,7 +121,7 @@ Once we have a font file (.otf or .ttf), we can place it next to our `sketch.js`
 
 Then we can use it to draw our texts:
 
-{% include p5-editor.html id="SBuDbl1J4" %}
+{% include p5-editor.html id="JW97r1_s4" %}
 
 So, in p5js, not only are our strings instances of a class, but we also have a [Font](https://p5js.org/reference/#/p5.Font) class with its own special functions for manipulating text. One of these functions, [`textBounds()`](https://p5js.org/reference/#/p5.Font/textBounds) returns a bounding box for the given text.
 
@@ -129,13 +129,13 @@ The box that is returned is an object with $$4$$ parameters: $$x$$, $$y$$, $$w$$
 
 We can use this information to draw rectangles around our text:
 
-{% include p5-editor.html id="-98bxlCNf" %}
+{% include p5-editor.html id="TA1GRq1Dw" %}
 
 Another special function in the Font class is [`textToPoints()`](https://p5js.org/reference/#/p5.Font/textToPoints). This function returns an array of points that follow the specified text. Once we have those points, we can make small modifications to their values before using them to create a shape.
 
 In this sketch we are adding a small random number to each point's `x` and `y` locations before drawing them:
 
-{% include p5-editor.html id="7XxCGaARd" %}
+{% include p5-editor.html id="z3QI6kJyQ" %}
 
 ## Loading Text Files
 
@@ -145,4 +145,4 @@ Just like there are `loadJSON()` and `loadTable()` functions, p5.js also has a [
 
 The result of calling the `loadStrings()` function is an array with the lines of the text file, so, if we use a `for()` loop we can iterate through the resulting array and draw one line of the text file at a time:
 
-{% include p5-editor.html id="EQKLo7iTC" %}
+{% include p5-editor.html id="O-q2k8pNX" %}

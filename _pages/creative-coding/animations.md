@@ -26,15 +26,15 @@ We can call each execution of `draw()` a frame, and by varying positions, sizes 
 
 If, instead of drawing a circle at the exact same location every time `draw()` executes, we use a variable to change its position, we can make it move!
 
-{% include p5-editor.html id="9dPEc2s6U" %}
+{% include p5-editor.html id="txJBbZKnX" %}
 
 Let's play around a little bit with this concept... what if we only draw the background once, but keep drawing ellipses every frame ?
 
-{% include p5-editor.html id="3RlxW-PnB" %}
+{% include p5-editor.html id="C0SDPIm2f" %}
 
 Or, what if instead of drawing a fully opaque background, we add a little alpha to our color?
 
-{% include p5-editor.html id="Jp6EWlbVr" %}
+{% include p5-editor.html id="anLS0_0Rx" %}
 
 Cooool !!!
 
@@ -42,7 +42,7 @@ Cooool !!!
 
 Instead of using a variable called `xPos` we could have called the p5.js variable [`frameCount`](https://p5js.org/reference/#/p5/frameCount). This variable keeps track of how many times the `draw()` function has executed and can be easily used for creating animations:
 
-{% include p5-editor.html id="pj861WPhB" %}
+{% include p5-editor.html id="L9FIYPY2_" %}
 
 At each frame we are redrawing the ellipse, but before redrawing we are rotating our canvas by `frameCount` degrees: the first frame it rotates by $$0^\circ$$, the second time by $$1^\circ$$, then $$2^\circ$$, then $$3^\circ$$, etc, and when we see all these frames one after the other we perceive it as an animated ellipse rotating.
 
@@ -50,7 +50,7 @@ Since the `frameCount` variable just keeps growing and growing it's very easy to
 
 Let's go back to our circle example:
 
-{% include p5-editor.html id="9dPEc2s6U" %}
+{% include p5-editor.html id="txJBbZKnX" %}
 
 Play with the value that determines the speed of the circle in the sketch above ☝️ and figure out how to make it move faster. As it moves faster, do we lose the impression of an animation at any point?
 
@@ -60,23 +60,23 @@ Now, what if we don't want it to go away, and instead have it bounce back once i
 
 We'll add a variable to keep track of our position and direction, and every frame, after we increment the position of our circle, we could check if its position has gotten bigger than the canvas `width` and if necessary, change its direction:
 
-{% include p5-editor.html id="jbsoIwGTJ" %}
+{% include p5-editor.html id="mH4M23PZV" %}
 
 Our circle is disappearing on the left side of the screen now. We can fix that the same way we fixed the right side:
 
-{% include p5-editor.html id="jUJYxGWG5" %}
+{% include p5-editor.html id="V_d91eHez" %}
 
 Let's just clean this up a little bit, and refactor the `xDir` variable to actually hold our velocity. The code stays the same, because the logic is the same, but the variable name is just a little more meaningful and we now know we can use it to control the velocity of our ellipse: a positive velocity means its moving to the right and a negative velocity means its moving to the left.
 
-{% include p5-editor.html id="TCVCAwXJ_" %}
+{% include p5-editor.html id="v6y32pYHP" %}
 
 Looking at the logic, we can actually simplify it by just detecting when it gets to either edge, and flipping the `xVel`:
 
-{% include p5-editor.html id="lfNvl4-cY" %}
+{% include p5-editor.html id="u28VL-98_" %}
 
 Almost perfect. The circle only changes direction when its center goes beyond the canvas, not its edge. Let's put the circle radius in a variable and use that to detect when the circle hits the end of the canvas:
 
-{% include p5-editor.html id="mHwD47zud" %}
+{% include p5-editor.html id="HR0Adpc-8" %}
 
 We now have a simple, infinite, animation using our `draw()` loop.
 
@@ -88,7 +88,7 @@ We can use the `map()` function to create an animation based on time. In this ex
 
 In addition to mapping $$[0, 59] \rightarrow [20, width]$$ for the diameter, we can also map the seconds value to the amount of green in our `fill()` color. We know each of the $$3$$ color parameters has a maximum value of $$255$$, and if we always want a bit of green in our color we can map $$[0, 59] \rightarrow [128, 255]$$:
 
-{% include p5-editor.html id="p84wngLLR" %}
+{% include p5-editor.html id="thbVYgT-l" %}
 
 We can add other elements to this by also mapping the milliseconds amount to a different ellipse's diameter. We unfortunately don't have a function that gives us the current time's milliseconds, but [`millis()`](https://p5js.org/reference/#/p5/millis) gives us the number of milliseconds that have elapsed since we started our sketch. It keeps growing, so we'll use `mod(%)` to keep it between $$[0, 999]$$.
 
@@ -96,7 +96,7 @@ Then, instead of mapping $$[0, 999] \rightarrow [20, width]$$, we'll map this va
 
 This should give us an interesting effect:
 
-{% include p5-editor.html id="NYoIU_AED" %}
+{% include p5-editor.html id="620VoCQoG" %}
 
 We can also use [`for()` loops](../../p5/counters/), [arrays](../../p5/arrays/) and [objects](../../p5/objects/) to create some pretty abstract animations.
 
@@ -104,4 +104,4 @@ We'll create an array of line objects. Each line has an `x` location, a length `
 
 At each frame we update every line's length using its velocity, and make sure to wrap back to $$0$$ when it grows bigger than the canvas `height`.
 
-{% include p5-editor.html id="Wbad1kY5q" %}
+{% include p5-editor.html id="5HEH8eW-r" %}

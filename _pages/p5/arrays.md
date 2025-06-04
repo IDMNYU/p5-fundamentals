@@ -9,7 +9,7 @@ We saw the p5.js variables [`mouseX`](https://p5js.org/reference/#/p5/mouseX) an
 
 These variables always hold the `x` and `y` position of our mouse during the execution of our sketch, so if we use them inside our `draw()` function to draw an ellipse, it will look like the ellipse is following our mouse.
 
-{% include p5-editor.html id="iQgAQwWr-" %}
+{% include p5-editor.html id="04ZAOiwGT" %}
 
 Great.
 
@@ -17,11 +17,11 @@ When we looked at [conditionals](../conditionals/) and [functions](../functions/
 
 Like this code that changes the color of rectangles when the mouse hovers over them:
 
-{% include p5-editor.html id="GZZ2GtQU4" %}
+{% include p5-editor.html id="IOAIaoJ2b" %}
 
 Or this code that changes the shapes that it draws when it detects collision between our mouse ellipse and an *obstacle*:
 
-{% include p5-editor.html id="FXP8atSEcM" %}
+{% include p5-editor.html id="2A9QJrOcR" %}
 
 Also great.
 
@@ -31,7 +31,7 @@ But, right now, we are not so interested in the logic for detecting collision or
 
 Let's take a look at a simplified version of one of those sketches, that only draws ellipses. Here we want $$5$$ obstacle ellipses, and since later we'll want to use their positions to detect collision, we'll use $$5$$ variables to hold their `x` positions and another $$5$$ variables for their `y` positions.
 
-{% include p5-editor.html id="9wTdOp6YM" %}
+{% include p5-editor.html id="LAIYvwNxQ" %}
 
 This is all fine and works well... for $$5$$ ellipses. What if this is the initial prototype of a game we are making and eventually we will want to have $$100$$ obstacles ?
 
@@ -80,7 +80,7 @@ Let's see how we can use this in our sketch with the obstacles.
 
 Instead of `x0`, `x1`, `y0`, `y1`, etc, we'll declare arrays to hold the `x` and `y` positions of our obstacles, and use the bracket notation to access individual elements when it's time to draw them.
 
-{% include p5-editor.html id="MRO4VsbASB" %}
+{% include p5-editor.html id="2TzVXz8uN" %}
 
 ## Iterators
 
@@ -118,7 +118,7 @@ Let's use this in our sketch with the obstacles to see how we can avoid writing 
 
 After we've declared our arrays with `x` and `y` positions, we'll iterate through them in order to draw the ellipses.
 
-{% include p5-editor.html id="8vZX0M-vR" %}
+{% include p5-editor.html id="pycWGw-Rw" %}
 
 Same result. Way less code.
 
@@ -130,7 +130,7 @@ Now that we are drawing our elements by iterating over our array using a `for()`
 
 All we have to do is add elements to the `x` and `y` arrays, but the rest of the code in `draw()` stays exactly the same.
 
-{% include p5-editor.html id="3wCddvEDi" %}
+{% include p5-editor.html id="Af1aWsAuo" %}
 
 We can easily put back the overlap detection function and change the logic for selecting the colors of the ellipses to work with our arrays.
 
@@ -151,7 +151,7 @@ This function implements this logic from the [functions](../functions/) tutorial
 
 It uses euclidean distances to determine if two ellipses are closer than the sum of their radii, and returns `true` if they are overlapping and `false` otherwise. It doesn't draw the concentric circles like the original one because we'll see how to do that in a more elegant manner when we look at [classes](../classes/).
 
-{% include p5-editor.html id="SPijB1Iul" %}
+{% include p5-editor.html id="S--4o9Nzw" %}
 
 ## Out of Control
 
@@ -180,6 +180,6 @@ x.push(mx);
 
 We can use something like this for the `x` and `y` coordinates in our sketch. And besides changing how the ellipse coordinates get initialized, we didn't have to change anything in our sketch. The `draw()` function is exactly the same as before.
 
-{% include p5-editor.html id="Ip0z34XuC" %}
+{% include p5-editor.html id="w1xoYIYbz" %}
 
 We'll see how to make it so the obstacles don't overlap when we talk about [classes](../classes/), but for now, arrays, FTW!

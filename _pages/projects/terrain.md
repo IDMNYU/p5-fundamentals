@@ -24,19 +24,19 @@ Let's visualize this.
 
 Let's first iterate through our canvas and pick a random grayscale value to draw at every pixel:
 
-{% include p5-editor.html id="wJcpEDZ5Q" %}
+{% include p5-editor.html id="Wr9xVbC2J" %}
 
 Pretty random. Each pixel value is completely independent of its location and of previous values.
 
 Let's use `noise(x)` now, and remember that we might want to divide the value of `x` by $$10$$ or $$100$$ in order to only gradually change the value returned by `noise()` slightly as we move from location `x` to `x + 1`:
 
-{% include p5-editor.html id="_d2qwwEpQ" %}
+{% include p5-editor.html id="CB_7NYUIv" %}
 
 We get stripes, since every row of pixels calls `noise(x)` with the exact same values for `x`. We saw this before when we looked at a grid of ellipses.
 
 Let's use `noise(x, y)`, so we can vary our parameters to `noise()` by row and column:
 
-{% include p5-editor.html id="8456VlDl7" %}
+{% include p5-editor.html id="hMEbT_KD4" %}
 
 Now, every pixel's color is slightly related to the colors around it, which makes the canvas look like smoke or clouds.
 
@@ -46,15 +46,15 @@ Let's experiment with colors, and use `noise(x, y)` to pick how much we vary bet
 
 We'll use the `noise()` function to pick a value between $$0$$ and $$255$$ for the red channel of our color, we'll keep the green channel always a constant, and the blue channel will always be the inverse of the red channel:
 
-{% include p5-editor.html id="ma0T_JrCb" %}
+{% include p5-editor.html id="QJbAlfcat" %}
 
 This is cool, but it still looks like clouds. Let's add some thresholding to try to bring out more of the yellows. We'll do this by using an `if()` statement and forcing the color to full yellow even when it's just barely above the halfway point between yellow and blue:
 
-{% include p5-editor.html id="edKgZh_Ou" %}
+{% include p5-editor.html id="8UuMMNnf7" %}
 
 This looks pretty cool, let's do something similar to the blue. Let's force it to full blue even if the amount of yellow is just below the halfway point:
 
-{% include p5-editor.html id="YF7ghy4EL" %}
+{% include p5-editor.html id="MdGq4BsdL" %}
 
 This is starting to look like a map! And every time we run the sketch we get a different pattern!
 
@@ -66,11 +66,11 @@ Let's reorganize our code a little bit, and adjust our thresholds and colors.
 
 We'll use a variable called `nLevel`, to store each pixel's noise level as a value between $$0$$ and $$1$$. We'll then use this value to threshold our noisy canvas and pick from one of $4$$ or $$5$$ colors that will make up our map.
 
-{% include p5-editor.html id="5rDownf7D" %}
+{% include p5-editor.html id="irukS7uMS" %}
 
 We can change the parameters to the `noise()` function to adjust how our map looks. What's the effect of calling `noise(x / 50, y / 50)` or `noise(x / 200, y / 200)` instead of `noise(x / 100, y / 100)`?
 
-{% include p5-editor.html id="5HaXb2qmF" %}
+{% include p5-editor.html id="Jy63zJGBH" %}
 
 Change the `noiseFactor` variable above and see what effect it has on our map ☝️.
 
@@ -80,7 +80,7 @@ Change the `noiseFactor` variable above and see what effect it has on our map �
 
 So, just like we added another parameter to the `noise()` function to make sure pixels that are close to each other end up with similar colors, we can also add a third parameter to allow us to change our map gradually from frame to frame. We'll call `noise(x, y, t)`, where `t` is a sequence of values related to the `frameCount` of our running sketch:
 
-{% include p5-editor.html id="mem8MaQDo" %}
+{% include p5-editor.html id="CyiaM5Nzz" %}
 
 This works, but trying to update all pixels every frame is a bit too much work for the browser, even with a small canvas.
 
@@ -88,13 +88,13 @@ We can take advantage of the fact that we can scale the `frameCount` by `noiseFa
 
 We'll use a variable called `pixelGroup` that will alternate between $$0$$ and $$1$$ each frames and will let us know which rows of pixels to update at a given frame, the even rows or the odd ones:
 
-{% include p5-editor.html id="Zhcfz732T" %}
+{% include p5-editor.html id="rrBQOHUM6" %}
 
 This already makes our sketch twice as fast, since we're only updating half of the pixels every frame.
 
 Can we do better ? What if we implement the same trick for the columns as well as the rows?
 
-{% include p5-editor.html id="lLyTeABZy" %}
+{% include p5-editor.html id="Lrf7B4cnL" %}
 
 # 🤔
 
@@ -128,7 +128,7 @@ $$1$$ | `even` | `odd`
 $$2$$ | `odd` | `even`
 $$3$$ | `odd` | `odd`
 
-{% include p5-editor.html id="kfqY5zrDB" %}
+{% include p5-editor.html id="e8563YziQ" %}
 
 This is still a bit slow, but it's already four times faster than the original, and could be a meditation upon geological changes.
 
@@ -142,7 +142,7 @@ Before we start, let's get our canvas ready for $$3D$$ drawings.
 
 Instead of the pixel group trick above, let's draw squares of width `gridWidth` with our colors. This makes our terrain look a little too pixelated, or [*8-bit*](https://stock.adobe.com/search?k=8%20bit%20video%20game), in our current monitors, but we'll change it soon:
 
-{% include p5-editor.html id="7kOAIddTS" %}
+{% include p5-editor.html id="QWHUB21jV" %}
 
 Now, let's add the $$3^{rd}$$ dimension. We'll have to change our canvas type to `WEBGL`:
 ```js
@@ -159,8 +159,7 @@ And, just to make sure we actually have a $$3^{rd}$$ dimension, let's rotate the
 rotateX(PI / 3);
 ```
 
-{% include p5-editor.html id="5t8vN5l-D" %}
-
+{% include p5-editor.html id="aqwIRuGT2" %}
 
 In order to add height/depth to our map, we have to change how we draw the squares on screen.
 
@@ -188,7 +187,7 @@ Drawing rectangles like this speeds up our sketch because instead of sending col
 
 We can even increase our `gridWidth` a little:
 
-{% include p5-editor.html id="jCxs2TzQg" %}
+{% include p5-editor.html id="FfRioC0c-" %}
 
 We just have to add heights to our vertices.
 
@@ -215,7 +214,7 @@ vertex(x, y + gridWidth, z1);
 
 In real code, with some adjustments to the position of the canvas:
 
-{% include p5-editor.html id="C3iEmws2q" %}
+{% include p5-editor.html id="Y3T5yRNNO" %}
 
 This is good. Interesting. It looks like the rise and fall of mountains, but the colors and the blending between colors doesn't look too good.
 
@@ -223,13 +222,13 @@ This is because the `QUAD_STRIP` tries to blend colors between its vertices, but
 
 We can, of course, just remove all of the colors:
 
-{% include p5-editor.html id="nQnhxKPb4" %}
+{% include p5-editor.html id="io4kmiLyK" %}
 
 But, this is boring. Let's fix our colors and in the process learn some tricks for speeding up generative graphics.
 
 Let's begin by combining all of the `QUAD_STRIP` shapes into one shape, by calling `beginShape()` only once, outside all of our loops:
 
-{% include p5-editor.html id="_T8t0jhW9" %}
+{% include p5-editor.html id="Z74ISxvjb" %}
 
 It looks like in addition to NOT fixing the blending, this also broke something else.
 
@@ -250,7 +249,7 @@ Independent of this, the reason why the colors aren't blending between rows is b
 
 Let's refactor the color logic into a function and call that twice, once for each of the two `noiseLevel` values:
 
-{% include p5-editor.html id="HPFsncYbq" %}
+{% include p5-editor.html id="PXgWSzSlo" %}
 
 This is better !
 
@@ -267,7 +266,7 @@ fColor = lerpColor(COLOR[0], COLOR[1], t);
 
 This can get a bit slow, due to all of the color blending, but since we now have blending between vertices and blending between height levels, we can decrease the resolution of our grid to try to increase our frame rate:
 
-{% include p5-editor.html id="rULkjLIeK" %}
+{% include p5-editor.html id="G1qTyyRBU" %}
 
 This looks good!
 
@@ -278,4 +277,4 @@ Let's fix that by adding some clamping to our height map. There should be no neg
 let z0 = map(nLevel0, 0.5, 1, 0, 128, true);
 ```
 
-{% include p5-editor.html id="FPDzIGAZI" %}
+{% include p5-editor.html id="DE1gDKhIp" %}

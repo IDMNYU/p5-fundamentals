@@ -26,13 +26,13 @@ Let's start by loading a sequence of images and taking a look at them.
 
 The `spriteInfo` object holds information about the images that we've downloaded/created, and an empty array to hold `Image` objects once we load them:
 
-{% include p5-editor.html id="pxkpF7p1B" %}
+{% include p5-editor.html id="R2lOim_V6" %}
 
 So, the idea is that we want to draw these one after the other, at the same location on scree, with a certain delay between them.
 
 Let's create a class that receives a list of images and $$(x, y)$$ positions as parameters to its constructor. It also has a `draw()` function to draw the image to the canvas:
 
-{% include p5-editor.html id="-URXG3qyl" %}
+{% include p5-editor.html id="A2qT3YoiW" %}
 
 Easy. Just a few things to note:
 
@@ -61,7 +61,7 @@ if (millis() > this.lastUpdate + this.delay) {
 ```
 
 And that's it, we have a simple animated sprite:
-{% include p5-editor.html id="V0LWITpih" %}
+{% include p5-editor.html id="dLkyNnAsO" %}
 
 Let's optimize the code a little bit before we continue.
 
@@ -79,11 +79,11 @@ Let's take advantage of our class and instantiate multiple animations.
 
 We're gonna turn `mGif` into an array to store our `Gif` class objects, and use `mouseClicked()` to push new `Gif`s into this array:
 
-{% include p5-editor.html id="_98mxD0hq" %}
+{% include p5-editor.html id="TtYhgZWRj" %}
 
 Very cool, but they get drawn on top of each other in a very crude way. Let's sort the array by $$y$$ position every time we add a new Gif to our array. This way we will draw the characters towards the top of the canvas first, and it will give our canvas a bit of perspective:
 
-{% include p5-editor.html id="ql967lz1m" %}
+{% include p5-editor.html id="l0DOW3TzC" %}
 
 While we're at it, let's add another type of character that can be drawn. We'll turn `spriteInfo` into an array of objects to keep info about the different sprites:
 ```js
@@ -95,7 +95,7 @@ let spriteInfo = [
 
 In the setup we'll iterate over this array to create the image arrays, and in the `mouseClicked()` we'll pick a character type randomly:
 
-{% include p5-editor.html id="RsomgsURQ" %}
+{% include p5-editor.html id="hIygpfC_N" %}
 
 ## Moving Animated Characters
 If we look at the code above, the code inside our `setup()`, `draw()` and `mouseClicked()` functions is extremely simple. We were able to put the messy logic for counting frames and updating image indexes inside our class. Once that is working we can forget about it and just instantiate and use our characters.
@@ -113,7 +113,7 @@ let spriteInfo = [
 
 And we don't need an array for multiple Gifs because for now we only have one character.
 
-{% include p5-editor.html id="7XUYT6-Do" %}
+{% include p5-editor.html id="DyKkS-PGn" %}
 
 Now, we have to add some code in order to draw different sequences of images depending on direction of movement.
 
@@ -127,7 +127,7 @@ this.currentImgs = this.imgInfo[0].imgs;
 
 We'll start with the "down" image:
 
-{% include p5-editor.html id="XV7zOvlzU" %}
+{% include p5-editor.html id="H2JSxzf6B" %}
 
 Now we can add the code for detecting key presses and updating `this.currentImgs` and the position of our character. We can check if any keys are pressed during our `draw()` function and update image arrays and positions accordingly.
 
@@ -144,7 +144,7 @@ getDirectionImgs(dir) {
 
 Almost there. This works, but the left and right movements are using the same sequence of images:
 
-{% include p5-editor.html id="iD9rPic5I" %}
+{% include p5-editor.html id="GiPqtfOOH" %}
 
 Since the right and left movements are symmetrical, we only store one of the sequences in order to save storage space.
 
@@ -158,6 +158,6 @@ if(this.flipX) {
 
 That's how we flip an image across the vertical axis: we scale by $$-1$$ in the x-direction and then move the image back to the right, so it's in the same place as it was before the flip.
 
-{% include p5-editor.html id="fliazTkAh" %}
+{% include p5-editor.html id="P3ltiFKkG" %}
 
 And now we have our hero character!

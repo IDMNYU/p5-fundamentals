@@ -25,11 +25,11 @@ We'll have a character that we control and as it moves around the screen it has 
 
 Let's start by creating our character and making it move, just like we did when we looked at keyboard [`interactions`](../../creative-coding/interactions/). We'll use the `keyPressed()` function to update our character's `x` and `y` positions.
 
-{% include p5-editor.html id="FTdO6KrG5" %}
+{% include p5-editor.html id="0izU8r-6k" %}
 
 Let's give our character continuous motion, so it keeps moving if the keys are held. To do this we can just call `keyPressed()` ourselves in `draw()` whenever any `keyIsPressed`. And since we have continuous movement now we can decrease the `moveDist` amount.
 
-{% include p5-editor.html id="QcWRQqTE3" %}
+{% include p5-editor.html id="t0YB__OTG" %}
 
 Better.
 
@@ -37,7 +37,7 @@ Better.
 
 Let's add our reward and obstacle objects. We'll use an array to keep track of each kind of object, and we'll start with $$1$$ obstacle and $$1$$ reward, and add obstacles and rewards as our main character collects rewards.
 
-{% include p5-editor.html id="lU0CYtCUe" %}
+{% include p5-editor.html id="bjA3vxeaW" %}
 
 ## Detecting Overlap
 
@@ -53,7 +53,7 @@ function overlap(o0, o1) {
 ```
 Now whenever the character overlaps with an obstacle it will decrease in diameter, and whenever it overlaps with a reward it grows. In both cases we remove the object from its array.
 
-{% include p5-editor.html id="oaifEI0NSm" %}
+{% include p5-editor.html id="1_mrmdGtz" %}
 
 Cool. But boring. Let's add more obstacles and rewards.
 
@@ -108,7 +108,7 @@ Now we'll just call this function with the appropriate parameters whenever there
 
 We can also use this function to simplify our `setup()`.
 
-{% include p5-editor.html id="a3hq79Ngk" %}
+{% include p5-editor.html id="kES1by4TD" %}
 
 ## More Rewards
 
@@ -127,4 +127,4 @@ if (rewards.length < maxRewardCount) {
 }
 ```
 
-{% include p5-editor.html id="v6V7-ncnS" %}
+{% include p5-editor.html id="rW2cLwrmj" %}

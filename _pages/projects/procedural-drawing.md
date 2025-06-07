@@ -33,27 +33,27 @@ Our project will have at least two modes: in one mode we will see the agents mov
 
 An initial skeleton of our sketch could have the following structure and pseudo-code:
 
-{% include p5-editor.html id="y53VeHqwa" %}
+{% include p5-editor.html id="hwrjRhVIc" %}
 
 Filling in our code, the logic to detect mouse and keyboard events and update state, could look like this:
 
-{% include p5-editor.html id="eUnEHNWiz" %}
+{% include p5-editor.html id="y6y3zHtVL" %}
 
 Now we just have to fill in the rest.
 
 We'll start by writing some pseudo-code for our `Agent` class:
 
-{% include p5-editor.html id="3yje3bbLZ" %}
+{% include p5-editor.html id="KXu-4HOIi" %}
 
 Once we have the class definition and its functions, we can fill in some of the rest of the code in `setup()` and `draw()` even though none of the class is written:
 
-{% include p5-editor.html id="zovsJ1fGz" %}
+{% include p5-editor.html id="rR0D4l4_Y" %}
 
 ## Update
 
 And now, finally, let's fill in some of our class, starting with the constructor and the `drawAgent()` function, and some pseudo-code for `update()`:
 
-{% include p5-editor.html id="CpcX_dT7f" %}
+{% include p5-editor.html id="yU_Q7eKjx" %}
 
 For our `update()` function we might want to try different strategies for the boundary checks, so let's write a couple of functions that we can use later:
 
@@ -63,7 +63,7 @@ For our `update()` function we might want to try different strategies for the bo
 
 `resetBoundary()`: when an agent reaches the edge of the canvas it disappears and is re-created at a new random position, with new velocity and diameter parameters.
 
-{% include p5-editor.html id="tXjjgdTos" %}
+{% include p5-editor.html id="yRpJsxHUf" %}
 
 The same is true for how we update the position of the agents. Let's have a couple of strategies that we can test later:
 
@@ -73,7 +73,7 @@ The same is true for how we update the position of the agents. Let's have a coup
 
 `updateNearest()`: the agent's position is determined by a *repulsion* velocity that is proportional to how close it is to other agents. In this strategy, the agents will try to spread out over the canvas.
 
-{% include p5-editor.html id="YIivQqhZu" %}
+{% include p5-editor.html id="_asz-6BMC" %}
 
 Hmmm.... this looks odd:
 ```js
@@ -112,7 +112,7 @@ Let's add some drawing strategies to our `Agent` class:
 `drawOverlap()`: draw an ellipse between two agents when they overlap.
 
 
-{% include p5-editor.html id="uHaz0JWfB" %}
+{% include p5-editor.html id="LSFQQjKr7" %}
 
 Let's clean up our code a bit and test our functions.
 
@@ -127,15 +127,15 @@ update() {
 }
 ```
 
-{% include p5-editor.html id="sVZ4ziA0F" %}
+{% include p5-editor.html id="Kwoatj_6y" %}
 
 Then, `updateByVelocity()` with `bounceBoundary()`:
 
-{% include p5-editor.html id="p8Aon1YV7" %}
+{% include p5-editor.html id="s8BL0LmJB" %}
 
 And `updateRandom()` with `wrapBoundary()`:
 
-{% include p5-editor.html id="JmQiFH4FF" %}
+{% include p5-editor.html id="zcZI2OxT1" %}
 
 But, for all of these, only the `AGENT_MODE` is drawing anything. Let's create some new *MODES*, one for each of our drawing functions and cycle through them as we click the mouse.
 
@@ -143,20 +143,20 @@ Now, the `draw()` function inside our `Agent` class is gonna be responsible for 
 
 This is the result when using the `updateNearest()` and `resetBoundary()` strategies:
 
-{% include p5-editor.html id="jmczGnvdS" %}
+{% include p5-editor.html id="d_tYxNd7t" %}
 
 And it's easy to see all the drawings with the other combinations of update and boundary strategies.
 
 `updateByVelocity()` with `bounceBoundary()`:
 
-{% include p5-editor.html id="6P4slX71w" %}
+{% include p5-editor.html id="APi5iUoClC" %}
 
 and `updateRandom()` with `wrapBoundary()`:
 
-{% include p5-editor.html id="BmSObJNns" %}
+{% include p5-editor.html id="Zjjt9SRVu" %}
 
 And, really, now the possibilities are endless. We can experiment with all possible combinations of update and boundary functions, and increase the number of agents to get more overlaps.
 
 Try it out below!
 
-{% include p5-editor.html id="p6h71pXE7" %}
+{% include p5-editor.html id="wxUNbekxM" %}

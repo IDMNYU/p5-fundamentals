@@ -33,7 +33,7 @@ Since calculating colors for every single pixel is a bit too much work for most 
 
 For every point in our grid, we'll calculate its distance from the center and use `map()` to pick a color that scales linearly with this distance. Points in the center, with a distance close to $$0$$ will have light values close to $$255$$, and points that are far from the center will have a color value of $$0$$.
 
-{% include p5-editor.html id="67bpLFuvP" %}
+{% include p5-editor.html id="Bt0tL1Z9Y" %}
 
 This works. We get a nice soft glow effect that almost makes our light source look like a sphere.
 
@@ -45,7 +45,7 @@ We'll use `map()` to scale the distance between each pixel and our light's cente
 
 Once we have a value that maps distances from our light source to values between $$0$$ and $$1$$, we can use the [`lerpColor()`](https://p5js.org/reference/#/p5/lerpColor) function to pick color values that go from our full color to $$0$$.
 
-{% include p5-editor.html id="4jfW3bt_E" %}
+{% include p5-editor.html id="uYVHa4qUT" %}
 
 Change `mColor`, `mMag` and `mPos` above ☝️ to see how each of them affects the output.
 
@@ -55,7 +55,7 @@ Our class will have a constructor for setting initial light parameters, a `set()
 
 We can even attach our light to the mouse position.
 
-{% include p5-editor.html id="mI7btHVoR" %}
+{% include p5-editor.html id="tnuSaYguz" %}
 
 There are a couple of things we can experiment with.
 
@@ -77,7 +77,7 @@ function addColors(c0, c1) {
 }
 ```
 
-{% include p5-editor.html id="NDUwDvrt5" %}
+{% include p5-editor.html id="HKFwUjNKf" %}
 
 The second thing we could do is add a bit of a glow animation to our light.
 
@@ -87,7 +87,7 @@ We can use the `sin()` function to create a `glow` parameter with a period of $$
 let glow = sin(TWO_PI / 1500 * millis());
 ```
 
-{% include p5-editor.html id="JnB8OMaWS" %}
+{% include p5-editor.html id="nUnZJAGOe" %}
 
 Neat ! 🍸
 
@@ -95,15 +95,16 @@ Let's move the logic for adding two colors inside our light class. We'll add an 
 
 It's easier to test and see how colors get added now:
 
-{% include p5-editor.html id="JKtHdE0Vx" %}
+{% include p5-editor.html id="eAP5OdSF2" %}
 
 Just one last thing, let's have some lights with movement.
 
 We'll use polar coordinates and `noise()` to create some circular paths for our lights, and see how they interact.
 
-{% include p5-editor.html id="8bBBb6ZxH" %}
+{% include p5-editor.html id="FVnXEn3pK" %}
 
-
+<!--
+{% comment %}
 ## Points and Lines
 
 What if we want light sources that aren't points? Like a light-saber or a laser beam?
@@ -122,7 +123,7 @@ $$d = \frac{\left|mX - nY + bn\right|}{\sqrt{m^2 + n^2}}$$
 
 Again, the details of how this is derived are not super important. We should just know that it can be calculated, and that the equation is here on this page whenever we need it.
 
-Now that we know how to measure this distance it, we can use it to calculate color values for every point in our canvas based on how far they are from the line. Since doing this for every single pixel would be too much work for our browsers, let's work with a canvas that's divided into 64 x 64 squares:
+Now that we know how to measure this distance, we can use it to calculate color values for every point in our canvas based on how far they are from the line. Since doing this for every single pixel would be too much work for our browsers, let's work with a canvas that's divided into 64 x 64 squares:
 
 {% include p5-editor.html id="Q2mlRpMIo" %}
 
@@ -153,3 +154,6 @@ For example, we can move the color info inside our object, call it a `LightLine`
 And now, automate some slope changes over time, sit back and enjoy a low-fi, pixel light show:
 
 {% include p5-editor.html id="EjqQv0gjl" %}
+
+{% endcomment %}
+-->

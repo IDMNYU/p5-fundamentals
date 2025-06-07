@@ -77,7 +77,6 @@ permalink: /
 <!-- Projects -->
 {% assign title = "Mini Projects:Putting it all together" %}
 {% capture topics %}
-  patterns-2d
   procedural-drawing
   glitchy-typewriter
   simple-game

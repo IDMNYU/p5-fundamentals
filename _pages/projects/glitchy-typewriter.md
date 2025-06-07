@@ -27,7 +27,7 @@ We have a phrase and we want to repeatedly write it on our canvas, one letter at
 
 Since strings are just arrays of letters, we can have a global variable for a counter, and use it to keep track of how many of the characters to draw at each frame. As the counter goes up, we'll draw more letter, and the effect will be something like a typewriter:
 
-{% include p5-editor.html id="eTPlwFKzC" %}
+{% include p5-editor.html id="TMCCkI66z" %}
 
 We are using the array's [`slice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) member function to copy over a portion (or slice) of the full array. The parameters to `slice()` specify the starting index and the end index of our slice.
 ```js
@@ -44,7 +44,7 @@ One aspect of this code that we can improve is the speed at which the letters co
 
 Let's add another global variable that will keep track of when to update the index. That way we can not only slow down our typewriter, but also add a little variation to each delay, so it feels a bit more like a person typing. We'll use the `millis()` function to keep track of time in our code:
 
-{% include p5-editor.html id="kPz4Lv3gw" %}
+{% include p5-editor.html id="17Zp_cNJX" %}
 
 Now, `nextUpdateMillis` holds the value of the next index update, and if `millis()` goes past this value, it means it's time to update the index along with the `nextUpdateMillis` variable.
 
@@ -61,7 +61,7 @@ And instead of keeping a counter for which letter in the phrase to draw, we'll k
 
 This way we can control where each word gets placed, and restart the phrase over at the right place and time:
 
-{% include p5-editor.html id="JBypcfU7E" %}
+{% include p5-editor.html id="xOACDfJgX" %}
 
 Our logic got a bit more complex, since now we have to calculate where to place each word.
 
@@ -111,7 +111,7 @@ In addition to the word "*glitch*" we can also highlight random words [probabili
 if (nextWord.includes("litch") || random() > 0.95)
 ```
 
-{% include p5-editor.html id="HgH7d2lPT" %}
+{% include p5-editor.html id="yM4OjJxDv" %}
 
 There are some extra variables now to help switch between the two styles of text, but the overall logic of when and where to display the words is the same.
 
@@ -129,7 +129,7 @@ if (cy > height - MARGIN) {
 }
 ```
 
-{% include p5-editor.html id="XwEXW_cxq" %}
+{% include p5-editor.html id="orCd7BAX6" %}
 
 Adding fadeout is a bit more complicated. There might be a way to use `map()` to map the `wi` word index into alpha values, but it's not very intuitive and the logic can end up looking messy and hard to understand.
 
@@ -139,7 +139,7 @@ We are going to use an array that holds alpha values for each word that we add t
 
 Now at every frame, before we draw anything, we can go through the array of alpha values and decrement them by some predetermined `fadeVelocity`:
 
-{% include p5-editor.html id="s7AyQcjQr" %}
+{% include p5-editor.html id="QodsQcNan" %}
 
 This looks good, but, besides the fact that it's not a typewriter, we have another issue to consider.
 
@@ -156,7 +156,7 @@ This is a perfect opportunity to try to encapsulate this logic into a class that
 
 Trying to keep the logic the same, while moving the properties that are particular to each word into a class, we end up with this:
 
-{% include p5-editor.html id="WJsh4bECM" %}
+{% include p5-editor.html id="qurBslwQT" %}
 
 We added a lot of code here. Let's take some time to look over all of the code.
 
@@ -170,7 +170,7 @@ And we still need `cx` and `cy` to keep track of where the next word goes in the
 
 Before we start implementing the letters, let's move some of the draw code into the class and get fading to work again:
 
-{% include p5-editor.html id="n-z5MTf3O" %}
+{% include p5-editor.html id="QM5rAw2IM" %}
 
 We now have an `update()` function for decrementing each word's alpha value each frame, and a `draw()` function for drawing the word. The red and black words have slightly different fade velocities, so the red words stay on screen a bit longer.
 
@@ -209,7 +209,7 @@ This is happening because the overflow check on line $$99$$ of our code is done 
 
 Let's move the `cx` and `cy` logic to the class. Every time a new `FadingWord` is created it can update the `cx` and `cy` variables:
 
-{% include p5-editor.html id="7o1dUp50h" %}
+{% include p5-editor.html id="B2475VXOf" %}
 
 This is a lot better. There are still some improvements we could make, but now the `setup()` and `draw()` functions in our `FadingWord` class are clean and work as we expected:
 
@@ -261,7 +261,7 @@ drawnWords.push(new FadingWord(nextWord, wordDelay));
 nextUpdateMillis = millis() + 1.2 * wordDelay;
 ```
 
-{% include p5-editor.html id="KJO5CEwKM" %}
+{% include p5-editor.html id="qwwE-h3-k" %}
 
 <script src="{{ '/assets/simplelightbox/simple-lightbox.min.js' | relative_url }}"></script>
 <script src="{{ '/js/lightbox.js' | relative_url }}"></script>

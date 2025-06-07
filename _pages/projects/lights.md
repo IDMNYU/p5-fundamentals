@@ -6,9 +6,9 @@ title: Lights
 This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
-- [Variables](../../p5/variables/)
-- [Maths](../../p5/maths/)
-- [Classes](../../p5/classes/)
+- [Variables](../../coding/variables/)
+- [Maths](../../coding/maths/)
+- [Classes](../../coding/classes/)
 - [Interactions](../../creative-coding/interactions/)
 - [Animations](../../creative-coding/animations/)
 - [Noise](../../creative-coding/more-random/)
@@ -140,7 +140,7 @@ And just like that, we get the distance.
 
 ## Light Saber Party
 
-Now that we know about [classes](../../p5/classes/), we can even create a class for lines with equation $$y = mx+b$$ and keep all of the math for calculating distances inside the class:
+Now that we know about [classes](../../coding/classes/), we can even create a class for lines with equation $$y = mx+b$$ and keep all of the math for calculating distances inside the class:
 
 {% include p5-editor.html id="YI2E4ithx" %}
 

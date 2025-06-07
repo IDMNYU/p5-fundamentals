@@ -1,7 +1,7 @@
 ---
 title: More Random
 ---
-We've already seen how to generate continuous [random numbers](../../p5/random/) within a range, and also how to use those numbers to pick values from a pre-determined set of options.
+We've already seen how to generate continuous [random numbers](../../coding/random/) within a range, and also how to use those numbers to pick values from a pre-determined set of options.
 
 Just to review, let's use `random()` to generate a grid of ellipses with different, unpredictable, diameters:
 

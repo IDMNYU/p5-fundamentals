@@ -7,12 +7,12 @@ title: Glitchy Typewriter
 This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
-- [Loops as Counters](../../p5/counters/)
-- [Random](../../p5/random/)
-- [Maths](../../p5/maths/)
-- [Arrays](../../p5/arrays/)
-- [Strings](../../p5/strings/)
-- [Classes](../../p5/classes/)
+- [Loops as Counters](../../coding/counters/)
+- [Random](../../coding/random/)
+- [Maths](../../coding/maths/)
+- [Arrays](../../coding/arrays/)
+- [Strings](../../coding/strings/)
+- [Classes](../../coding/classes/)
 - [Animations](../../creative-coding/animations/)
 
 ## Typing

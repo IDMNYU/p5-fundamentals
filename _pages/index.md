@@ -12,11 +12,17 @@ permalink: /
 {% include home-section.html section="intro" title=title topics=topics %}
 
 <!-- P5 -->
-{% assign title = "Ready to p5:The basics of programming using p5.js and JavaScript" %}
+{% assign title = "Ready to p5:The basics of p5.js" %}
 {% capture topics %}
   p5-setup
   p5-intro
   drawing
+{% endcapture %}
+{% include home-section.html section="p5" title=title topics=topics %}
+
+<!-- Coding -->
+{% assign title = "Coding:The basics of programming using p5.js and JavaScript" %}
+{% capture topics %}
   variables
   conditionals
   patterns
@@ -29,7 +35,7 @@ permalink: /
   advanced-arraying
   classes
 {% endcapture %}
-{% include home-section.html section="p5" title=title topics=topics %}
+{% include home-section.html section="coding" title=title topics=topics %}
 
 <!-- Creative Coding -->
 {% assign title = "Creative Coding:The browser as a canvas" %}

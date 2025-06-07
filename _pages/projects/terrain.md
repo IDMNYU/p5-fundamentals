@@ -6,9 +6,9 @@ title: Generative Terrain
 This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
-- [Drawing Patterns](../../p5/patterns/)
-- [Loops as Counters](../../p5/counters/)
-- [Random](../../p5/random/)
+- [Drawing Patterns](../../coding/patterns/)
+- [Loops as Counters](../../coding/counters/)
+- [Random](../../coding/random/)
 - [Interactions](../../creative-coding/interactions/)
 - [Animations](../../creative-coding/animations/)
 - [Noise](../../creative-coding/more-random/)

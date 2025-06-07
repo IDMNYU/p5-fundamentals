@@ -6,10 +6,10 @@ title: Simple Game
 
 This mini-project draws on materials from:
 
-- [Functions](../../p5/functions/)
-- [Randomness](../../p5/random/)
-- [Arrays](../../p5/arrays/)
-- [Objects](../../p5/objects/)
+- [Functions](../../coding/functions/)
+- [Randomness](../../coding/random/)
+- [Arrays](../../coding/arrays/)
+- [Objects](../../coding/objects/)
 - [Interactions](../../creative-coding/interactions/)
 
 ## NOTE:
@@ -43,7 +43,7 @@ Let's add our reward and obstacle objects. We'll use an array to keep track of e
 
 Now, let's add overlap detection so we can tell when our character has collected a reward or touched an obstacle.
 
-We'll use a function that's very similar to the one we saw when we looked at [functions](../../p5/functions/), except this one has been rewritten to receive objects instead of the $$6$$ separate parameters for diameter and `x` and `y` positions:
+We'll use a function that's very similar to the one we saw when we looked at [functions](../../coding/functions/), except this one has been rewritten to receive objects instead of the $$6$$ separate parameters for diameter and `x` and `y` positions:
 
 ```js
 function overlap(o0, o1) {

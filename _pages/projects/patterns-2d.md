@@ -7,13 +7,13 @@ title: 2D Patterns
 This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
-- [Drawing Patterns](../../p5/patterns/)
-- [Loops as Counters](../../p5/counters/)
+- [Drawing Patterns](../../coding/patterns/)
+- [Loops as Counters](../../coding/counters/)
 - [Translations and Transformations](../../creative-coding/transformations/)
 
 ## Tiling
 
-We saw how to draw chessboards [here](../../p5/counters/).
+We saw how to draw chessboards [here](../../coding/counters/).
 
 What if instead of black and white squares we used the following tiles:
 

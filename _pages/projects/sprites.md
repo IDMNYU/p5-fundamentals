@@ -6,9 +6,9 @@ title: Sprites
 This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
-- [Conditionals](../../p5/conditionals/)
-- [Arrays](../../p5/arrays/)
-- [Classes](../../p5/classes/)
+- [Conditionals](../../coding/conditionals/)
+- [Arrays](../../coding/arrays/)
+- [Classes](../../coding/classes/)
 - [Interactions](../../creative-coding/interactions/)
 - [Animations](../../creative-coding/animations/)
 - [State Variables](../../creative-coding/state/)

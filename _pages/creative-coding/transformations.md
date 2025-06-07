@@ -1,12 +1,12 @@
 ---
 title: Translations, Rotations and Transformations
 ---
-Now that we've covered the basics of JavaScript and fundamental programming constructs like [variables](../../p5/variables/), [loops](../../p5/patterns/), [functions](../../p5/functions/), [arrays](../../p5/arrays/), [objects](../../p5/objects) and [classes](../../p5/classes), we're going to start looking at some concepts that are more specific to creative coding and audio visual applications.
+Now that we've covered the basics of JavaScript and fundamental programming constructs like [variables](../../coding/variables/), [loops](../../coding/patterns/), [functions](../../coding/functions/), [arrays](../../coding/arrays/), [objects](../../coding/objects) and [classes](../../coding/classes), we're going to start looking at some concepts that are more specific to creative coding and audio visual applications.
 
 ## Translations
 Let's go back to drawing with simple shapes.
 
-Let's say we have a collection of simple shapes that make up a more complicated shape, like a star,  a smiley face or a [heart](../../p5/functions/).
+Let's say we have a collection of simple shapes that make up a more complicated shape, like a star,  a smiley face or a [heart](../../coding/functions/).
 
 We can draw this at a particular location by specifying all of the coordinates of our basic shapes:
 

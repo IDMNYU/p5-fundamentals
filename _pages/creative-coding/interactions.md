@@ -2,7 +2,7 @@
 title: Interactions
 ---
 
-We've seen and used the p5.js special variables [`mouseX`](https://p5js.org/reference/#/p5/mouseX) and [`mouseY`](https://p5js.org/reference/#/p5/mouseY) when we looked at [variables](../../p5/variables/), [conditionals](../../p5/conditionals/), [functions](../../p5/functions/) and [classes](../../p5/classes/).
+We've seen and used the p5.js special variables [`mouseX`](https://p5js.org/reference/#/p5/mouseX) and [`mouseY`](https://p5js.org/reference/#/p5/mouseY) when we looked at [variables](../../coding/variables/), [conditionals](../../coding/conditionals/), [functions](../../coding/functions/) and [classes](../../coding/classes/).
 
 These variables always give us the current `x` and `y` coordinates of our mouse, relative to the $$(0, 0)$$ origin of our canvas.
 

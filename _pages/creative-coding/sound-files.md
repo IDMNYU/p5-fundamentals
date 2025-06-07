@@ -72,7 +72,7 @@ Some things to note about the code:
 1. The [`jump()`](https://p5js.org/reference/#/p5.SoundFile/jump) function only works if the file is playing, so we had to use an extra global variable to keep track of whether the file should restart after a pause.
 2. The buttons could probably be in a class, since they have the same size and style and right now there's lots of repeated code.
 
-Let's make a [class](../../p5/classes/) for our buttons to encapsulate their style and behavior:
+Let's make a [class](../../coding/classes/) for our buttons to encapsulate their style and behavior:
 
 {% include p5-editor.html id="H4SNKePvH" %}
 

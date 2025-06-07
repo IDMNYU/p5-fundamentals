@@ -2,7 +2,7 @@
 title: Loading Data (JSON/CSV)
 ---
 
-We've seen how [arrays](../../p5/arrays/) and [objects](../../p5/objects/) can be used for organizing our data, and also how to use `for()` loops to create, store and process values in those structures. We've also seen how the [`map()`](../maths/) function can be used to transform input values in different ranges and units into parameters for visualizations.
+We've seen how [arrays](../../coding/arrays/) and [objects](../../coding/objects/) can be used for organizing our data, and also how to use `for()` loops to create, store and process values in those structures. We've also seen how the [`map()`](../maths/) function can be used to transform input values in different ranges and units into parameters for visualizations.
 
 We can now look at ways of acquiring, processing and visualizing data that has been previously created and stored in files locally or online.
 

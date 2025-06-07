@@ -7,11 +7,11 @@ title: Procedural Drawing Machine
 This mini-project draws on materials from:
 
 - [Shapes and Colors](../../p5/drawing/)
-- [Conditionals](../../p5/conditionals/)
-- [Loops as Counters](../../p5/counters/)
-- [Functions](../../p5/functions/)
-- [Arrays](../../p5/arrays/)
-- [Classes](../../p5/classes/)
+- [Conditionals](../../coding/conditionals/)
+- [Loops as Counters](../../coding/counters/)
+- [Functions](../../coding/functions/)
+- [Arrays](../../coding/arrays/)
+- [Classes](../../coding/classes/)
 - [Translations and Transformations](../../creative-coding/transformations/)
 - [Interactions](../../creative-coding/interactions/)
 - [Animations](../../creative-coding/animations/)

@@ -98,7 +98,7 @@ This should give us an interesting effect:
 
 {% include p5-editor.html id="620VoCQoG" %}
 
-We can also use [`for()` loops](../../p5/counters/), [arrays](../../p5/arrays/) and [objects](../../p5/objects/) to create some pretty abstract animations.
+We can also use [`for()` loops](../../coding/counters/), [arrays](../../coding/arrays/) and [objects](../../coding/objects/) to create some pretty abstract animations.
 
 We'll create an array of line objects. Each line has an `x` location, a length `l` and a velocity `v`.
 

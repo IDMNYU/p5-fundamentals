@@ -6,7 +6,7 @@ Since arrays are so very often used in programming, and not only to store inform
 
 We saw some of these in the previous [tutorial about arrays](../arrays/): `push()` and `length`. The [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) function is used when we want to add elements to the end of the array, and the [`length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) variable when we want to know the size of the array:
 
-{% include p5-editor.html id="5TJYOc0Xl" %}
+{% include p5-editor.html id="LASWmNjIj" %}
 
 In this sketch we are adding random diameter values to an array every time the mouse is clicked, and during `draw()` we draw ellipses based on those diameters. Since we can't tell beforehand how many times the mouse has been clicked, we can't foretell how many values we have in our array, so we rely on `length` to set the limit for the `for()` loop in `draw()`.
 
@@ -18,11 +18,11 @@ The way to remove the first element of an array is using the special builtin fun
 
 We can do the reverse: add elements to the front of the array and remove from the back with [`unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) and [`pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), respectively:
 
-{% include p5-editor.html id="Hq2pjvxEA" %}
+{% include p5-editor.html id="-BVml9j5Z" %}
 
 Let's pretend that now, for aesthetic reasons, we want to draw our diameters in order from smallest to largest. We can make use of the special [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) function:
 
-{% include p5-editor.html id="jnOgEyxik" %}
+{% include p5-editor.html id="ekJDKCRmr" %}
 
 After we add a new element we sort the array of diameters from smallest to largest. As we keep clicking through this example we'll notice something strange: it seems like all the circles drawn just keep growing.
 
@@ -32,7 +32,7 @@ What if we don't want to remove the smallest element, but still want to draw the
 
 Luckily this is such a common case that JavaScript also has a function that does that for us:
 
-{% include p5-editor.html id="EYLThxCIc" %}
+{% include p5-editor.html id="7ZmtXjOyM" %}
 
 The function is called [`toSorted()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted), and it's very similar to `sort()` except, where `sort()` does the sorting on the original array, `toSorted()` first makes a copy of the array and then returns the copy after sorting it.
 
@@ -42,7 +42,7 @@ There are a couple of other special array functions that come in pairs like that
 
 Now, let's say that instead of just the $$10$$ diameters we have an array that holds up to $$100$$ circle [objects](../objects/):
 
-{% include p5-editor.html id="QXvrUA6dg" %}
+{% include p5-editor.html id="cyYHQSaL5" %}
 
 Similar logic as before, but now with every click we add between $$8$$ and $$16$$ elements to our array, until we get to $$100$$ elements and clear the array to start over.
 
@@ -52,7 +52,7 @@ The `for()` loop that draws our circles works. It's a good `for()` loop. But, if
 
 When we have this situation, where we want to get every element of an array and do something with it, and don't have to update any other variables or objects, there's a different way to ask for the array to iterate over its elements:
 
-{% include p5-editor.html id="DhLOKnElN" %}
+{% include p5-editor.html id="eMHwj8fqF" %}
 
 First, we define a function called `drawCircle()`. This function takes one argument, which will be one of our circle objects with `x`, `y` and `d` parameters, and draws an ellipse using those values. Easy. Then, in our `draw()` function, when we want to iterate over all of the elements of the array and draw our circles, we can use the special function [`forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 
@@ -64,7 +64,7 @@ This is some really advanced array'ing ! And the code becomes a little more conc
 
 Once we know how to pass functions to functions we can really start doing some fancier processing of the data in our arrays, like filtering our array by values inside the elements:
 
-{% include p5-editor.html id="wV23pLR6dN" %}
+{% include p5-editor.html id="KBK3zfcnR" %}
 
 If we look at at the documentation for the [`filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) function we'll see that it takes a function as its parameter and returns a copy of the array, but only with the elements that pass the filter function. What this means is that it runs the function on every element of the array and if the function returns true that element is copied into the new array, if not, it doesn't make it into the array.
 
@@ -87,7 +87,7 @@ If our array elements are all numbers or words, `sort()` just works without any 
 
 Let's first change our sketch a bit and draw our circles close to the center on our canvas:
 
-{% include p5-editor.html id="TK9D8hlkL" %}
+{% include p5-editor.html id="tW5TKn97o" %}
 
 So, now we are not storing absolute x and y positions anymore, but small random variations to add to $$\frac{width}{2}$$ and $$\frac{height}{2}$$.
 
@@ -103,7 +103,7 @@ function orderByDiameter(circleA, circleB) {
 }
 ```
 
-{% include p5-editor.html id="y7ga_B5Dm" %}
+{% include p5-editor.html id="BPNIo4WX_" %}
 
 Hmmm.... oh. Right. Since we followed the documentation to create our `orderByDiameter()` function, we are actually telling `sort()` to order things from smallest to largest. There are two ways of fixing this. The first way, and perhaps simpler, is to just [`reverse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) the array after it's been sorted:
 
@@ -123,7 +123,7 @@ function orderByDiameterReverse(circleA, circleB) {
 
 And here's the result, drawing the circles ordered from largest to smallest so we can see all of them:
 
-{% include p5-editor.html id="COQJ7lSPY" %}
+{% include p5-editor.html id="tIIb9LqVZ" %}
 
 Both options are there in the sketch above, and we can turn them on and off with comments to see that they do the same thing.
 
@@ -131,4 +131,4 @@ Both options are there in the sketch above, and we can turn them on and off with
 
 And now, we can add some new parameters to our circle object, like: color and rotation velocity, to create some kind of hypnotizing machine:
 
-{% include p5-editor.html id="RNW4ev8dd" %}
+{% include p5-editor.html id="IA_Vdmxm7" %}

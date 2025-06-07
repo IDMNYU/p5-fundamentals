@@ -6,7 +6,7 @@ We've seen and used the p5.js special variables [`mouseX`](https://p5js.org/refe
 
 These variables always give us the current `x` and `y` coordinates of our mouse, relative to the $$(0, 0)$$ origin of our canvas.
 
-{% include p5-editor.html id="RHuP9coKo" %}
+{% include p5-editor.html id="F3XVsdlkv" %}
 
 Now, we are going to see some other special variables and functions that will help us add interactivity to our sketches using the mouse and the keyboard.
 
@@ -16,7 +16,7 @@ Another pair of special variables available to us in p5.js are the [`pmouseX`](h
 
 By comparing the current and previous positions of our mouse we can draw lines or shapes that are based on the speed in which a user moves the mouse.
 
-{% include p5-editor.html id="mbnzIufP6" %}
+{% include p5-editor.html id="41CirwIOB" %}
 
 Another mouse-related special variable in p5.js is the [`mouseIsPressed`](https://p5js.org/reference/#/p5/mouseIsPressed) variable. This variable returns a *boolean* value that tells us whether any of the mouse buttons are currently pressed.
 
@@ -32,7 +32,7 @@ if(mouseIsPressed) {
 }
 ```
 
-{% include p5-editor.html id="p-gctWMk-" %}
+{% include p5-editor.html id="XPa-IjLtt" %}
 
 ## Mouse Functions
 
@@ -46,7 +46,7 @@ function draw() {
 }
 ```
 
-{% include p5-editor.html id="A4CtkK0ur" %}
+{% include p5-editor.html id="2qicG7dPq" %}
 
 This doesn't seem correct...
 
@@ -66,7 +66,7 @@ function mouseClicked() {
 }
 ```
 
-{% include p5-editor.html id="H1xuSiVnL" %}
+{% include p5-editor.html id="Xo6XxohE_" %}
 
 And now we can use the `clickCount` variable to change some parameters in our sketch. In this case we'll use the  number of clicks to compute the diameter for an ellipse. To make the changes more apparent, we'll give the ellipse a starting diameter of $$20$$ and we'll increment it by $$4$$ pixels per click:
 
@@ -74,13 +74,13 @@ And now we can use the `clickCount` variable to change some parameters in our sk
 let mDiam = 20 + 4 * clickCount;
 ```
 
-{% include p5-editor.html id="LBAguAfKi" %}
+{% include p5-editor.html id="CPZLTJ2JP" %}
 
 ## Functions and Variables
 
 Since the `mouseX` and `mouseY` variables are always available to us, we can use them inside the `mouseClicked()` function to get the location of a mouse click. In addition to increasing our ellipse size, we can now use clicks to move it.
 
-{% include p5-editor.html id="I2U_zj7Z4" %}
+{% include p5-editor.html id="kP0syTm_8" %}
 
 ## More Events
 
@@ -104,7 +104,7 @@ function doubleClicked() {
 
 Done!!
 
-{% include p5-editor.html id="F8LMdAsUR" %}
+{% include p5-editor.html id="hPBEKfhH5" %}
 
 But, it gets kind of boring to click so many times to get our ellipse to a certain size. Let's say we just want to be able to stretch it out temporarily by dragging the mouse.
 
@@ -140,7 +140,7 @@ function mouseReleased() {
 }
 ```
 
-{% include p5-editor.html id="OHzE0gVvKG" %}
+{% include p5-editor.html id="lJKgp2IIY" %}
 
 ## Keyboard Events
 
@@ -156,7 +156,7 @@ function keyPressed() {
 }
 ```
 
-{% include p5-editor.html id="3-RyfP72P" %}
+{% include p5-editor.html id="UdSwBaV9L" %}
 
 Similar to the `mouseX` and `mouseY` variables, we can query the special p5.js [`key`](https://p5js.org/reference/#/p5/key) and [`keyCode`](https://p5js.org/reference/#/p5/keyCode) variables anywhere in our code to determine which keys are being pressed.
 
@@ -164,7 +164,7 @@ The difference between `key` and `keyCode` is that `key` holds the letter associ
 
 We can use key codes to move an ellipse around the screen and the `key` variable to reset its position:
 
-{% include p5-editor.html id="G5khlkjBI" %}
+{% include p5-editor.html id="SNBPBinYR" %}
 
 We can almost program a simple video-game now!
 
@@ -180,7 +180,7 @@ Let's say we want our background to change color periodically. In order to do th
 
 We'll use the p5.js [`millis()`](https://p5js.org/reference/#/p5/millis) function to get the number of milliseconds (thousandths of a second) that have elapsed since the start of our sketch (since the `setup()` function was first called).
 
-{% include p5-editor.html id="tvK-cfBDp" %}
+{% include p5-editor.html id="ilyYXfwfS" %}
 
 We can also use the current time to change parameters of our sketch.
 
@@ -194,7 +194,7 @@ if (currentHour > 12) {
 }
 ```
 
-{% include p5-editor.html id="44k3JJiWk" %}
+{% include p5-editor.html id="GIkBvs3q4" %}
 
 We'll see more about these functions when we look at animations.
 
@@ -212,7 +212,7 @@ function mouseMoved() {
 
 Now our `mouseMoved()` function is responsible for adding points to the `mPos` array, and in `draw()` we go through every object in the array and draw lines connecting them.
 
-{% include p5-editor.html id="t6Fh4L2ov" %}
+{% include p5-editor.html id="l7XSgtlFw" %}
 
 This is cool, but let's add a time component to this to make older positions disappear.
 
@@ -228,7 +228,7 @@ Now, in our `draw()` function we'll have two steps: first, we'll decrease the `w
 
 This gives a cool trail effect to our mouse movements.
 
-{% include p5-editor.html id="PlO4G39KH" %}
+{% include p5-editor.html id="w3nfyQ553" %}
 
 We can change this slightly to have it only add points when the mouse is dragged, and only update the weights if the mouse is not pressed.
 
@@ -246,4 +246,4 @@ let updateCount = mPos.length - i + 2;
 mPos[i].w *= 0.99 ** updateCount;
 ```
 
-{% include p5-editor.html id="Xm6YSR2Mm" %}
+{% include p5-editor.html id="Qjv7xnWFm" %}

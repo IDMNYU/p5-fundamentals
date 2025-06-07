@@ -41,37 +41,37 @@ Keep that in mind as we go through these examples and start using DOM elements i
 ## Links and Text
 We can add links to our sketch like this:
 
-{% include p5-editor.html id="0Z8_vyT_f" %}
+{% include p5-editor.html id="IhgQ06zCM" %}
 
 And we can use our p5.js `draw()` and `mouseClick()` functions to dynamically calculate the position for a link, or to dynamically keep adding links as we click:
 
-{% include p5-editor.html id="ahTW1X3gU" %}
+{% include p5-editor.html id="cVl54_Chi" %}
 
 This is fine and fun, but unless there's a real good reason for creating these kinds of static elements dynamically in our p5js, it's best to have them defined and positioned in the html file, and styled with css.
 
 Creating elements to display dynamic content that comes from the p5.js sketch could be more useful. For example, we can create elements to display our mouse's position and the current frame rate:
 
-{% include p5-editor.html id="sQ7CuXm9B" %}
+{% include p5-editor.html id="zpsAqlRi8" %}
 
 The same thing can be achieved using the p5.js `text()` function, but what's nice about using a [`p5.Element`](https://p5js.org/reference/#/p5.Element) is that it's easy to detect interactions on those elements by attaching listeners to their `mousePressed()`, `mouseOver()`, etc, events:
 
-{% include p5-editor.html id="eEUbnkAGI" %}
+{% include p5-editor.html id="OiLGOTucx" %}
 
 ## Inputs
 [`p5.Elements`](https://p5js.org/reference/#/p5.Element) become really useful in situations where we want to create some simple user input elements.
 
 We can use the `createSlider()` function to create an html `<input>` element of type `range`. Then, in `draw()` we use the object's `value()` function to access its current value and use it to change the background and text colors.
 
-{% include p5-editor.html id="NjRVzW4-8" %}
+{% include p5-editor.html id="v7Y9dy88s" %}
 
 We can also create html `<button>` elements in a similar way, and, kind of like what we saw above with the `<p>` elements, attach a function to its `mouseClicked()` event:
 
-{% include p5-editor.html id="wcZUxkBO4" %}
+{% include p5-editor.html id="ozXc5GHd4" %}
 
 We can combine our button with the sliders in a way that every time the button is clicked, the sliders get updated with the new RGB values for the background:
 
-{% include p5-editor.html id="dxQ4kJY04" %}
+{% include p5-editor.html id="GV0s_G5CA" %}
 
 The more correct way of doing this in 2024 is using an `<input>` element of type `color` that creates a browser-specific color picker element with a lot of options:
 
-{% include p5-editor.html id="D_WYJs4FK" %}
+{% include p5-editor.html id="SsC8rWpog" %}

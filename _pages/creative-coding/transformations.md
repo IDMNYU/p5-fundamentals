@@ -20,10 +20,6 @@ We can use variables, which helps a bit:
 
 {% include p5-editor.html id="7AeMM-06s" %}
 
-Or functions, like we did [previously](../../p5/functions/):
-
-{% include p5-editor.html id="gSxtZmO58" %}
-
 These all work, but there's another way to do this, which might seem more difficult at first, but once we get used to it, will allow us to perform other kinds of transformations on our shapes, like rotations and scaling.
 
 Instead of changing the `x` and `y` locations of where we want to draw our shape on our canvas, we can change the location of our canvas' origin. We'll always draw our shapes at the $$(0, 0)$$ location, but we'll change where that location is in our canvas. We can use the p5.js function [`translate()`](https://p5js.org/reference/#/p5/translate) to change our origin location.

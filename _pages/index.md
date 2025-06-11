@@ -53,7 +53,6 @@ permalink: /
   vectors
   images
   videos
-  cv
   3d
   sound-files
   sound-processing

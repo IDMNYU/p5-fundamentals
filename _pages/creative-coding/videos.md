@@ -73,7 +73,7 @@ It's a little bit harder to figure out the dominant color channel in a video or 
 
 ## Processing Video Pixels
 
-And, now, finally, let's copy our circle pattern code, but use pixel color values that are coming from the camera to draw our circles:
+And, now, finally, let's copy our circle pattern code from the [images tutorial](../images/), but use pixel color values that are coming from the camera to draw our circles:
 
 ### NOTE: sketches has to be opened in a new window using its [SKETCH LINK](https://editor.p5js.org/tgh-p5-tutorials/sketches/XJclc3KE0)
 {% include p5-editor.html id="XJclc3KE0" %}
